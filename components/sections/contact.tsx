@@ -172,7 +172,8 @@ export function Contact() {
                       </div>
                       <Button 
                         type="submit" 
-                        className="w-full rounded-full py-4 sm:py-6 text-sm sm:text-lg font-bold mt-4 whitespace-normal text-balance h-auto min-h-[3.5rem]"
+                        size="lg"
+                        className="w-full rounded-full font-bold mt-4 whitespace-normal text-balance h-auto py-3 px-8 text-sm sm:text-base"
                         disabled={isSubmitting}
                       >
                         {isSubmitting ? "WYSYŁANIE..." : "WYŚLIJ I WYBIERZ TERMIN"} 
