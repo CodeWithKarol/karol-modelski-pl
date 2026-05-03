@@ -29,6 +29,7 @@ type ContactFormValues = z.infer<typeof contactFormSchema>
 export function Contact() {
   const [step, setStep] = useState(1)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isCalendlyReady, setIsCalendlyReady] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const {
     register,
@@ -43,17 +44,20 @@ export function Contact() {
     },
   })
 
-  // Elegant initialization using a callback ref
-  const calendlyContainerRef = useCallback((node: HTMLDivElement | null) => {
-    if (node !== null && (window as any).Calendly) {
-      (window as any).Calendly.initInlineWidget({
-        url: 'https://calendly.com/kontakt-karol-modelski/30min?hide_landing_page_details=1&hide_gdpr_banner=1',
-        parentElement: node,
-        prefill: {},
-        utm: {}
-      });
+  // Initialization logic for Calendly
+  useEffect(() => {
+    if (step === 2 && isCalendlyReady) {
+      const node = document.getElementById('calendly-container-node');
+      if (node && (window as any).Calendly) {
+        (window as any).Calendly.initInlineWidget({
+          url: 'https://calendly.com/kontakt-karol-modelski/30min?hide_landing_page_details=1&hide_gdpr_banner=1',
+          parentElement: node,
+          prefill: {},
+          utm: {}
+        });
+      }
     }
-  }, []);
+  }, [step, isCalendlyReady]);
 
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true)
@@ -200,23 +204,8 @@ export function Contact() {
                     <div className="flex-grow bg-muted/5 min-h-[600px] relative overflow-hidden">
                       <div 
                         id="calendly-container-node"
-                        ref={calendlyContainerRef}
                         className="calendly-inline-widget w-full h-full" 
                         style={{ minWidth: '320px', height: '650px' }} 
-                      />
-                      <Script 
-                        src="https://assets.calendly.com/assets/external/widget.js" 
-                        strategy="afterInteractive"
-                        onReady={() => {
-                          // Handle case where script loads after the component is already on step 2
-                          const node = document.getElementById('calendly-container-node');
-                          if (node && (window as any).Calendly) {
-                            (window as any).Calendly.initInlineWidget({
-                              url: 'https://calendly.com/kontakt-karol-modelski/30min?hide_landing_page_details=1&hide_gdpr_banner=1',
-                              parentElement: node,
-                            });
-                          }
-                        }}
                       />
                     </div>
                     <div className="p-4 bg-muted/10 border-t border-border flex justify-center">
@@ -243,6 +232,11 @@ export function Contact() {
           </div>
         </div>
       </div>
+      <Script 
+        src="https://assets.calendly.com/assets/external/widget.js" 
+        strategy="afterInteractive"
+        onReady={() => setIsCalendlyReady(true)}
+      />
     </section>
   )
 }
