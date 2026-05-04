@@ -25,6 +25,14 @@ const faqs = [
   {
     question: "Co jeśli będę potrzebował zmian w przyszłości?",
     answer: "Moje systemy są budowane modułowo i skalowalnie. Ponieważ kod jest Twoją własnością, w przyszłości może go rozwijać dowolny programista, choć oczywiście oferuję wsparcie powdrożeniowe i dalszy rozwój systemu."
+  },
+  {
+    question: "Jak automatyzacja procesów biznesowych wpływa na skalowanie firmy?",
+    answer: "Automatyzacja procesów biznesowych eliminuje 'wąskie gardła', pozwalając Twojej firmie obsługiwać 3-4 razy więcej zleceń przy tym samym zespole. Zamiast zatrudniać kolejnych pracowników do zadań administracyjnych, inwestujesz w skalowalną technologię, która rośnie wraz z Twoimi potrzebami."
+  },
+  {
+    question: "Czy automatyzacja procesów biznesowych i AI są bezpieczne dla moich danych?",
+    answer: "Tak. Jako ekspert z doświadczeniem w bankowości (Citi, BNP Paribas), wdrażam automatyzację procesów biznesowych z zachowaniem rygorystycznych standardów bezpieczeństwa. Twoje dane biznesowe są chronione i nie służą do trenowania publicznych modeli AI."
   }
 ]
 

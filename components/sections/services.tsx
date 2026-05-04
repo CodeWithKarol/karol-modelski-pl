@@ -20,7 +20,7 @@ const pillars = [
   {
     id: "filar-2",
     title: "Filar II: Automatyzacja AI i analiza danych",
-    subtitle: "Sztuczna inteligencja, która pracuje na Twój zysk.",
+    subtitle: "Jak wdrożyć automatyzację AI w małej firmie?",
     description: "Wdrażam zaawansowaną automatyzację AI, która nie tylko wykonuje polecenia, ale pomaga Ci podejmować lepsze decyzje.",
     benefits: "Inteligentne sortowanie zapytań od klientów, automatyczne streszczenia długich raportów oraz systemy, które potrafią wyciągać kluczowe informacje z tysięcy dokumentów w kilka sekund.",
     result: "Wykorzystujesz najnowszą automatyzację, aby być o krok przed konkurencją, która wciąż działa „po staremu”.",
