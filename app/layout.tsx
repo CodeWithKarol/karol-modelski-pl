@@ -15,6 +15,9 @@ const fontMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Karol Modelski | Automatyzacja biznesu i procesów z atestem bankowym",
   description: "Odzyskaj 15h tygodniowo dzięki inteligentnej automatyzacji procesów biznesowych i AI. Sprawdź systemy Karola Modelskiego z bankowym atestem jakości. Bez abonamentów.",
+  verification: {
+    google: "TfCJMM5KY6TTwBe-LufSiIOEBV827rpb1RDD59ghAE0",
+  },
 }
 
 export default function RootLayout({
