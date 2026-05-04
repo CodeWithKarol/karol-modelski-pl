@@ -13,6 +13,7 @@ const fontMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://karol-modelski.pl"),
   title: "Karol Modelski | Automatyzacja biznesu i procesów z atestem bankowym",
   description: "Odzyskaj 15h tygodniowo dzięki inteligentnej automatyzacji procesów biznesowych i AI. Sprawdź systemy Karola Modelskiego z bankowym atestem jakości. Bez abonamentów.",
   verification: {
