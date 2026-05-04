@@ -7,32 +7,32 @@ import {
 
 const faqs = [
   {
-    question: "Czy muszę płacić miesięczny abonament za automatyzację?",
-    answer: "Nie. W przeciwieństwie do wielu firm, ja buduję Twoją automatyzację na systemach, które stają się Twoją własnością cyfrową. Nie uzależniam Twojego biznesu od dożywotnich opłat za mój kod."
+    question: "Czy każda automatyzacja biznesu wiąże się z abonamentem?",
+    answer: "Nie. W przeciwieństwie do wielu firm, buduję systemy w modelu własności cyfrowej, co oznacza, że nie płacisz mi dożywotnich opłat za korzystanie z narzędzi. Twoja automatyzacja procesów staje się Twoim aktywem."
   },
   {
-    question: "Mam stary program w firmie, czy da się go zintegrować?",
-    answer: "Dzięki mojemu doświadczeniu w budowaniu architektury dla banków (Citi, BNP Paribas), specjalizuję się w łączeniu nowoczesnych narzędzi z istniejącymi systemami. Jeśli istnieje sposób na wymianę danych, ja go znajdę i bezpiecznie wdrożę."
+    question: "Jak połączyć nowoczesną automatyzację procesów ze starymi programami?",
+    answer: "Dzięki mojemu doświadczeniu w budowaniu architektury dla banków (Citi, BNP Paribas), specjalizuję się w łączeniu nowoczesnych narzędzi z systemami legacy, tworząc stabilne mosty danych tam, gdzie inni widzą bariery."
   },
   {
-    question: "Ile czasu zajmuje wdrożenie pierwszej automatyzacji?",
-    answer: "Typowe wdrożenie trwa od 2 do 6 tygodni. Wszystko zależy od stopnia skomplikowania procesu, ale moim celem jest dostarczenie pierwszej realnej wartości tak szybko, jak to możliwe."
+    question: "Ile trwa wdrożenie pierwszej automatyzacji procesów biznesowych?",
+    answer: "Standardowy czas realizacji, od audytu do gotowego systemu, wynosi zazwyczaj od 2 do 6 tygodni. Wszystko zależy od stopnia skomplikowania procesu, ale moim celem jest dostarczenie pierwszej realnej wartości tak szybko, jak to możliwe."
   },
   {
-    question: "Jakie są koszty utrzymania gotowego systemu?",
-    answer: "Koszty są minimalne. Wykorzystuję rozwiązania, które płacisz tylko za realne zużycie (serverless). W większości przypadków koszty infrastruktury dla małej i średniej firmy to zaledwie kilkanaście do kilkudziesięciu złotych miesięcznie."
+    question: "Od czego zacząć wdrażanie automatyzacji AI w małej firmie?",
+    answer: "Najlepiej zacząć od bezpłatnego audytu, podczas którego wskażę obszary o najwyższym ROI, gdzie automatyzacja AI (np. Google Gemini) przyniesie najszybsze zyski i odciąży Twój zespół od powtarzalnych zadań."
   },
   {
-    question: "Co jeśli będę potrzebował zmian w przyszłości?",
-    answer: "Moje systemy są budowane modułowo i skalowalnie. Ponieważ kod jest Twoją własnością, w przyszłości może go rozwijać dowolny programista, choć oczywiście oferuję wsparcie powdrożeniowe i dalszy rozwój systemu."
+    question: "Jakie są koszty utrzymania profesjonalnej automatyzacji procesów?",
+    answer: "Koszty utrzymania automatyzacji procesów są minimalne, ponieważ wykorzystuję architekturę serverless, gdzie płacisz tylko za realne zużycie. W większości przypadków to zaledwie kilkanaście do kilkudziesięciu złotych miesięcznie."
+  },
+  {
+    question: "Czy automatyzacja procesów biznesowych jest bezpieczna dla moich danych?",
+    answer: "Tak. Jako ekspert z doświadczeniem bankowym, wdrażam automatyzację procesów biznesowych z zachowaniem rygorystycznych standardów bezpieczeństwa. Twoje dane są chronione i nie służą do trenowania publicznych modeli AI."
   },
   {
     question: "Jak automatyzacja procesów biznesowych wpływa na skalowanie firmy?",
-    answer: "Automatyzacja procesów biznesowych eliminuje 'wąskie gardła', pozwalając Twojej firmie obsługiwać 3-4 razy więcej zleceń przy tym samym zespole. Zamiast zatrudniać kolejnych pracowników do zadań administracyjnych, inwestujesz w skalowalną technologię, która rośnie wraz z Twoimi potrzebami."
-  },
-  {
-    question: "Czy automatyzacja procesów biznesowych i AI są bezpieczne dla moich danych?",
-    answer: "Tak. Jako ekspert z doświadczeniem w bankowości (Citi, BNP Paribas), wdrażam automatyzację procesów biznesowych z zachowaniem rygorystycznych standardów bezpieczeństwa. Twoje dane biznesowe są chronione i nie służą do trenowania publicznych modeli AI."
+    answer: "Moja automatyzacja biznesu jest modułowa, co pozwala na łatwe dopisywanie nowych funkcji i obsługę znacznie większej liczby zleceń przy tym samym zespole, eliminując bariery wzrostu Twojej firmy."
   }
 ]
 
