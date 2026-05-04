@@ -63,6 +63,15 @@ export function FAQ() {
               </AccordionItem>
             ))}
           </Accordion>
+          
+          <div className="mt-12 text-center">
+            <p className="text-muted-foreground">
+              Masz inne pytania?{" "}
+              <a href="#kontakt" className="text-primary font-semibold hover:underline">
+                Zapytaj mnie podczas bezpłatnej konsultacji
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </section>
