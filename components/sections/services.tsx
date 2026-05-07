@@ -2,7 +2,13 @@ import {
   Workflow, 
   BrainCircuit, 
   LayoutDashboard, 
-  Code2 
+  Code2,
+  CheckCircle2,
+  ShieldCheck,
+  Users,
+  XCircle,
+  TrendingDown,
+  Coins
 } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
@@ -80,6 +86,88 @@ export function Services() {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="mt-24 grid grid-cols-1 gap-8 lg:grid-cols-2">
+          {/* Negative Hook */}
+          <div className="rounded-3xl bg-muted p-8 sm:p-12 border border-border flex flex-col h-full">
+            <h3 className="text-2xl font-bold text-foreground">Dla kogo NIE jest ta oferta?</h3>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Moje rozwiązania są inwestycją w trwałą zmianę efektywności Twojej firmy. Nie współpracuję z firmami, które:
+            </p>
+            
+            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 flex-grow">
+              <div className="flex gap-4 p-4 rounded-2xl bg-background border border-border">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-destructive/10">
+                  <Coins className="h-5 w-5 text-destructive" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-foreground text-sm">Najtańsze „na raz”</h4>
+                  <p className="text-muted-foreground text-xs mt-1">Szukają doraźnych napraw zamiast systemowej zmiany.</p>
+                </div>
+              </div>
+              
+              <div className="flex gap-4 p-4 rounded-2xl bg-background border border-border">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-destructive/10">
+                  <TrendingDown className="h-5 w-5 text-destructive" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-foreground text-sm">Brak gotowości na zmiany</h4>
+                  <p className="text-muted-foreground text-xs mt-1">Nie chcą modyfikować nieefektywnych, obecnych nawyków.</p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 p-4 rounded-2xl bg-background border border-border sm:col-span-2 lg:col-span-1 xl:col-span-2">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-destructive/10">
+                  <XCircle className="h-5 w-5 text-destructive" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-foreground text-sm">Akceptacja chaosu</h4>
+                  <p className="text-muted-foreground text-xs mt-1">Uważają błędy i bałagan za naturalny, nieunikniony koszt prowadzenia biznesu.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Risk Reversal */}
+          <div className="rounded-3xl bg-primary/5 p-8 sm:p-12 border border-primary/10 flex flex-col h-full">
+            <h3 className="text-2xl font-bold text-foreground">Zero ryzyka po wdrożeniu</h3>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Nie zostawiam Cię z samym kodem. Kluczem do sukcesu jest pewność, że system będzie działał bez zarzutu przez lata.
+            </p>
+            
+            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 flex-grow">
+              <div className="flex gap-4 p-4 rounded-2xl bg-background border border-primary/10">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                  <ShieldCheck className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-foreground text-sm">30 dni opieki</h4>
+                  <p className="text-muted-foreground text-xs mt-1">Monitoruję system i wprowadzam poprawki w cenie wdrożenia.</p>
+                </div>
+              </div>
+              
+              <div className="flex gap-4 p-4 rounded-2xl bg-background border border-primary/10">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                  <CheckCircle2 className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-foreground text-sm">Gwarancja Satysfakcji</h4>
+                  <p className="text-muted-foreground text-xs mt-1">Jeśli system nie spełni założeń – poprawiam go do skutku.</p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 p-4 rounded-2xl bg-background border border-primary/10 sm:col-span-2 lg:col-span-1 xl:col-span-2">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                  <Users className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-foreground text-sm">Szkolenie zespołu</h4>
+                  <p className="text-muted-foreground text-xs mt-1">Osobiście uczę Twoich pracowników obsługi nowych narzędzi, aby przejście było płynne.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="mt-24 rounded-2xl bg-muted p-8 sm:p-12 lg:flex lg:items-center lg:gap-x-12">
