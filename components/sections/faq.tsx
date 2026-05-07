@@ -23,7 +23,11 @@ const faqs = [
     answer: "Najlepiej zacząć od bezpłatnego audytu, podczas którego wskażę obszary o najwyższym ROI, gdzie automatyzacja AI (np. Google Gemini) przyniesie najszybsze zyski i odciąży Twój zespół od powtarzalnych zadań."
   },
   {
-    question: "Jakie są koszty utrzymania profesjonalnej automatyzacji procesów?",
+    question: "Ile kosztuje wdrożenie profesjonalnej automatyzacji biznesu?",
+    answer: "Każdy projekt wyceniam indywidualnie po audycie. Możemy jednak zacząć od małej automatyzacji (np. jednego kluczowego procesu) już od ok. 2500 - 3500 PLN netto. Dla większych firm oferuję również „Fazę Zerową” (kompleksowy audyt i projekt architektury), która pozwala precyzyjnie oszacować koszty dużego wdrożenia."
+  },
+  {
+    question: "Jakie są koszty utrzymania automatyzacji procesów w firmie?",
     answer: "Koszty utrzymania automatyzacji procesów są minimalne, ponieważ wykorzystuję technologię, dzięki której płacisz tylko za faktyczne działanie systemu, a nie za jego samo istnienie (tzw. serverless). W większości przypadków to zaledwie kilkanaście do kilkudziesięciu złotych miesięcznie."
   },
   {
