@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     question: "Jak połączyć nowoczesną automatyzację procesów ze starymi programami?",
-    answer: "Dzięki mojemu doświadczeniu w budowaniu architektury dla banków (Citi, BNP Paribas), specjalizuję się w łączeniu nowoczesnych narzędzi z systemami legacy, tworząc stabilne mosty danych tam, gdzie inni widzą bariery."
+    answer: "Dzięki mojemu doświadczeniu w budowaniu architektury dla banków (Citi, BNP Paribas), specjalizuję się w łączeniu nowoczesnych narzędzi ze starszym oprogramowaniem, które już masz w firmie (systemami legacy), tworząc stabilne mosty danych tam, gdzie inni widzą bariery."
   },
   {
     question: "Ile trwa wdrożenie pierwszej automatyzacji procesów biznesowych?",
@@ -23,8 +23,12 @@ const faqs = [
     answer: "Najlepiej zacząć od bezpłatnego audytu, podczas którego wskażę obszary o najwyższym ROI, gdzie automatyzacja AI (np. Google Gemini) przyniesie najszybsze zyski i odciąży Twój zespół od powtarzalnych zadań."
   },
   {
-    question: "Jakie są koszty utrzymania profesjonalnej automatyzacji procesów?",
-    answer: "Koszty utrzymania automatyzacji procesów są minimalne, ponieważ wykorzystuję architekturę serverless, gdzie płacisz tylko za realne zużycie. W większości przypadków to zaledwie kilkanaście do kilkudziesięciu złotych miesięcznie."
+    question: "Ile kosztuje wdrożenie profesjonalnej automatyzacji biznesu?",
+    answer: "Każdy projekt wyceniam indywidualnie po audycie. Możemy jednak zacząć od małej automatyzacji (np. jednego kluczowego procesu) już od ok. 2500 - 3500 PLN netto. Dla większych firm oferuję również „Fazę Zerową” (kompleksowy audyt i projekt architektury), która pozwala precyzyjnie oszacować koszty dużego wdrożenia."
+  },
+  {
+    question: "Jakie są koszty utrzymania automatyzacji procesów w firmie?",
+    answer: "Koszty utrzymania automatyzacji procesów są minimalne, ponieważ wykorzystuję technologię, dzięki której płacisz tylko za faktyczne działanie systemu, a nie za jego samo istnienie (tzw. serverless). W większości przypadków to zaledwie kilkanaście do kilkudziesięciu złotych miesięcznie."
   },
   {
     question: "Czy automatyzacja procesów biznesowych jest bezpieczna dla moich danych?",
@@ -33,6 +37,14 @@ const faqs = [
   {
     question: "Jak automatyzacja procesów biznesowych wpływa na skalowanie firmy?",
     answer: "Moja automatyzacja biznesu jest modułowa, co pozwala na łatwe dopisywanie nowych funkcji i obsługę znacznie większej liczby zleceń przy tym samym zespole, eliminując bariery wzrostu Twojej firmy."
+  },
+  {
+    question: "Czy automatyzacja pracy wymaga ode mnie wiedzy technicznej?",
+    answer: "Absolutnie nie. Cały proces techniczny, od projektu po wdrożenie i testy, biorę na siebie. Twoim zadaniem jest jedynie pokazanie mi, jak obecnie wygląda dany proces, a ja dostarczę Ci gotowe, proste w obsłudze narzędzie, które będzie pracować za Ciebie."
+  },
+  {
+    question: "Jak szybko zwraca się automatyzacja procesów w firmie?",
+    answer: "W większości przypadków zwrot z inwestycji (ROI) jest widoczny już w pierwszym lub drugim miesiącu od wdrożenia. Oszczędność czasu Twojego i Twojego zespołu oraz eliminacja błędów ludzkich sprawiają, że automatyzacja procesów w firmie spłaca się błyskawicznie, uwalniając zasoby do ważniejszych zadań."
   }
 ]
 

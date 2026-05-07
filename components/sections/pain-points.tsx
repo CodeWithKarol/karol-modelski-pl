@@ -16,7 +16,7 @@ const painPoints = [
   },
   {
     title: "Kosztowne błędy ludzkie",
-    description: "Jeden przeoczony e-mail lub błąd w arkuszu kosztuje tysiące. Moja automatyzacja procesów zastępuje zawodną pamięć niezawodnym algorytmem 24/7.",
+    description: "Jeden przeoczony e-mail lub błąd w arkuszu kosztuje tysiące. Moja automatyzacja pracy zastępuje zawodną pamięć niezawodnym algorytmem 24/7.",
     icon: AlertCircle,
     tag: "🚩"
   },
@@ -66,10 +66,23 @@ export function PainPoints() {
           </dl>
         </div>
 
-        <div className="mt-24 flex justify-center">
+        <div className="mt-24 flex flex-col items-center justify-center">
           <Card className="max-w-3xl border-primary/20 bg-primary/5">
             <CardContent className="flex flex-col items-center gap-6 p-8 sm:flex-row">
               <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                <TrendingUp className="h-8 w-8 text-primary" />
+              </div>
+              <div className="text-center sm:text-left">
+                <h3 className="text-xl font-bold text-foreground">Ile kosztuje Cię brak automatyzacji?</h3>
+                <p className="mt-2 text-muted-foreground leading-relaxed">
+                  Każdy miesiąc zwlekania to dziesiątki roboczogodzin Twojego zespołu wyrzuconych do kosza na powtarzalne zadania. W skali roku to koszt równy zatrudnieniu nowego pracownika, który zamiast budować Twój zysk, zajmuje się „przekładaniem danych”.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+          
+          <div className="mt-12 flex flex-col items-center gap-6 sm:flex-row">
+             <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary/10">
                 <UserCheck className="h-8 w-8 text-primary" />
               </div>
               <div className="text-center sm:text-left">
@@ -78,8 +91,7 @@ export function PainPoints() {
                   Bo biorę pełną odpowiedzialność za każdy wiersz kodu i każdy zautomatyzowany krok w Twojej firmie. Nie deleguję Twojego sukcesu do stażystów – osobiście projektuję system, który odzyska Twój czas.
                 </p>
               </div>
-            </CardContent>
-          </Card>
+          </div>
         </div>
       </div>
     </section>
