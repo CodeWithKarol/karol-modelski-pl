@@ -15,7 +15,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { CheckCircle2, Loader2 } from "lucide-react"
+import { CheckCircle2, Download, Loader2 } from "lucide-react"
 
 const schema = z.object({
   email: z.string().email("Proszę podać poprawny adres e-mail"),
@@ -77,7 +77,7 @@ export function LeadMagnetModal({ children }: { children: React.ReactNode }) {
             <DialogHeader>
               <DialogTitle className="text-2xl">Odbierz bezpłatną listę</DialogTitle>
               <DialogDescription className="pt-2">
-                Zostaw swój e-mail służbowy, a wyślę Ci <strong>Listę 5 procesów, które zautomatyzujesz w 48h</strong>.
+                Zostaw swój e-mail służbowy, aby natychmiast pobrać <strong>Listę 5 procesów, które zautomatyzujesz w 48h</strong>.
               </DialogDescription>
             </DialogHeader>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 py-4">
@@ -97,10 +97,10 @@ export function LeadMagnetModal({ children }: { children: React.ReactNode }) {
                 {isSubmitting ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Wysyłanie...
+                    Przetwarzanie...
                   </>
                 ) : (
-                  "Wyślij mi listę (PDF)"
+                  "Odblokuj dostęp do PDF"
                 )}
               </Button>
             </form>
@@ -110,13 +110,15 @@ export function LeadMagnetModal({ children }: { children: React.ReactNode }) {
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
               <CheckCircle2 className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="text-xl font-bold text-foreground">Gotowe!</h3>
-            <p className="mt-2 text-muted-foreground">
-              Lista 5 procesów została wysłana na Twój adres e-mail.
+            <h3 className="text-xl font-bold text-foreground">Dostęp przyznany!</h3>
+            <p className="mt-2 text-muted-foreground px-4">
+              Twoja lista 5 procesów jest gotowa. Kliknij poniżej, aby rozpocząć pobieranie:
             </p>
-            <p className="mt-4 text-xs text-muted-foreground">
-              Nie widzisz maila? Sprawdź folder Spam.
-            </p>
+            <Button className="mt-6 w-full rounded-full" asChild>
+              <a href="https://drive.google.com/file/d/1BLAIqABd8kBg-aXkYmxyirLPR_qTcFaf/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <Download className="mr-2 h-4 w-4" /> Pobierz Listę (PDF)
+              </a>
+            </Button>
           </div>
         )}
       </DialogContent>
