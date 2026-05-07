@@ -12,7 +12,7 @@ const pillars = [
     id: "filar-1",
     title: "Filar I: Inteligentna automatyzacja procesów biznesowych",
     subtitle: "Twoje cyfrowe zaplecze, które nigdy nie śpi.",
-    description: "Skupiam się na wyeliminowaniu najbardziej powtarzalnych i nudnych zadań w Twojej administracji, kadrach czy księgowości.",
+    description: "Kompleksowa automatyzacja procesów w firmie eliminuje wąskie gardła w administracji i księgowości. Skupiam się na wyeliminowaniu najbardziej powtarzalnych i nudnych zadań w Twojej firmie.",
     benefits: "Automatyczny obieg faktur, bezbłędne raportowanie czasu pracy i błyskawiczną wymianę danych między Twoimi programami (np. CRM -> Fakturowanie -> Slack).",
     result: "Twoja automatyzacja procesów biznesowych sprawia, że zespół zajmuje się obsługą klientów, a nie „przekładaniem papierów”.",
     icon: Workflow
@@ -30,8 +30,8 @@ const pillars = [
     id: "filar-3",
     title: "Filar III: Dedykowane systemy i panele zarządzania",
     subtitle: "Twoje centrum dowodzenia szyte na miarę.",
-    description: "Gdy gotowe narzędzia na rynku zawodzą, wkraczam ja ze swoim zapleczem programistycznym. Buduję dla Ciebie dedykowane interfejsy w Angular lub React.",
-    benefits: "Własny, czytelny dashboard, który zbiera dane z całej Twojej firmy w jednym miejscu. To aplikacja stworzona pod Twoje unikalne procesy – bez zbędnych funkcji, prosta w obsłudze i w pełni skalowalna.",
+    description: "Gdy gotowe narzędzia na rynku zawodzą, wkraczam ja ze swoim zapleczem programistycznym. Buduję dla Ciebie dedykowane panele sterowania w technologiach, z których korzystają najwięksi gracze (Angular, React).",
+    benefits: "Własny, czytelny panel (dashboard), który zbiera dane z całej Twojej firmy w jednym miejscu. To aplikacja stworzona pod Twoje unikalne procesy – bez zbędnych funkcji, prosta w obsłudze i w pełni skalowalna.",
     result: "Twoja automatyzacja biznesu zyskuje profesjonalną i bezpieczną twarz. Masz system, który dostosowuje się do Ciebie, a nie odwrotnie.",
     icon: LayoutDashboard
   }
