@@ -24,7 +24,7 @@ const steps = [
   {
     id: 3,
     title: "KROK 3: Budowa i Wdrożenie",
-    description: "Koduję system w Angular/React, łączę aplikacje i szkolę Twój zespół.",
+    description: "Buduję Twój system w technologiach, z których korzystają najwięksi gracze (Angular/React), łączę aplikacje i szkolę Twój zespół.",
     deliverable: "Gotową do pracy, przetestowaną automatyzację procesów biznesowych.",
     icon: Zap
   },
@@ -84,7 +84,7 @@ export function Process() {
             <div>
               <h3 className="text-xl md:text-2xl font-bold text-foreground">Dlaczego to działa?</h3>
               <p className="mt-4 text-base md:text-lg text-muted-foreground leading-relaxed">
-                Pracując ze mną, nie trafiasz do kolejki w wielkiej agencji. Masz bezpośredni kontakt z architektem Twojego systemu. Dzięki połączeniu zwinności no-code z potęgą czystego kodu, dostarczam rozwiązania, które są niemożliwe do osiągnięcia przy użyciu samych gotowych narzędzi.
+                Pracując ze mną, nie trafiasz do kolejki w wielkiej agencji. Masz bezpośredni kontakt z architektem Twojego systemu. Dzięki połączeniu zwinności gotowych narzędzi (tzw. no-code) z potęgą programowania, dostarczam rozwiązania, które są niemożliwe do osiągnięcia przy użyciu samych szablonów.
               </p>
             </div>
           </div>

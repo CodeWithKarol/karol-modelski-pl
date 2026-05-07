@@ -177,11 +177,11 @@ export function Contact() {
                       <Button 
                         type="submit" 
                         size="lg"
-                        className="w-full rounded-full font-bold mt-4 whitespace-normal text-balance h-auto py-3 px-8 text-sm sm:text-base"
+                        className="w-full rounded-full font-medium mt-4 whitespace-normal text-balance h-11 px-8 text-sm sm:text-base"
                         disabled={isSubmitting}
                       >
-                        {isSubmitting ? "WYSYŁANIE..." : "WYŚLIJ I WYBIERZ TERMIN"} 
-                        {!isSubmitting && <ArrowRight className="ml-2 h-5 w-5 shrink-0" />}
+                        {isSubmitting ? "Wysyłanie..." : "Wyślij i wybierz termin"} 
+                        {!isSubmitting && <ArrowRight className="ml-2 h-4 w-4 shrink-0" />}
                       </Button>
                       {error && (
                         <p className="text-sm font-medium text-destructive text-center mt-2">{error}</p>

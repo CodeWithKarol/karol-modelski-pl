@@ -8,23 +8,23 @@ import {
 
 const techs = [
   {
-    name: "Angular / React",
-    description: "Błyskawiczne i intuicyjne panele zarządzania, które ułatwiają codzienną pracę.",
+    name: "Panele sterowania",
+    description: "Buduję intuicyjne aplikacje (Angular/React), które zbierają dane w jednym miejscu. Twoja automatyzacja biznesu staje się prosta w obsłudze.",
     icon: Atom
   },
   {
-    name: "n8n / Make",
-    description: "„Mózg” operacyjny łączący wszystkie Twoje aplikacje w jeden, spójny ekosystem.",
+    name: "Integracja narzędzi",
+    description: "Łączę Twoje programy w jeden system (n8n/Make). Automatyzacja procesów w firmie wyklucza błędy przy ręcznym przepisywaniu danych.",
     icon: Share2
   },
   {
-    name: "Google Gemini",
-    description: "Najnowocześniejsza automatyzacja AI do inteligentnej i szybkiej analizy danych.",
+    name: "Inteligentne moduły AI",
+    description: "Wdrażam automatyzację AI (Google Gemini), która potrafi czytać faktury, streszczać maile i analizować dokumenty w kilka sekund.",
     icon: Sparkles
   },
   {
-    name: "TypeScript",
-    description: "Fundament bezawaryjnego i bezpiecznego kodu, który przetrwa lata intensywnej pracy.",
+    name: "Stabilność i bezpieczeństwo",
+    description: "Stosuję standardy bankowe (TypeScript), dzięki czemu Twoja automatyzacja pracy jest bezawaryjna i bezpieczna dla Twoich danych.",
     icon: Hexagon
   }
 ]
@@ -34,12 +34,12 @@ export function Stack() {
     <section className="bg-muted/50 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-primary">Technologia</h2>
+          <h2 className="text-base font-semibold leading-7 text-primary">Twoje bezpieczeństwo</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Zaplecze technologiczne – Twoja gwarancja jakości
+            Technologia, która daje Ci spokój na lata
           </p>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            W moich projektach nie ma miejsca na przypadek. Dobieram narzędzia, których używają liderzy rynku, aby Twoja automatyzacja procesów była szybka, bezpieczna i skalowalna.
+            Zamiast eksperymentów, wybieram sprawdzone narzędzia, na których polegają liderzy rynku. Dzięki temu Twoja automatyzacja procesów jest nie tylko szybka, ale przede wszystkim przewidywalna i łatwa w utrzymaniu.
           </p>
         </div>
 

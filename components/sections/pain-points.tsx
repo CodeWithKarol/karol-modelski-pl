@@ -16,7 +16,7 @@ const painPoints = [
   },
   {
     title: "Kosztowne błędy ludzkie",
-    description: "Jeden przeoczony e-mail lub błąd w arkuszu kosztuje tysiące. Moja automatyzacja procesów zastępuje zawodną pamięć niezawodnym algorytmem 24/7.",
+    description: "Jeden przeoczony e-mail lub błąd w arkuszu kosztuje tysiące. Moja automatyzacja pracy zastępuje zawodną pamięć niezawodnym algorytmem 24/7.",
     icon: AlertCircle,
     tag: "🚩"
   },

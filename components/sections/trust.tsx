@@ -8,8 +8,8 @@ import {
 
 const trustPoints = [
   {
-    title: "Szybkość no-code, potęga czystego kodu",
-    description: "W moich projektach wykorzystuję najnowocześniejsze silniki automatyzacji, aby dowieźć Ci rozwiązanie w tygodnie, a nie miesiące. Jeśli jednak napotkamy na ograniczenie techniczne, którego nie da się „wyklikać” – po prostu siadam i dopisuję brakującą funkcjonalność w Angular lub React. Dla Ciebie oznacza to system bez limitów.",
+    title: "Szybkość gotowych narzędzi, potęga programowania",
+    description: "W moich projektach wykorzystuję najnowocześniejsze narzędzia do automatyzacji, aby dowieźć Ci rozwiązanie w tygodnie, a nie miesiące. Jeśli jednak napotkamy na ograniczenie techniczne, którego nie da się „wyklikać” – po prostu siadam i dopisuję brakującą funkcjonalność w nowoczesnych technologiach. Dla Ciebie oznacza to system bez limitów.",
     icon: Rocket
   },
   {
@@ -19,7 +19,7 @@ const trustPoints = [
   },
   {
     title: "Rozwiązania „szyte na miarę”, a nie „z pudełka”",
-    description: "Nie naginam Twojej firmy do możliwości oprogramowania. Projektując Twoją automatyzację biznesu, skupiam się na Twoich unikalnych potrzebach. Jeśli potrzebujesz specyficznego dashboardu, którego nie ma żaden gotowy CRM na świecie – ja go dla Ciebie stworzę.",
+    description: "Nie naginam Twojej firmy do możliwości oprogramowania. Projektując Twoją automatyzację biznesu, skupiam się na Twoich unikalnych potrzebach. Jeśli potrzebujesz specyficznego panelu zarządczego, którego nie ma żaden gotowy system na świecie – ja go dla Ciebie stworzę.",
     icon: Wrench
   },
   {
@@ -34,12 +34,12 @@ export function Trust() {
     <section className="bg-muted/30 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-primary">Zaufanie</h2>
+          <h2 className="text-base font-semibold leading-7 text-primary">Twoje korzyści</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Dlaczego warto mi zaufać? Przełamuję bariery, na których inni się zatrzymują.
+            Pomagam Ci tam, gdzie standardowe rozwiązania zawodzą.
           </p>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Na rynku znajdziesz wielu specjalistów, którzy potrafią połączyć dwie aplikacje za pomocą gotowych wtyczek. Problem pojawia się wtedy, gdy Twój biznes potrzebuje czegoś więcej niż „standard”. Ja nie szukam kompromisów – ja je eliminuję.
+            Większość firm oferuje gotowe wtyczki, które wymuszają na Tobie zmianę sposobu pracy. Ja działam inaczej – buduję systemy, które dopasowują się do Twojego biznesu, usuwając techniczne przeszkody z Twojej drogi do wzrostu.
           </p>
         </div>
 
