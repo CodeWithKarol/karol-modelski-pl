@@ -53,77 +53,117 @@ const benefits = [
   }
 ]
 
-export function About() {
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { cn } from "@/lib/utils"
+
+interface AboutProps {
+  compact?: boolean
+}
+
+export function About({ compact = false }: AboutProps) {
   return (
-    <section id="o-mnie" className="py-24 sm:py-32 bg-background overflow-hidden">
+    <section id="o-mnie" className={cn("py-24 sm:py-32 bg-background overflow-hidden", compact && "bg-transparent py-16 sm:py-24")}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
-          
-          {/* Left Column: Bio & Core Message */}
-          <div>
-            <h2 className="text-base font-semibold leading-7 text-primary">O mnie</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+        {compact && (
+          <div className="mx-auto max-w-3xl text-center mb-16">
+            <h2 className="text-base font-semibold leading-7 text-primary uppercase tracking-widest">Ekspertyza</h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Standard Bankowy w Twojej firmie
             </p>
-            <div className="mt-8 text-lg leading-8 text-muted-foreground space-y-6">
-              <p>
-                Nazywam się <strong className="text-foreground font-semibold">Karol Modelski</strong>. Budowałem systemy dla milionów użytkowników w instytucjach takich jak <strong className="text-foreground">Citi, BNP Paribas czy Silent Eight</strong>.
-              </p>
-              <p>
-                Dziś tę wiedzę i „pancerną” jakość przekazuję mniejszym firmom, wdrażając automatyzację, która jest solidna, bezpieczna i banalnie prosta w obsłudze.
-              </p>
-            </div>
-
-            <div className="mt-12 bg-primary/5 rounded-3xl p-8 border border-primary/10">
-              <h3 className="text-xl font-bold text-foreground mb-6">Co zyskujesz, współpracując bezpośrednio ze mną?</h3>
-              <div className="space-y-8">
-                {benefits.map((benefit) => (
-                  <div key={benefit.title} className="flex gap-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                      <benefit.icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-foreground">{benefit.title}</h4>
-                      <p className="text-muted-foreground text-sm mt-1">{benefit.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column: Corporate Experience Breakdown */}
-          <div className="lg:mt-12">
-            <h3 className="text-2xl font-bold text-foreground mb-8">Dlaczego moje doświadczenie to Twój zysk?</h3>
-            <p className="text-muted-foreground mb-12">
-              Większość rozwiązań IT jest zbyt skomplikowana. Ja przenoszę standardy „pancernych” systemów bankowych do mniejszych firm, dbając o to, by technologia była niewidoczna, a efekty – namacalne.
+            <p className="mt-6 text-lg leading-8 text-muted-foreground">
+              Moje doświadczenie z systemami dla milionów użytkowników (Citi, BNP Paribas) przekładam na architekturę, która w Twojej firmie będzie po prostu „nie do zdarcia”.
             </p>
-            
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-              {expertise.map((item) => (
-                <div key={item.title} className="flex flex-col gap-4 p-6 rounded-2xl border border-border bg-muted/30 transition-colors hover:bg-muted/50">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                    <item.icon className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-foreground">{item.title}</h4>
-                    <p className="text-xs font-semibold text-primary uppercase tracking-wider mt-1">{item.context}</p>
-                    <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
-                      {item.description}
+          </div>
+        )}
+        
+        <div className={cn(
+          "mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:max-w-none lg:items-center",
+          compact ? "lg:grid-cols-1" : "lg:grid-cols-2"
+        )}>
+          
+          {/* Left Column: Only for Full Page */}
+          {!compact && (
+            <div>
+              <h2 className="text-base font-semibold leading-7 text-primary uppercase tracking-widest">Moja Historia</h2>
+              <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+                Ekspert od systemów „nie do zdarcia”
+              </p>
+              <div className="mt-8 text-lg leading-8 text-muted-foreground space-y-6">
+                <p>
+                  Nazywam się <strong className="text-foreground font-semibold">Karol Modelski</strong>. Budowałem systemy dla milionów użytkowników w instytucjach takich jak <strong className="text-foreground">Citi, BNP Paribas czy Silent Eight</strong>.
+                </p>
+                <p>
+                  Dziś tę wiedzę i „pancerną” jakość przekazuję mniejszym firmom, wdrażając automatyzację, która jest solidna, bezpieczna i banalnie prosta w obsłudze.
+                </p>
+                <div className="mt-10">
+                  <div className="p-6 bg-primary/5 rounded-2xl border border-primary/10">
+                    <p className="text-base italic">
+                      „Moim celem nie jest 'napisanie kodu', ale stworzenie cyfrowego aktywa, które odzyskuje dla Ciebie 15 godzin tygodniowo.”
                     </p>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
+          )}
 
-            <div className="mt-12 p-6 rounded-2xl border border-dashed border-primary/30 text-center">
-              <p className="text-lg font-medium text-foreground italic">
-                „Profesjonalna automatyzacja procesów to nie wydatek – to inwestycja w Twój święty spokój i szybszy wzrost firmy.”
-              </p>
-            </div>
+          {/* Right Column: Key Pillars (Full on Home, Secondary on About) */}
+          <div className={cn(
+            "grid grid-cols-1 gap-6",
+            compact ? "sm:grid-cols-2 lg:grid-cols-4" : "sm:grid-cols-2"
+          )}>
+            {expertise.map((item) => (
+              <div 
+                key={item.title} 
+                className={cn(
+                  "flex flex-col gap-4 p-6 rounded-2xl border transition-all hover:shadow-md",
+                  compact 
+                    ? "bg-background border-primary/5 hover:border-primary/20" 
+                    : "bg-muted/30 border-border hover:bg-muted/50"
+                )}
+              >
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                  <item.icon className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-foreground text-sm">{item.title}</h4>
+                  <p className="text-[10px] font-bold text-primary uppercase tracking-widest mt-1">{item.context}</p>
+                  <p className="text-xs text-muted-foreground mt-3 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
+
+        {compact && (
+          <div className="mt-16 text-center">
+            <Button asChild variant="outline" className="rounded-full">
+              <Link href="/o-mnie">Poznaj moją historię i pełną filozofię pracy</Link>
+            </Button>
+          </div>
+        )}
+
+        {!compact && (
+          <div className="mt-24">
+            <div className="mx-auto max-w-2xl lg:text-center mb-16">
+              <h2 className="text-3xl font-bold">Co zyskujesz, współpracując bezpośrednio ze mną?</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {benefits.map((benefit) => (
+                <div key={benefit.title} className="p-8 rounded-3xl bg-primary/5 border border-primary/10">
+                  <benefit.icon className="h-8 w-8 text-primary mb-6" />
+                  <h4 className="font-bold text-foreground text-xl">{benefit.title}</h4>
+                  <p className="text-muted-foreground text-sm mt-4 leading-relaxed">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   )
 }
+
+

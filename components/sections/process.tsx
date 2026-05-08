@@ -41,13 +41,13 @@ export function Process() {
   return (
     <section className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-primary">Proces</h2>
+        <div className="mx-auto max-w-3xl text-center mb-16 lg:mb-24">
+          <h2 className="text-base font-semibold leading-7 text-primary uppercase tracking-widest">Proces</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Cztery kroki do firmy, która pracuje na Twoich zasadach
           </p>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Wdrożenie nowej technologii nie musi być skomplikowane ani stresujące. Jako Twój jedyny punkt kontaktu, prowadzę Cię przez jasny proces – od identyfikacji problemu, aż po stałe wsparcie gotowego systemu.
+            Wdrożenie nowej technologii nie musi być skomplikowane. Jako Twój jedyny punkt kontaktu, prowadzę Cię przez jasny proces – od diagnozy, aż po stałe wsparcie.
           </p>
         </div>
 

@@ -7,86 +7,79 @@ import {
   FileText
 } from "lucide-react"
 
+import Link from "next/link"
+
 export function Footer() {
+  const serviceLinks = [
+    { name: "Automatyzacja AI", href: "/uslugi/automatyzacja-ai" },
+    { name: "Systemy na wymiar", href: "/uslugi/systemy-na-wymiar" },
+    { name: "Łączenie aplikacji", href: "/uslugi/laczenie-aplikacji" },
+  ]
+
   return (
     <footer className="bg-muted/50 border-t border-border py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+        <div className="xl:grid xl:grid-cols-4 xl:gap-8">
           
           {/* Brand & Tagline */}
-          <div className="space-y-8">
+          <div className="space-y-8 xl:col-span-1">
             <div>
               <h3 className="text-xl font-bold text-foreground">Karol Modelski</h3>
-              <p className="text-sm font-medium text-primary mt-1">Ekspert Automatyzacji Biznesu</p>
+              <p className="text-sm font-medium text-primary mt-1 text-balance">
+                Automatyzacja Procesów Biznesowych & AI | Warszawa
+              </p>
             </div>
             <p className="text-base leading-7 text-muted-foreground max-w-xs">
               Odzyskaj do 15 godzin tygodniowo dzięki technologii, która pracuje na Twoich zasadach.
             </p>
-            <div className="flex space-x-6">
-              <a href="https://www.linkedin.com/in/karol-modelski" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                <span className="sr-only">LinkedIn</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-6 w-6"
-                >
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                  <rect width="4" height="12" x="2" y="9" />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
-              </a>
-              <a href="mailto:kontakt@karol-modelski.pl" className="text-muted-foreground hover:text-primary transition-colors">
-                <span className="sr-only">E-mail</span>
-                <Mail className="h-6 w-6" />
-              </a>
-            </div>
           </div>
 
-          {/* Guarantees Grid */}
-          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 xl:col-span-2 xl:mt-0">
+          {/* New Service Links Column (SEO Power) */}
+          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 xl:col-span-3 xl:mt-0">
+            <div className="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-6">Usługi</h3>
+                <ul role="list" className="space-y-4">
+                  {serviceLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                  <li>
+                    <Link href="/uslugi" className="text-sm font-bold text-primary hover:underline transition-colors">
+                      Pełny katalog →
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-12 md:mt-0">
+                <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-6">Firma</h3>
+                <ul role="list" className="space-y-4">
+                  <li><Link href="/o-mnie" className="text-sm text-muted-foreground hover:text-primary transition-colors">O mnie</Link></li>
+                  <li><Link href="/faq" className="text-sm text-muted-foreground hover:text-primary transition-colors">FAQ</Link></li>
+                  <li><Link href="/#kontakt" className="text-sm text-muted-foreground hover:text-primary transition-colors">Kontakt</Link></li>
+                </ul>
+              </div>
+            </div>
+
             <div className="md:grid md:grid-cols-1 md:gap-8">
               <div>
-                <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-6">Gwarancja jakości i bezpieczeństwa</h3>
+                <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-6">Gwarancja jakości</h3>
                 <ul role="list" className="space-y-6">
                   <li className="flex gap-4">
                     <Landmark className="h-5 w-5 text-primary shrink-0" />
                     <div>
                       <p className="text-sm font-bold text-foreground">Standard Bankowy</p>
-                      <p className="text-xs text-muted-foreground mt-1">Stabilność systemów, którym ufają największe banki świata (Citi, BNP Paribas).</p>
+                      <p className="text-xs text-muted-foreground mt-1">Stabilność systemów Citi i BNP Paribas.</p>
                     </div>
                   </li>
                   <li className="flex gap-4">
                     <Lock className="h-5 w-5 text-primary shrink-0" />
                     <div>
-                      <p className="text-sm font-bold text-foreground">Bezpieczeństwo danych</p>
-                      <p className="text-xs text-muted-foreground mt-1">Twoje informacje biznesowe są chronione zgodnie z najwyższymi standardami.</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="md:grid md:grid-cols-1 md:gap-8">
-              <div className="xl:mt-11">
-                <ul role="list" className="space-y-6">
-                  <li className="flex gap-4">
-                    <Key className="h-5 w-5 text-primary shrink-0" />
-                    <div>
-                      <p className="text-sm font-bold text-foreground">Pełna własność</p>
-                      <p className="text-xs text-muted-foreground mt-1">Buduję narzędzia, które należą wyłącznie do Ciebie – bez ukrytych kosztów.</p>
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <MousePointer2 className="h-5 w-5 text-primary shrink-0" />
-                    <div>
-                      <p className="text-sm font-bold text-foreground">Prostota obsługi</p>
-                      <p className="text-xs text-muted-foreground mt-1">Intuicyjne systemy, które nie wymagają specjalistycznej wiedzy technicznej.</p>
+                      <p className="text-sm font-bold text-foreground">Własność Cyfrowa</p>
+                      <p className="text-xs text-muted-foreground mt-1">Żadnych ukrytych abonamentów.</p>
                     </div>
                   </li>
                 </ul>
@@ -100,14 +93,15 @@ export function Footer() {
           <div className="space-y-2 text-center lg:text-left">
             <p className="text-xs text-muted-foreground font-mono">Karol Modelski</p>
             <p className="text-xs text-muted-foreground flex items-center justify-center lg:justify-start gap-2">
-              <FileText className="h-3 w-3" /> NIP: 6112800950 (Wystawiam faktury VAT)
+              <FileText className="h-3 w-3" /> NIP: 6112800950 (Faktura VAT)
             </p>
           </div>
-          <p className="mt-8 text-xs text-muted-foreground lg:mt-0 text-center lg:text-right font-mono">
-            &copy; {new Date().getFullYear()} Karol Modelski. Wszystkie prawa zastrzeżone.
-          </p>
+          <div className="mt-8 flex justify-center gap-6 lg:mt-0 text-xs text-muted-foreground">
+            <p>&copy; {new Date().getFullYear()} Karol Modelski. Wszystkie prawa zastrzeżone.</p>
+          </div>
         </div>
       </div>
     </footer>
   )
 }
+

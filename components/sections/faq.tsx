@@ -1,3 +1,6 @@
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { cn } from "@/lib/utils"
 import {
   Accordion,
   AccordionContent,
@@ -44,23 +47,38 @@ const faqs = [
   }
 ]
 
-export function FAQ() {
+interface FAQProps {
+  compact?: boolean
+}
+
+export function FAQ({ compact = false }: FAQProps) {
+  // Select top 3 strategic questions for home page teaser
+  const teaserFaqs = [
+    faqs.find(f => f.question.includes("abonamentem")),
+    faqs.find(f => f.question.includes("Ile kosztuje")),
+    faqs.find(f => f.question.includes("dane mojej firmy"))
+  ].filter(Boolean) as typeof faqs
+
+  const displayedFaqs = compact ? teaserFaqs : faqs
+
   return (
-    <section className="py-24 sm:py-32 bg-muted/30">
+    <section className={cn("py-24 sm:py-32 bg-muted/30", compact && "bg-transparent py-16 sm:py-24")}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center mb-16">
-          <h2 className="text-base font-semibold leading-7 text-primary">FAQ</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-            Najczęściej zadawane pytania
+        <div className="mx-auto max-w-3xl text-center mb-16">
+          <h2 className="text-base font-semibold leading-7 text-primary uppercase tracking-widest">FAQ</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            {compact ? "Pytania, które słyszę najczęściej" : "Kompletna baza wiedzy"}
           </p>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground text-balance">
-            Masz wątpliwości? Tutaj znajdziesz odpowiedzi na kwestie, które najczęściej nurtują moich klientów przed rozpoczęciem współpracy.
+          <p className="mt-6 text-lg leading-8 text-muted-foreground">
+            {compact 
+              ? "Masz wątpliwości przed startem? Oto odpowiedzi na 3 kluczowe kwestie." 
+              : "Znajdź odpowiedzi na wszystkie pytania dotyczące procesu, kosztów i bezpieczeństwa wdrożeń automatyzacji."}
           </p>
         </div>
 
         <div className="mx-auto max-w-3xl">
           <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
+            {displayedFaqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-b border-primary/10">
                 <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary transition-colors py-6">
                   {faq.question}
@@ -73,12 +91,18 @@ export function FAQ() {
           </Accordion>
           
           <div className="mt-12 text-center">
-            <p className="text-muted-foreground">
-              Masz inne pytania?{" "}
-              <a href="#kontakt" className="text-primary font-semibold hover:underline">
-                Zapytaj mnie podczas bezpłatnej konsultacji
-              </a>
-            </p>
+            {compact ? (
+              <Button asChild variant="outline" className="rounded-full">
+                <Link href="/faq">Zobacz wszystkie pytania i odpowiedzi</Link>
+              </Button>
+            ) : (
+              <p className="text-muted-foreground">
+                Masz inne pytania?{" "}
+                <a href="#kontakt" className="text-primary font-semibold hover:underline">
+                  Zapytaj mnie podczas bezpłatnej konsultacji
+                </a>
+              </p>
+            )}
           </div>
         </div>
       </div>
