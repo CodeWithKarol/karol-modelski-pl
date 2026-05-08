@@ -9,30 +9,30 @@ import {
 const steps = [
   {
     id: 1,
-    title: "KROK 1: Bezpłatny Audyt i Strategia",
-    description: "Analizuję Twoje działania i wskazuję obszary z najwyższym zwrotem z inwestycji.",
-    deliverable: "Listę zadań do natychmiastowej automatyzacji.",
+    title: "Bezpłatna Diagnoza ROI (15 min)",
+    description: "Krótka rozmowa, podczas której wskazuję największe straty czasu w Twoim zespole.",
+    deliverable: "Wstępna identyfikacja potencjału oszczędności.",
     icon: Search
   },
   {
     id: 2,
-    title: "KROK 2: Projekt „Mapy Drogowej”",
-    description: "Rysuję plan przepływu danych i wygląd Twojego nowego panelu zarządzania.",
-    deliverable: "Wizualny schemat systemu przed rozpoczęciem prac.",
+    title: "Strategiczny Audyt (Faza Zero)",
+    description: "Głęboka analiza, po której otrzymujesz wizualną mapę drogową, ukazującą jak docelowo zadziała automatyzacja procesów w firmie.",
+    deliverable: "Precyzyjny projekt systemu i wyliczenie ROI.",
     icon: Map
   },
   {
     id: 3,
-    title: "KROK 3: Budowa i Wdrożenie",
-    description: "Buduję Twój system w technologiach, z których korzystają najwięksi gracze (Angular/React), łączę aplikacje i szkolę Twój zespół.",
-    deliverable: "Gotową do pracy, przetestowaną automatyzację procesów biznesowych.",
+    title: "Budowanie i Kodowanie",
+    description: "Prace programistyczne w Angularze/React oraz integracja narzędzi w jeden spójny system.",
+    deliverable: "Gotowy system przygotowany do wdrożenia.",
     icon: Zap
   },
   {
     id: 4,
-    title: "KROK 4: Opieka i Rozwój",
-    description: "Monitoruję system 24/7 i rozbudowuję go wraz ze wzrostem Twojej firmy.",
-    deliverable: "Gwarancję bezpieczeństwa i stałe wsparcie techniczne.",
+    title: "Wdrożenie i Stała Opieka (24/7)",
+    description: "Przekazanie systemu na własność oraz ciągłe monitorowanie jego stabilności i rozwoju.",
+    deliverable: "Gwarancja bezpieczeństwa i bezawaryjnego działania.",
     icon: ShieldCheck
   }
 ]

@@ -96,14 +96,14 @@ export function Footer() {
         </div>
 
         {/* Business Info Bar */}
-        <div className="mt-16 border-t border-border pt-8 lg:flex lg:items-center lg:justify-between">
-          <div className="space-y-2">
+        <div className="mt-12 sm:mt-16 border-t border-border pt-8 lg:flex lg:items-center lg:justify-between">
+          <div className="space-y-2 text-center lg:text-left">
             <p className="text-xs text-muted-foreground font-mono">Karol Modelski</p>
-            <p className="text-xs text-muted-foreground flex items-center gap-2">
+            <p className="text-xs text-muted-foreground flex items-center justify-center lg:justify-start gap-2">
               <FileText className="h-3 w-3" /> NIP: 6112800950 (Wystawiam faktury VAT)
             </p>
           </div>
-          <p className="mt-8 text-xs text-muted-foreground lg:mt-0 font-mono">
+          <p className="mt-8 text-xs text-muted-foreground lg:mt-0 text-center lg:text-right font-mono">
             &copy; {new Date().getFullYear()} Karol Modelski. Wszystkie prawa zastrzeżone.
           </p>
         </div>

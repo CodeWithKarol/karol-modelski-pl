@@ -11,7 +11,7 @@ const faqs = [
     answer: "Nie. W przeciwieństwie do wielu firm, buduję systemy w modelu własności cyfrowej, co oznacza, że nie płacisz mi dożywotnich opłat za korzystanie z narzędzi. Twoja automatyzacja procesów staje się Twoim aktywem."
   },
   {
-    question: "Jak połączyć nowoczesną automatyzację procesów ze starymi programami?",
+    question: "Jak połączyć nowoczesną automatyzację ze starymi programami?",
     answer: "Dzięki mojemu doświadczeniu w budowaniu architektury dla banków (Citi, BNP Paribas), specjalizuję się w łączeniu nowoczesnych narzędzi ze starszym oprogramowaniem, które już masz w firmie (systemami legacy), tworząc stabilne mosty danych tam, gdzie inni widzą bariery."
   },
   {
@@ -20,23 +20,19 @@ const faqs = [
   },
   {
     question: "Od czego zacząć wdrażanie automatyzacji AI w małej firmie?",
-    answer: "Najlepiej zacząć od bezpłatnego audytu, podczas którego wskażę obszary o najwyższym ROI, gdzie automatyzacja AI (np. Google Gemini) przyniesie najszybsze zyski i odciąży Twój zespół od powtarzalnych zadań."
+    answer: "Najlepiej zacząć od bezpłatnej Diagnozy ROI, podczas której wskażę obszary o najwyższym potencjale zysku, gdzie automatyzacja AI przyniesie najszybsze efekty i odciąży Twój zespół od powtarzalnych zadań."
   },
   {
-    question: "Ile kosztuje wdrożenie profesjonalnej automatyzacji biznesu?",
-    answer: "Każdy projekt wyceniam indywidualnie po audycie. Możemy jednak zacząć od małej automatyzacji (np. jednego kluczowego procesu) już od ok. 2500 - 3500 PLN netto. Dla większych firm oferuję również „Fazę Zerową” (kompleksowy audyt i projekt architektury), która pozwala precyzyjnie oszacować koszty dużego wdrożenia."
+    question: "Ile kosztuje wdrożenie systemu?",
+    answer: "Najprostsze automatyzacje i spięcie aplikacji zaczynają się od ok. 3 500 PLN netto. Kompleksowa automatyzacja procesów wymagająca dedykowanego panelu w Angularze i zaawansowanego AI jest zawsze poprzedzona płatną Fazą Zero (Audytem), dzięki czemu z góry znasz precyzyjne koszty i ROI."
+  },
+  {
+    question: "Czy dane mojej firmy będą bezpieczne?",
+    answer: "Tak. Jako ekspert z doświadczeniem bankowym, wdrażam systemy zgodnie z rygorystycznymi standardami bezpieczeństwa. Twoje wrażliwe dane są chronione i nigdy nie służą do trenowania publicznych modeli sztucznej inteligencji."
   },
   {
     question: "Jakie są koszty utrzymania automatyzacji procesów w firmie?",
     answer: "Koszty utrzymania automatyzacji procesów są minimalne, ponieważ wykorzystuję technologię, dzięki której płacisz tylko za faktyczne działanie systemu, a nie za jego samo istnienie (tzw. serverless). W większości przypadków to zaledwie kilkanaście do kilkudziesięciu złotych miesięcznie."
-  },
-  {
-    question: "Czy automatyzacja procesów biznesowych jest bezpieczna dla moich danych?",
-    answer: "Tak. Jako ekspert z doświadczeniem bankowym, wdrażam automatyzację procesów biznesowych z zachowaniem rygorystycznych standardów bezpieczeństwa. Twoje dane są chronione i nie służą do trenowania publicznych modeli AI."
-  },
-  {
-    question: "Jak automatyzacja procesów biznesowych wpływa na skalowanie firmy?",
-    answer: "Moja automatyzacja biznesu jest modułowa, co pozwala na łatwe dopisywanie nowych funkcji i obsługę znacznie większej liczby zleceń przy tym samym zespole, eliminując bariery wzrostu Twojej firmy."
   },
   {
     question: "Czy automatyzacja pracy wymaga ode mnie wiedzy technicznej?",
@@ -44,7 +40,7 @@ const faqs = [
   },
   {
     question: "Jak szybko zwraca się automatyzacja procesów w firmie?",
-    answer: "W większości przypadków zwrot z inwestycji (ROI) jest widoczny już w pierwszym lub drugim miesiącu od wdrożenia. Oszczędność czasu Twojego i Twojego zespołu oraz eliminacja błędów ludzkich sprawiają, że automatyzacja procesów w firmie spłaca się błyskawicznie, uwalniając zasoby do ważniejszych zadań."
+    answer: "W większości przypadków zwrot z inwestycji (ROI) jest widoczny już w pierwszym lub drugim miesiącu od wdrożenia. Oszczędność czasu Twojego i Twojego zespołu oraz eliminacja błędów ludzkich sprawiają, że automatyzacja spłaca się błyskawicznie."
   }
 ]
 
@@ -54,10 +50,10 @@ export function FAQ() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center mb-16">
           <h2 className="text-base font-semibold leading-7 text-primary">FAQ</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
             Najczęściej zadawane pytania
           </p>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">
+          <p className="mt-6 text-lg leading-8 text-muted-foreground text-balance">
             Masz wątpliwości? Tutaj znajdziesz odpowiedzi na kwestie, które najczęściej nurtują moich klientów przed rozpoczęciem współpracy.
           </p>
         </div>
