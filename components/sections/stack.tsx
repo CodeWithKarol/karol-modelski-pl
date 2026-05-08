@@ -24,7 +24,7 @@ const techs = [
   },
   {
     name: "Stabilność i bezpieczeństwo",
-    description: "Stosuję standardy bankowe (TypeScript), dzięki czemu Twoja automatyzacja pracy jest bezawaryjna i bezpieczna dla Twoich danych.",
+    description: "Stosuję standardy bankowe (TypeScript – technologia, która wyłapuje błędy w kodzie, zanim system trafi do użytku), zapewniając bezawaryjną automatyzację pracy.",
     icon: Hexagon
   }
 ]
@@ -35,10 +35,10 @@ export function Stack() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-primary">Twoje bezpieczeństwo</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
             Technologia, która daje Ci spokój na lata
           </p>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">
+          <p className="mt-6 text-lg leading-8 text-muted-foreground text-balance">
             Zamiast eksperymentów, wybieram sprawdzone narzędzia, na których polegają liderzy rynku. Dzięki temu Twoja automatyzacja procesów jest nie tylko szybka, ale przede wszystkim przewidywalna i łatwa w utrzymaniu.
           </p>
         </div>

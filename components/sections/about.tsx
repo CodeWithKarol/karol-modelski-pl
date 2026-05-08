@@ -62,7 +62,7 @@ export function About() {
           {/* Left Column: Bio & Core Message */}
           <div>
             <h2 className="text-base font-semibold leading-7 text-primary">O mnie</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
               Standard Bankowy w Twojej firmie
             </p>
             <div className="mt-8 text-lg leading-8 text-muted-foreground space-y-6">
