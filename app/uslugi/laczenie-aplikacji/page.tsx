@@ -1,5 +1,11 @@
 import { Share2, RefreshCcw, Boxes, Link, Coins } from "lucide-react"
 import { ServiceTemplate } from "@/components/templates/service-template"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Łączenie aplikacji i automatyzacja workflow | n8n & Make",
+  description: "Zautomatyzuj obieg danych między Twoimi narzędziami. Integracje n8n i Make, które eliminują ręczne przepisywanie. Odzyskaj czas swojego zespołu.",
+}
 
 export default function LaczenieAplikacjiPage() {
   return (

@@ -10,6 +10,12 @@ import { Footer } from "@/components/sections/footer"
 import { UseCases } from "@/components/sections/use-cases"
 import { TrustLogos } from "@/components/sections/trust-logos"
 import { Stack } from "@/components/sections/stack"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Karol Modelski – Automatyzacja Procesów Biznesowych & AI | Warszawa",
+  description: "Pomagam przedsiębiorcom wyeliminować chaos operacyjny i odzyskać czas. Projektuję inteligentne systemy AI i automatyzacje, które przejmują Twoje obowiązki – 24/7. Sprawdź ROI!",
+}
 
 export default function Page() {
   return (

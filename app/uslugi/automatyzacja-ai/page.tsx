@@ -1,5 +1,11 @@
 import { Sparkles, BrainCircuit, Zap, Lock, Coins } from "lucide-react"
 import { ServiceTemplate } from "@/components/templates/service-template"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Automatyzacja AI dla Biznesu - Google Gemini | Karol Modelski",
+  description: "Wdrażam moduły AI, które myślą, sortują i analizują Twoje dokumenty. Bezpieczne systemy AI na własność dla firm. Zwiększ zysk dzięki Google Gemini.",
+}
 
 export default function AutomatyzacjaAIPage() {
   return (
