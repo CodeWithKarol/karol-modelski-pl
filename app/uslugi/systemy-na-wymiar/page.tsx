@@ -1,5 +1,11 @@
 import { LayoutDashboard, Monitor, Database, Rocket, Lock } from "lucide-react"
 import { ServiceTemplate } from "@/components/templates/service-template"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Systemy na Wymiar | Dedykowane Oprogramowanie dla Firm",
+  description: "Buduję dedykowane panele sterowania i systemy zarządzania w React/Angular. Bez abonamentów, pełna własność i standard bankowy bezpieczeństwa.",
+}
 
 export default function SystemyNaWymiarPage() {
   return (
