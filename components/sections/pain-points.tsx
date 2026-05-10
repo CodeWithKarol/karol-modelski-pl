@@ -38,13 +38,13 @@ export function PainPoints() {
   return (
     <section id="problemy" className="bg-muted/50 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-primary">Problem</h2>
+        <div className="mx-auto max-w-3xl text-center mb-16 lg:mb-24">
+          <h2 className="text-base font-semibold leading-7 text-primary uppercase tracking-widest">Problem</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Twoja firma rośnie, a Ty masz coraz mniej czasu?
           </p>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Często spotykam właścicieli firm, którzy uważają, że rozwój musi oznaczać więcej pracy. Ja wierzę w <strong className="text-foreground">mądrzejszą pracę</strong>. Jeśli rozpoznajesz u siebie te objawy, pomogę Ci przebić „szklany sufit”, w który właśnie uderzył Twój biznes:
+            Często spotykam właścicieli firm, którzy uważają, że rozwój musi oznaczać więcej pracy. Ja wierzę w <strong className="text-foreground font-semibold">mądrzejszą pracę</strong>. Pomogę Ci przebić „szklany sufit”, w który właśnie uderzył Twój biznes.
           </p>
         </div>
         

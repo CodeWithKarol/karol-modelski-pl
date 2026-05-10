@@ -33,13 +33,13 @@ export function Trust() {
   return (
     <section className="bg-muted/30 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-primary">Twoje korzyści</h2>
+        <div className="mx-auto max-w-3xl text-center mb-16 lg:mb-24">
+          <h2 className="text-base font-semibold leading-7 text-primary uppercase tracking-widest">Twoje korzyści</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
             Pomagam Ci tam, gdzie standardowe rozwiązania zawodzą.
           </p>
           <p className="mt-6 text-lg leading-8 text-muted-foreground text-balance">
-            Większość firm oferuje gotowe wtyczki, które wymuszają na Tobie zmianę sposobu pracy. Ja działam inaczej – buduję systemy, które dopasowują się do Twojego biznesu, usuwając techniczne przeszkody z Twojej drogi do wzrostu.
+            Większość firm oferuje gotowe wtyczki, które wymuszają na Tobie zmianę sposobu pracy. Ja buduję systemy, które dopasowują się do Twojego biznesu.
           </p>
         </div>
 

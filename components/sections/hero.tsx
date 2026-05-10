@@ -5,21 +5,21 @@ export function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 py-24 sm:py-32 lg:px-8">
       <div className="mx-auto max-w-4xl text-center">
-        <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-6xl text-balance">
-          Automatyzacja procesów biznesowych, która pracuje na Twój zysk 24/7
+        <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl text-balance">
+          Karol Modelski – Automatyzacja procesów biznesowych, która pracuje na Twój zysk
         </h1>
-        <p className="mt-6 text-lg leading-8 text-muted-foreground">
-          Przestań marnować czas na powtarzalne zadania i błędy ludzkie. Tworzę inteligentną automatyzację procesów biznesowych, która przejmuje nudne obowiązki Twojego zespołu. Dzięki moim dedykowanym narzędziom zyskujesz pełną kontrolę i możliwość skalowania firmy bez zatrudniania kolejnych osób.
+        <p className="mt-6 text-xl leading-8 text-muted-foreground max-w-2xl mx-auto">
+          Pomagam przedsiębiorcom wyeliminować chaos operacyjny i odzyskać czas. Projektuję inteligentne systemy, które przejmują Twoje obowiązki – 24/7.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-x-6">
-          <Button variant="outline" size="lg" className="w-full rounded-full px-8 sm:w-auto" asChild>
-            <a href="#problemy">
-              Sprawdź, ile czasu odzyskasz
+          <Button size="lg" className="w-full rounded-full px-8 sm:w-auto" asChild>
+            <a href="/uslugi">
+              Sprawdź katalog rozwiązań
             </a>
           </Button>
-          <Button size="lg" className="w-full rounded-full px-8 sm:w-auto" asChild>
+          <Button variant="outline" size="lg" className="w-full rounded-full px-8 sm:w-auto" asChild>
             <a href="#kontakt">
-              Zautomatyzuj swój proces
+              Porozmawiajmy o Twoim biznesie
             </a>
           </Button>
         </div>
