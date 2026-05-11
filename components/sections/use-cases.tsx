@@ -1,35 +1,20 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { BarChart3, Users2, Receipt, Laptop2, MessageSquare, Ship } from "lucide-react"
+import { BarChart3, Receipt, Laptop2 } from "lucide-react"
 
 const cases = [
   {
     title: "Sprzedaż i CRM",
-    description: "Automatyczne wprowadzanie leadów, generowanie ofert i synchronizacja danych między systemami.",
+    description: "Automatyczna kwalifikacja leadów, natychmiastowe generowanie ofert w PDF i powiadomienia dla zespołu.",
     icon: BarChart3
   },
   {
-    title: "Finanse i Księgowość",
-    description: "Bezbłędny obieg faktur, automatyczne przypomnienia o płatnościach i raportowanie zysków.",
+    title: "Administracja i Dokumentacja",
+    description: "Automatyczny i bezbłędny obieg faktur, umów i raportów bez angażowania ludzi.",
     icon: Receipt
   },
   {
-    title: "Obsługa Klienta",
-    description: "Inteligentne sortowanie zapytań przez AI i automatyczne odpowiedzi na powtarzalne pytania.",
-    icon: MessageSquare
-  },
-  {
-    title: "Operacje i Logistyka",
-    description: "Śledzenie statusów zamówień, automatyzacja dokumentacji i optymalizacja obiegu informacji.",
-    icon: Ship
-  },
-  {
-    title: "Zarządzanie Zespołem",
-    description: "Automatyczne raporty czasu pracy, onboarding pracowników i centralne panele dashboardów.",
-    icon: Users2
-  },
-  {
-    title: "Dedykowane Rozwiązania",
-    description: "Jeśli Twój proces jest unikalny, stworzę system 'na wymiar', który go obsłuży.",
+    title: "Zarządzanie Danymi",
+    description: "Wszystkie kluczowe wskaźniki firmy (KPI) zwizualizowane na jednym, czytelnym pulpicie menedżerskim.",
     icon: Laptop2
   }
 ]
@@ -39,12 +24,12 @@ export function UseCases() {
     <section className="py-24 bg-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center mb-16 lg:mb-24">
-          <h2 className="text-base font-semibold leading-7 text-primary uppercase tracking-widest">Zastosowania</h2>
+          <h2 className="text-base font-semibold leading-7 text-primary uppercase tracking-widest">Możliwości</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Gdzie automatyzacja przynosi największy zysk?
+            Obszary, które wspólnie zoptymalizujemy
           </p>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Moje systemy wdrażam tam, gdzie chaos informacyjny blokuje rozwój firmy. Zobacz, w jakich obszarach możemy odzyskać Twój czas.
+            Wdrażam systemy tam, gdzie ręczna praca blokuje potencjał wzrostu. Zobacz praktyczne efekty automatyzacji.
           </p>
         </div>
 

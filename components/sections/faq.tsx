@@ -90,13 +90,13 @@ export function FAQ({ compact = false }: FAQProps) {
             ))}
           </Accordion>
           
-          <div className="mt-12 text-center">
+          <div className="mt-12 flex justify-center">
             {compact ? (
-              <Button asChild variant="outline" className="rounded-full">
+              <Button asChild variant="outline" className="rounded-full px-8 w-full sm:w-auto h-auto py-3 sm:py-2 whitespace-normal text-center max-w-xs sm:max-w-none">
                 <Link href="/faq">Zobacz wszystkie pytania i odpowiedzi</Link>
               </Button>
             ) : (
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-center">
                 Masz inne pytania?{" "}
                 <a href="#kontakt" className="text-primary font-semibold hover:underline">
                   Zapytaj mnie podczas bezpłatnej konsultacji

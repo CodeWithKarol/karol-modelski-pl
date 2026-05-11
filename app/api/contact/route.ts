@@ -30,10 +30,24 @@ export async function POST(request: Request) {
       });
     }
     
-    const response = await fetch(webhookUrl, {
+    // Use environment variable for the webhook URL
+    const targetWebhook = process.env.CONTACT_WEBHOOK_URL;
+    
+    if (!targetWebhook) {
+      throw new Error("CONTACT_WEBHOOK_URL is not defined");
+    }
+    
+    const response = await fetch(targetWebhook, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
+      body: JSON.stringify({
+        name: body.name,
+        email: body.email,
+        phone: body.phone || "Nie podano",
+        challenge: body.challenge,
+        timestamp: new Date().toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw' }),
+        source_url: request.url
+      }),
     });
 
     if (!response.ok) {

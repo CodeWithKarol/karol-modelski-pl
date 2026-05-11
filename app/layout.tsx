@@ -16,7 +16,7 @@ const fontMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://karol-modelski.pl"),
   title: {
-    default: "Karol Modelski – Automatyzacja Procesów Biznesowych & AI | Warszawa",
+    default: "Karol Modelski | Automatyzacja procesów biznesowych | Warszawa",
     template: "%s | Karol Modelski"
   },
   description: "Odzyskaj do 15h tygodniowo dzięki automatyzacji procesów biznesowych. Wdrażam systemy AI na własność, bez abonamentów i w standardzie bankowym. Sprawdź!",
