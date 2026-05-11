@@ -21,7 +21,7 @@ export function Hero() {
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="rounded-full px-8 h-12 text-base font-bold border-2" asChild>
-                <a href="#problemy">
+                <a href="#proces">
                   Zobacz, jak działam
                 </a>
               </Button>

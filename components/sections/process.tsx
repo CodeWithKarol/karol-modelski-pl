@@ -30,7 +30,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section className="py-24 sm:py-32">
+    <section id="proces" className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center mb-16 lg:mb-24">
           <h2 className="text-base font-semibold leading-7 text-primary uppercase tracking-widest">Współpraca</h2>
