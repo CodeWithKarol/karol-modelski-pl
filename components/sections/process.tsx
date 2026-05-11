@@ -1,38 +1,29 @@
 import { 
   Search, 
-  Map, 
   Zap, 
-  ShieldCheck,
-  UserCircle2
+  ShieldCheck
 } from "lucide-react"
 
 const steps = [
   {
     id: 1,
-    title: "Bezpłatna Diagnoza ROI (15 min)",
-    description: "Krótka rozmowa, podczas której wskazuję największe straty czasu w Twoim zespole.",
-    deliverable: "Wstępna identyfikacja potencjału oszczędności.",
+    title: "Faza 0 (Darmowa diagnostyka)",
+    description: "Rozmawiamy o Twojej firmie i wąskich gardłach. Bez zobowiązań analizujemy, gdzie ucieka najwięcej czasu.",
+    deliverable: "Identyfikacja pola do automatyzacji.",
     icon: Search
   },
   {
     id: 2,
-    title: "Strategiczny Audyt (Faza Zero)",
-    description: "Głęboka analiza, po której otrzymujesz wizualną mapę drogową, ukazującą jak docelowo zadziała automatyzacja procesów w firmie.",
-    deliverable: "Precyzyjny projekt systemu i wyliczenie ROI.",
-    icon: Map
-  },
-  {
-    id: 3,
-    title: "Budowanie i Kodowanie",
-    description: "Prace programistyczne w Angularze/React oraz integracja narzędzi w jeden spójny system.",
-    deliverable: "Gotowy system przygotowany do wdrożenia.",
+    title: "Projekt i wdrożenie",
+    description: "Tworzę spójne środowisko i buduję dedykowany panel w React/Angular spięty z Twoimi systemami.",
+    deliverable: "Gotowy system na Twoją własność.",
     icon: Zap
   },
   {
-    id: 4,
-    title: "Wdrożenie i Stała Opieka (24/7)",
-    description: "Przekazanie systemu na własność oraz ciągłe monitorowanie jego stabilności i rozwoju.",
-    deliverable: "Gwarancja bezpieczeństwa i bezawaryjnego działania.",
+    id: 3,
+    title: "Wsparcie i opieka (Retainer)",
+    description: "Nie zostawiam Cię samego. Dbam o to, by automatyzacja działała stabilnie w miarę rozwoju Twojej firmy.",
+    deliverable: "Ciągłość działania i rozwój systemu.",
     icon: ShieldCheck
   }
 ]
@@ -42,19 +33,19 @@ export function Process() {
     <section className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center mb-16 lg:mb-24">
-          <h2 className="text-base font-semibold leading-7 text-primary uppercase tracking-widest">Proces</h2>
+          <h2 className="text-base font-semibold leading-7 text-primary uppercase tracking-widest">Współpraca</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Cztery kroki do firmy, która pracuje na Twoich zasadach
+            Jak wygląda nasza wspólna droga?
           </p>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Wdrożenie nowej technologii nie musi być skomplikowane. Jako Twój jedyny punkt kontaktu, prowadzę Cię przez jasny proces – od diagnozy, aż po stałe wsparcie.
+            Wdrożenie nowej technologii nie musi być skomplikowane. Prowadzę Cię przez jasny, 3-etapowy proces – od pierwszej rozmowy, aż po stałe wsparcie Twojego biznesu.
           </p>
         </div>
 
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid grid-cols-1 gap-y-16 md:grid-cols-2 md:gap-x-12 xl:grid-cols-4 xl:gap-x-8">
+        <div className="mx-auto mt-16 max-w-5xl">
+          <div className="grid grid-cols-1 gap-y-12 md:grid-cols-3 md:gap-x-12">
             {steps.map((step) => (
-              <div key={step.id} className="relative flex flex-col gap-6 px-2 sm:px-0">
+              <div key={step.id} className="relative flex flex-col gap-6">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold text-lg shrink-0">
                   <step.icon className="h-6 w-6" />
                 </div>
@@ -62,31 +53,17 @@ export function Process() {
                   <h3 className="text-xl font-bold leading-7 text-foreground">
                     {step.title}
                   </h3>
-                  <p className="mt-4 text-base leading-7 text-muted-foreground flex-grow">
+                  <p className="mt-4 text-base leading-7 text-muted-foreground">
                     {step.description}
                   </p>
                   <div className="mt-6 rounded-xl bg-muted p-4">
                     <p className="text-sm font-medium text-foreground">
-                      <span className="text-primary font-bold">Co otrzymujesz?</span> {step.deliverable}
+                      <span className="text-primary font-bold">Rezultat:</span> {step.deliverable}
                     </p>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-
-        <div className="mt-24 rounded-3xl bg-primary/5 p-6 sm:p-12 border border-primary/10">
-          <div className="flex flex-col items-center gap-6 md:gap-8 md:flex-row md:text-left text-center">
-            <div className="flex h-16 w-16 md:h-20 md:w-20 shrink-0 items-center justify-center rounded-full bg-primary/10">
-              <UserCircle2 className="h-10 w-10 md:h-12 md:w-12 text-primary" />
-            </div>
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold text-foreground">Dlaczego to działa?</h3>
-              <p className="mt-4 text-base md:text-lg text-muted-foreground leading-relaxed">
-                Pracując ze mną, nie trafiasz do kolejki w wielkiej agencji. Masz bezpośredni kontakt z architektem Twojego systemu. Dzięki połączeniu zwinności gotowych narzędzi (tzw. no-code) z potęgą programowania, dostarczam rozwiązania, które są niemożliwe do osiągnięcia przy użyciu samych szablonów.
-              </p>
-            </div>
           </div>
         </div>
       </div>

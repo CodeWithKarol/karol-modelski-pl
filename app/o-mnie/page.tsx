@@ -4,17 +4,17 @@ import { UserCircle } from "lucide-react"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "O mnie - Karol Modelski | Ekspert Automatyzacji",
-  description: "Dowiedz się więcej o mojej filozofii pracy. Standard bankowy (Citi, BNP Paribas) przeniesiony do świata automatyzacji dla małych i średnich firm.",
+  title: "O mnie | Karol Modelski - Architekt systemów & Automatyzacja",
+  description: "Poznaj moje podejście do automatyzacji procesów biznesowych. Standardy bankowe (Citi, BNP Paribas) przeniesione do Twojej firmy. Warszawa stacjonarnie.",
 }
 
 export default function AboutPage() {
   return (
     <StandardLayout
-      title="Standard Bankowy w Twojej firmie"
-      description="Budowałem systemy dla milionów użytkowników w Citi i BNP Paribas. Dziś tę 'pancerną' jakość przekazuję mniejszym firmom, wdrażając solidną automatyzację."
+      title="Architekt systemów, który pracuje dla Twojego zysku"
+      description="Przenoszę najwyższe standardy projektowania systemów z sektora finansowego wprost do Twojego biznesu. Poznaj moją historię i zobacz, jak możemy zabezpieczyć Twój rozwój."
       breadcrumbs={[{ name: "O mnie" }]}
-      badge={{ text: "Ekspert Automatyzacji", icon: UserCircle }}
+      badge={{ text: "O mnie", icon: UserCircle }}
     >
       <About />
     </StandardLayout>

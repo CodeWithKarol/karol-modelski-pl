@@ -2,63 +2,51 @@ import { Hero } from "@/components/sections/hero"
 import { PainPoints } from "@/components/sections/pain-points"
 import { About } from "@/components/sections/about"
 import { ServiceTeaser } from "@/components/sections/service-teaser"
-import { Trust } from "@/components/sections/trust"
 import { Process } from "@/components/sections/process"
 import { FAQ } from "@/components/sections/faq"
 import { Contact } from "@/components/sections/contact"
 import { Footer } from "@/components/sections/footer"
 import { UseCases } from "@/components/sections/use-cases"
 import { TrustLogos } from "@/components/sections/trust-logos"
-import { Stack } from "@/components/sections/stack"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Karol Modelski – Automatyzacja Procesów Biznesowych & AI | Warszawa",
-  description: "Pomagam przedsiębiorcom wyeliminować chaos operacyjny i odzyskać czas. Projektuję inteligentne systemy AI i automatyzacje, które przejmują Twoje obowiązki – 24/7. Sprawdź ROI!",
+  title: "Karol Modelski | Automatyzacja procesów biznesowych | Warszawa",
+  description: "Automatyzacja procesów biznesowych Warszawa. Zyskaj jeden intuicyjny panel na wszystkie dane firmy, na własność i bez abonamentu. Odzyskaj swój czas!",
 }
 
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col">
-      {/* 1. Hero - Unikalna wartość */}
+      {/* 1. Hero - USP (Angular/React, brak abonamentu, własność) */}
       <Hero />
 
-      {/* 2. Zaufanie (Logotypy marek od razu budują autorytet) */}
+      {/* 2. Doświadczenie (Social Proof zaraz pod Hero) */}
       <TrustLogos />
 
-      {/* 3. Problemy klienta */}
+      {/* 3. Eskalacja problemu (Zrozumienie + Ile kosztuje brak automatyzacji?) */}
       <div className="bg-muted/30 border-y border-border">
         <PainPoints />
       </div>
 
-      {/* 4. Dystrybucja ruchu - Główne usługi */}
+      {/* 4. Oferta (Usługi i konkretne obszary automatyzacji) */}
       <ServiceTeaser />
-
-      {/* 5. Obszary zastosowań (Nowość - pomaga SEO i AI) */}
       <div className="bg-muted/30 border-y border-border">
         <UseCases />
       </div>
 
-      {/* 6. Autorytet i "Dlaczego ja?" */}
+      {/* 5. Autorytet i "Dlaczego ja?" (Standardy bankowe + Osobista odpowiedzialność) */}
       <About compact />
 
-      {/* 7. Wartości i Przewagi */}
-      <div className="bg-muted/30 border-y border-border">
-        <Trust />
-      </div>
-
-      {/* 8. Narzędzia i Technologie */}
-      <Stack />
-
-      {/* 9. Przebieg współpracy (Proces) */}
+      {/* 6. Proces (Jak działam: Faza 0 -> Wdrożenie -> Wsparcie) */}
       <div className="bg-muted/30 border-y border-border">
         <Process />
       </div>
 
-      {/* 10. Rozbijanie obiekcji (FAQ) */}
+      {/* 7. FAQ (Rozbijanie obiekcji: własność, koszty utrzymania) */}
       <FAQ compact />
 
-      {/* 11. Zamknięcie (CTA) */}
+      {/* 8. Kontakt (Hybryda: Calendly + Formularz) */}
       <Contact />
       
       <Footer />

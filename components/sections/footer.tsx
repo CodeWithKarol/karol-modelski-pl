@@ -26,7 +26,7 @@ export function Footer() {
             <div>
               <h3 className="text-xl font-bold text-foreground">Karol Modelski</h3>
               <p className="text-sm font-medium text-primary mt-1 text-balance">
-                Automatyzacja Procesów Biznesowych & AI | Warszawa
+                Karol Modelski | Automatyzacja procesów biznesowych | Warszawa
               </p>
             </div>
             <p className="text-base leading-7 text-muted-foreground max-w-xs">
