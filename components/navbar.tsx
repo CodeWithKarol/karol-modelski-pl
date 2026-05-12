@@ -9,24 +9,25 @@ import { cn } from "@/lib/utils"
 
 const services = [
   { 
-    name: "Automatyzacja AI", 
-    href: "/uslugi/automatyzacja-ai", 
-    description: "Inteligentne moduły AI",
+    name: 'Wdrażanie Google Gemini AI', 
+    description: 'Automatyzacja AI dla firm na własność.', 
+    href: '/oferta/automatyzacja-ai-dla-firm', 
     icon: Sparkles 
   },
   { 
-    name: "Systemy na wymiar", 
-    href: "/uslugi/systemy-na-wymiar", 
-    description: "Dedykowane oprogramowanie",
+    name: 'Aplikacje React & Angular', 
+    description: 'Systemy dedykowane na własność.', 
+    href: '/oferta/dedykowane-aplikacje-react-angular', 
     icon: LayoutDashboard 
   },
   { 
-    name: "Łączenie aplikacji", 
-    href: "/uslugi/laczenie-aplikacji", 
-    description: "Integracje i workflow",
+    name: 'Automatyzacja Operacyjna', 
+    description: 'Optymalizacja procesów w Twojej firmie.', 
+    href: '/oferta/automatyzacja-procesow-operacyjnych', 
     icon: Share2 
   },
 ]
+
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
@@ -65,7 +66,7 @@ export function Navbar() {
               <button
                 className={cn(
                   "flex items-center gap-x-1 text-sm font-semibold leading-6 transition-colors hover:text-primary outline-none",
-                  pathname.startsWith("/uslugi") ? "text-primary" : "text-foreground"
+                  pathname.startsWith("/oferta") ? "text-primary" : "text-foreground"
                 )}
               >
                 Oferta
@@ -95,7 +96,7 @@ export function Navbar() {
                       ))}
                     </div>
                     <div className="bg-muted/50 p-4 border-t border-border">
-                      <Link href="/uslugi" className="flex items-center justify-center gap-x-2.5 text-sm font-bold leading-6 text-foreground hover:text-primary transition-colors">
+                      <Link href="/oferta" className="flex items-center justify-center gap-x-2.5 text-sm font-bold leading-6 text-foreground hover:text-primary transition-colors">
                         Zobacz pełny katalog usług <ArrowRight className="h-4 w-4" />
                       </Link>
                     </div>
@@ -113,6 +114,7 @@ export function Navbar() {
             >
               O mnie
             </Link>
+
             <Link
               href="/faq"
               className={cn(

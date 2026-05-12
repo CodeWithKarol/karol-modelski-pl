@@ -30,6 +30,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Karol Modelski",
+    "jobTitle": "Systems Architect & Developer",
+    "url": "https://karol-modelski.pl",
+    "email": "kontakt@karol-modelski.pl",
+    "description": "Architekt systemów specjalizujący się w automatyzacji procesów biznesowych i AI.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Warszawa",
+      "addressRegion": "Mazowieckie",
+      "addressCountry": "PL"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/karol-modelski",
+      "https://github.com/CodeWithKarol"
+    ],
+    "brand": {
+      "@type": "Brand",
+      "name": "Karol Modelski | Automatyzacja procesów biznesowych | Warszawa"
+    }
+  }
+
   return (
     <html
       lang="en"
@@ -37,6 +61,10 @@ export default function RootLayout({
       className={cn("antialiased", fontMono.variable, "font-sans", inter.variable)}
     >
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <ThemeProvider>
           <Navbar />
           <div className="pt-20">
