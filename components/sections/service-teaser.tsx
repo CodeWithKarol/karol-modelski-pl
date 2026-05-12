@@ -6,25 +6,25 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 export function ServiceTeaser() {
   const categories = [
     { 
-      name: "Automatyzacja Procesów", 
+      name: "Automatyzacja Procesów Operacyjnych", 
       icon: Zap, 
-      href: "/uslugi/laczenie-aplikacji",
+      href: "/oferta/automatyzacja-procesow-operacyjnych",
       description: "Projektowanie i wdrażanie przepływów pracy, które eliminują ręczną pracę i zmniejszają koszty operacyjne.",
-      cta: "Zobacz, jak automatyzuję procesy"
+      cta: "Sprawdź automatyzację procesów operacyjnych"
     },
     { 
-      name: "Dedykowane Narzędzia (React / Angular)", 
+      name: "Dedykowane Aplikacje React & Angular", 
       icon: LayoutDashboard, 
-      href: "/uslugi/systemy-na-wymiar",
+      href: "/oferta/dedykowane-aplikacje-react-angular",
       description: "Szybkie, skrojone pod Twój biznes aplikacje i interfejsy zbierające wszystkie rozproszone dane w jeden panel.",
-      cta: "Sprawdź dedykowane aplikacje"
+      cta: "Zobacz aplikacje React/Angular na własność"
     },
     { 
-      name: "Integracje systemów i AI (Gemini)", 
+      name: "Wdrażanie Google Gemini AI", 
       icon: Share2, 
-      href: "/uslugi/automatyzacja-ai",
+      href: "/oferta/automatyzacja-ai-dla-firm",
       description: "Łączenie Twoich ulubionych programów oraz wdrażanie modeli Gemini AI do automatycznej analizy dokumentów czy obsługi zapytań.",
-      cta: "Poznaj integracje z Gemini AI"
+      cta: "Odkryj możliwości wdrożenia Google Gemini AI"
     },
   ]
 
@@ -66,7 +66,7 @@ export function ServiceTeaser() {
 
         <div className="mt-16 flex justify-center">
           <Button asChild variant="outline" className="rounded-full px-8 w-full sm:w-auto h-auto py-3 sm:py-2 whitespace-normal text-center max-w-xs sm:max-w-none">
-            <Link href="/uslugi">Zobacz pełny katalog rozwiązań i cennik</Link>
+            <Link href="/oferta">Zobacz pełny katalog rozwiązań i cennik</Link>
           </Button>
         </div>
       </div>

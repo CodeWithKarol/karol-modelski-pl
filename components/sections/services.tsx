@@ -19,33 +19,33 @@ import { cn } from "@/lib/utils"
 const pillars = [
   {
     id: "filar-1",
-    title: "Systemy na wymiar",
-    subtitle: "Dedykowane Oprogramowanie",
+    title: "Dedykowane Aplikacje React & Angular",
+    subtitle: "Systemy Dedykowane na własność",
     description: "Twój autorski, bezpieczny panel sterowania zbierający dane z całej firmy w jeden widok.",
     benefits: "Koniec z dziesiątkami otwartych kart i Excelem. Otrzymujesz profesjonalne narzędzie na wyłączną własność, które jest banalnie proste w obsłudze. Bezawaryjność gwarantuje TypeScript.",
     investment: "Projektowana w Fazie Zero",
     icon: LayoutDashboard,
-    href: "/uslugi/systemy-na-wymiar"
+    href: "/oferta/dedykowane-aplikacje-react-angular"
   },
   {
     id: "filar-2",
-    title: "Automatyzacja AI",
-    subtitle: "Inteligentne Moduły",
+    title: "Wdrażanie Google Gemini AI",
+    subtitle: "Automatyzacja AI dla firm",
     description: "Wdrożenie modułów AI, które „myślą” nad Twoimi dokumentami i zapytaniami.",
     benefits: "Automatyczne streszczenia raportów, inteligentne sortowanie zapytań i wyciąganie danych w sekundy. Bezpieczna automatyzacja ai – Twoje dane nie trenują publicznych modeli.",
     investment: "Projektowana indywidualnie",
     icon: Sparkles,
-    href: "/uslugi/automatyzacja-ai"
+    href: "/oferta/automatyzacja-ai-dla-firm"
   },
   {
     id: "filar-3",
-    title: "Łączenie aplikacji",
-    subtitle: "Integracje i Automatyzacja",
+    title: "Automatyzacja Procesów Operacyjnych",
+    subtitle: "Optymalizacja procesów w firmie",
     description: "Bezbłędny obieg danych i łączenie używanych przez Ciebie aplikacji w jeden organizm.",
     benefits: "Automatyczny obieg faktur, raportowanie czasu pracy i wymiana informacji między CRM, księgowością a komunikatorami zespołu (np. Slack).",
     investment: "3 500 – 5 500 PLN",
     icon: Share2,
-    href: "/uslugi/laczenie-aplikacji"
+    href: "/oferta/automatyzacja-procesow-operacyjnych"
   }
 ]
 
@@ -187,9 +187,10 @@ export function Services({
           
           {compact && showTeaserButton && (
             <div className="mt-12 text-center">
-              <Button asChild size="lg" variant="outline" className="rounded-full px-12">
-                <a href="/uslugi">Zobacz pełną ofertę i cennik</a>
+                  <Button asChild size="lg" variant="outline" className="rounded-full px-12">
+                <a href="/oferta">Zobacz pełną ofertę i cennik</a>
               </Button>
+
             </div>
           )}
         </div>
