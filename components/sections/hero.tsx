@@ -1,88 +1,159 @@
-import { Button } from "@/components/ui/button"
-import { Zap, MessageSquare, Database, Cog, Layers } from "lucide-react"
+import { WorkflowDiagram } from "@/components/workflow-diagram"
 
-export function Hero() {
+const tools = [
+  { label: "CRM", color: "bg-violet-100 text-violet-700 dark:bg-violet-950/60 dark:text-violet-300" },
+  { label: "Gmail", color: "bg-red-100 text-red-700 dark:bg-red-950/60 dark:text-red-300" },
+  { label: "Google Sheets", color: "bg-emerald-100 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300" },
+  { label: "Slack", color: "bg-pink-100 text-pink-700 dark:bg-pink-950/60 dark:text-pink-300" },
+  { label: "n8n", color: "bg-amber-100 text-amber-700 dark:bg-amber-950/60 dark:text-amber-300" },
+  { label: "Gemini AI", color: "bg-indigo-100 text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300" },
+]
+
+export function HeroSection() {
   return (
-    <section className="relative flex min-h-[90vh] items-center overflow-hidden px-6 pt-32 pb-24 lg:pt-48 lg:pb-32 lg:px-8">
-      <div className="mx-auto max-w-7xl w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Column: Content */}
-          <div className="flex flex-col text-left lg:col-span-7 xl:col-span-6">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl text-balance leading-[1.1]">
-              Automatyzacja procesów biznesowych, która uwalnia Twój czas i porządkuje chaos.
-            </h1>
-            <p className="mt-8 text-xl leading-8 text-muted-foreground max-w-xl">
-              Przejmij pełną kontrolę nad operacjami w swojej firmie. Tworzę intuicyjne widoki w Angularze i React, które zbierają wszystkie Twoje dane w jeden czytelny widok. Bez abonamentów, na Twoją wyłączną własność.
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="rounded-full px-8 h-12 text-base font-bold shadow-lg shadow-primary/20" asChild>
-                <a href="#kontakt">
-                  Zarezerwuj bezpłatną konsultację
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" className="rounded-full px-8 h-12 text-base font-bold border-2" asChild>
-                <a href="#proces">
-                  Zobacz, jak działam
-                </a>
-              </Button>
+    <section
+      id="hero"
+      aria-labelledby="hero-heading"
+      className="relative overflow-hidden"
+    >
+      {/* Subtle background texture */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10"
+      >
+        {/* Top-left glow */}
+        <div className="absolute -left-64 -top-32 h-[600px] w-[600px] rounded-full bg-amber-400/5 blur-3xl" />
+        {/* Bottom-right glow */}
+        <div className="absolute -bottom-32 -right-48 h-[500px] w-[500px] rounded-full bg-indigo-400/5 blur-3xl" />
+        {/* Hairline grid */}
+        <svg className="absolute inset-0 h-full w-full opacity-[0.025]" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="hero-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" strokeWidth="1" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#hero-grid)" />
+        </svg>
+      </div>
+
+      <div className="mx-auto max-w-6xl px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24 lg:pt-32">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+
+          {/* Left: copy */}
+          <div className="flex flex-col gap-8">
+            {/* Eyebrow badge */}
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-400/40 bg-amber-50 px-3 py-1 dark:bg-amber-950/40">
+              <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+              <span className="font-mono text-xs font-semibold tracking-wide text-amber-700 dark:text-amber-300">
+                Wdrożenie w 48 godzin · Wolne terminy w tym tygodniu
+              </span>
             </div>
+
+            {/* H1 */}
+            <h1
+              id="hero-heading"
+              className="text-4xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl"
+            >
+              Automatyzacja procesów biznesowych z{" "}
+              <span className="relative whitespace-nowrap">
+                <span className="relative z-10">n8n</span>
+                <span
+                  aria-hidden="true"
+                  className="absolute bottom-1 left-0 z-0 h-3 w-full -skew-x-2 bg-amber-400/25"
+                />
+              </span>
+              {" "}–{" "}
+              <br className="hidden sm:block" />
+              Odzyskaj czas w{" "}
+              <span className="text-amber-600 dark:text-amber-400">48 godzin</span>
+            </h1>
+
+            {/* Subheadline */}
+            <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Zamiast wielomiesięcznych, drogich projektów IT – wdrażam proste, punktowe
+              integracje, które od jutra robią powtarzalną robotę za Twój zespół. Łączę Twoje
+              codzienne narzędzia za pomocą platformy{" "}
+              <strong className="font-semibold text-foreground">n8n</strong> i wspieram je
+              inteligentnymi modelami{" "}
+              <strong className="font-semibold text-foreground">Google Gemini</strong>.
+              Przestań ręcznie przepisywać dane i eliminuj błędy ludzkie od zaraz.
+            </p>
+
+            {/* Tool pills */}
+            <div className="flex flex-wrap gap-2">
+              {tools.map((t) => (
+                <span
+                  key={t.label}
+                  className={`rounded-full px-3 py-1 font-mono text-xs font-medium ${t.color}`}
+                >
+                  {t.label}
+                </span>
+              ))}
+            </div>
+
+            {/* CTA block */}
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href="https://calendly.com/kontakt-karol-modelski/new-meeting"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Umów bezpłatną diagnozę i zautomatyzuj pierwszy proces (otwiera Calendly)"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-foreground px-7 py-3.5 text-sm font-semibold text-background transition-all duration-200 hover:bg-foreground/85 hover:shadow-lg hover:shadow-foreground/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                Zautomatyzuj pierwszy proces
+                <svg
+                  aria-hidden="true"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  className="transition-transform duration-200 group-hover:translate-x-1"
+                >
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    stroke="currentColor"
+                    strokeWidth="1.75"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://calendly.com/kontakt-karol-modelski/new-meeting"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-xl border border-border px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                Bezpłatna Diagnoza
+              </a>
+            </div>
+
+            {/* Microcopy */}
+            <p className="flex items-center gap-2 text-xs text-muted-foreground">
+              <svg
+                aria-hidden="true"
+                width="14"
+                height="14"
+                viewBox="0 0 16 16"
+                fill="none"
+                className="shrink-0 text-amber-500"
+              >
+                <path
+                  d="M8 1l1.854 3.756L14 5.528l-3 2.921.708 4.129L8 10.5l-3.708 2.078L5 8.449 2 5.528l4.146-.772L8 1z"
+                  fill="currentColor"
+                />
+              </svg>
+              Projektowane z precyzją byłego architekta systemów bankowych.
+            </p>
           </div>
 
-          {/* Right Column: Visual */}
-          <div className="relative hidden lg:block lg:col-span-5 xl:col-span-6">
-            <AutomationVisual />
+          {/* Right: workflow diagram */}
+          <div className="relative lg:pl-4">
+            <WorkflowDiagram />
           </div>
         </div>
       </div>
     </section>
-  )
-}
-
-function AutomationVisual() {
-  return (
-    <div className="relative w-full h-[400px] xl:h-[450px] bg-muted/20 rounded-[2.5rem] border border-border/50 p-4 sm:p-8 overflow-hidden flex items-center justify-center">
-      {/* Background patterns */}
-      <div className="absolute inset-0 opacity-[0.03]">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px]" />
-      </div>
-      
-      <div className="relative flex items-center gap-4 xl:gap-8 scale-90 xl:scale-100">
-        {/* App 1 */}
-        <div className="flex h-16 w-16 xl:h-20 xl:w-20 items-center justify-center rounded-2xl bg-background border border-border/50 shadow-xl z-10 animate-pulse">
-          <MessageSquare className="h-8 w-8 xl:h-10 xl:w-10 text-blue-500" />
-        </div>
-        
-        {/* Connecting line */}
-        <div className="w-12 xl:w-16 h-1 bg-gradient-to-r from-blue-500/20 via-primary/50 to-primary relative rounded-full">
-          <div className="absolute top-1/2 -right-1.5 -translate-y-1/2 w-3 h-3 rounded-full bg-primary shadow-lg shadow-primary/50" />
-        </div>
-        
-        {/* Main Automation Hub */}
-        <div className="flex h-24 w-24 xl:h-28 xl:w-28 items-center justify-center rounded-[2rem] bg-primary shadow-2xl shadow-primary/30 z-10 border-4 border-background">
-          <Zap className="h-12 w-12 xl:h-14 xl:w-14 text-primary-foreground animate-bounce" />
-        </div>
-        
-        {/* Connecting line */}
-        <div className="w-12 xl:w-16 h-1 bg-gradient-to-r from-primary via-green-500/50 to-green-500/20 relative rounded-full">
-          <div className="absolute top-1/2 -right-1.5 -translate-y-1/2 w-3 h-3 rounded-full bg-green-500 shadow-lg shadow-green-500/50" />
-        </div>
-        
-        {/* App 2 */}
-        <div className="flex h-16 w-16 xl:h-20 xl:w-20 items-center justify-center rounded-2xl bg-background border border-border/50 shadow-xl z-10 animate-pulse delay-700">
-          <Database className="h-8 w-8 xl:h-10 xl:w-10 text-green-500" />
-        </div>
-      </div>
-
-      {/* Floating secondary elements */}
-      <div className="absolute top-12 right-12 xl:top-16 xl:right-24 flex h-14 w-14 xl:h-16 xl:w-16 items-center justify-center rounded-2xl bg-background border border-border/50 shadow-lg animate-bounce [animation-duration:4s]">
-        <Cog className="h-6 w-6 xl:h-8 xl:w-8 text-muted-foreground/60" />
-      </div>
-      <div className="absolute bottom-12 left-12 xl:bottom-16 xl:left-24 flex h-14 w-14 xl:h-16 xl:w-16 items-center justify-center rounded-2xl bg-background border border-border/50 shadow-lg animate-bounce [animation-duration:5s] delay-300">
-        <Layers className="h-6 w-6 xl:h-8 xl:w-8 text-muted-foreground/60" />
-      </div>
-
-      {/* Glow effects */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/10 rounded-full blur-[80px] -z-10" />
-    </div>
   )
 }

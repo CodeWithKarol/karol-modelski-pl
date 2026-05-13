@@ -1,28 +1,59 @@
-import { Geist_Mono, Inter } from "next/font/google"
 import type { Metadata } from "next"
+import { Geist_Mono, Inter } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { Navbar } from "@/components/navbar"
+import { Navigation } from "@/components/navigation"
 import { cn } from "@/lib/utils"
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'})
+const inter = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-sans" })
 
 const fontMono = Geist_Mono({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: "--font-mono",
 })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://karol-modelski.pl"),
   title: {
-    default: "Karol Modelski | Automatyzacja procesów biznesowych | Warszawa",
-    template: "%s | Karol Modelski"
+    default: "Karol Modelski – Automatyzacja procesów biznesowych z n8n | Warszawa",
+    template: "%s | Karol Modelski",
   },
-  description: "Odzyskaj do 15h tygodniowo dzięki automatyzacji procesów biznesowych. Wdrażam systemy AI na własność, bez abonamentów i w standardzie bankowym. Sprawdź!",
-  verification: {
-    google: "TfCJMM5KY6TTwBe-LufSiIOEBV827rpb1RDD59ghAE0",
+  description:
+    "Wdrażam proste integracje n8n i Google Gemini, które eliminują ręczną pracę Twojego zespołu. Pierwsze wdrożenie w 48 godzin.",
+  alternates: {
+    canonical: "https://karol-modelski.pl",
   },
+}
+
+const jsonLdProfessionalService = {
+  "@context": "https://schema.org",
+  "@type": ["ProfessionalService", "LocalBusiness"],
+  name: "Karol Modelski – Automatyzacja procesów biznesowych",
+  description:
+    "Wdrożenia automatyzacji procesów biznesowych z n8n i Google Gemini dla małych i średnich firm. Eliminuję rutynowe zadania, oszczędzam czas i redukuję koszty operacyjne.",
+  url: "https://karol-modelski.pl",
+  email: "kontakt@karol-modelski.pl",
+  telephone: null,
+  founder: {
+    "@type": "Person",
+    name: "Karol Modelski",
+    jobTitle: "Systems Architect & Automation Engineer",
+    url: "https://karol-modelski.pl",
+    sameAs: ["https://www.linkedin.com/in/karol-modelski"],
+  },
+  areaServed: [
+    { "@type": "City", name: "Warszawa" },
+    { "@type": "Country", name: "Polska" },
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Warszawa",
+    addressRegion: "Mazowieckie",
+    addressCountry: "PL",
+  },
+  sameAs: ["https://www.linkedin.com/in/karol-modelski"],
+  knowsAbout: ["n8n", "automatyzacja procesów biznesowych", "Google Gemini", "integracje API", "CRM automation"],
 }
 
 export default function RootLayout({
@@ -30,46 +61,27 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Karol Modelski",
-    "jobTitle": "Systems Architect & Developer",
-    "url": "https://karol-modelski.pl",
-    "email": "kontakt@karol-modelski.pl",
-    "description": "Architekt systemów specjalizujący się w automatyzacji procesów biznesowych i AI.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Warszawa",
-      "addressRegion": "Mazowieckie",
-      "addressCountry": "PL"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/in/karol-modelski",
-      "https://github.com/CodeWithKarol"
-    ],
-    "brand": {
-      "@type": "Brand",
-      "name": "Karol Modelski | Automatyzacja procesów biznesowych | Warszawa"
-    }
-  }
-
   return (
     <html
-      lang="en"
+      lang="pl"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", inter.variable)}
+      className={cn("antialiased", fontMono.variable, inter.variable)}
     >
       <body>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdProfessionalService) }}
         />
         <ThemeProvider>
-          <Navbar />
-          <div className="pt-20">
-            {children}
-          </div>
+          {/* Skip to content — accessibility + SEO */}
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-background focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-foreground focus:ring-2 focus:ring-ring focus:ring-offset-2"
+          >
+            Przejdź do treści
+          </a>
+          <Navigation />
+          <main id="main-content">{children}</main>
         </ThemeProvider>
       </body>
     </html>
