@@ -1,55 +1,59 @@
-import { Hero } from "@/components/sections/hero"
-import { PainPoints } from "@/components/sections/pain-points"
-import { About } from "@/components/sections/about"
-import { ServiceTeaser } from "@/components/sections/service-teaser"
-import { Process } from "@/components/sections/process"
-import { FAQ } from "@/components/sections/faq"
-import { Contact } from "@/components/sections/contact"
+import { HeroSection } from "@/components/sections/hero"
+import { AgitationSection } from "@/components/sections/agitation"
+import { OfferClusters } from "@/components/sections/offer-clusters"
+import { WhyN8n } from "@/components/sections/why-n8n"
+import { AboutTrust } from "@/components/sections/about-trust"
+import { ProcessSteps } from "@/components/sections/process-steps"
+import { FaqSection } from "@/components/sections/faq-section"
+import { ContactDual } from "@/components/sections/contact-dual"
 import { Footer } from "@/components/sections/footer"
-import { UseCases } from "@/components/sections/use-cases"
-import { TrustLogos } from "@/components/sections/trust-logos"
-import { Metadata } from "next"
+
+import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Karol Modelski | Automatyzacja procesów biznesowych | Warszawa",
-  description: "Automatyzacja procesów biznesowych Warszawa. Zyskaj jeden intuicyjny panel na wszystkie dane firmy, na własność i bez abonamentu. Odzyskaj swój czas!",
+  title: "Automatyzacja procesów biznesowych z n8n – Karol Modelski",
+  description:
+    "Wdrażam proste integracje n8n i Google Gemini, które eliminują ręczną pracę Twojego zespołu. Pierwsze wdrożenie w 48 godzin.",
+  alternates: {
+    canonical: "https://karol-modelski.pl",
+  },
+  openGraph: {
+    title: "Automatyzacja procesów biznesowych z n8n – Karol Modelski",
+    description:
+      "Wdrażam proste integracje n8n i Google Gemini, które eliminują ręczną pracę Twojego zespołu. Pierwsze wdrożenie w 48 godzin.",
+    url: "https://karol-modelski.pl",
+    siteName: "Karol Modelski – Automatyzacja n8n",
+    locale: "pl_PL",
+    type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Karol Modelski – Automatyzacja procesów biznesowych z n8n",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Automatyzacja procesów biznesowych z n8n – Karol Modelski",
+    description: "Eliminuj ręczną pracę zespołu. Pierwsze wdrożenie w 48 godzin.",
+    images: ["/og.png"],
+  },
 }
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col">
-      {/* 1. Hero - USP (Angular/React, brak abonamentu, własność) */}
-      <Hero />
-
-      {/* 2. Doświadczenie (Social Proof zaraz pod Hero) */}
-      <TrustLogos />
-
-      {/* 3. Eskalacja problemu (Zrozumienie + Ile kosztuje brak automatyzacji?) */}
-      <div className="bg-muted/30 border-y border-border">
-        <PainPoints />
-      </div>
-
-      {/* 4. Oferta (Usługi i konkretne obszary automatyzacji) */}
-      <ServiceTeaser />
-      <div className="bg-muted/30 border-y border-border">
-        <UseCases />
-      </div>
-
-      {/* 5. Autorytet i "Dlaczego ja?" (Standardy bankowe + Osobista odpowiedzialność) */}
-      <About compact />
-
-      {/* 6. Proces (Jak działam: Faza 0 -> Wdrożenie -> Wsparcie) */}
-      <div className="bg-muted/30 border-y border-border">
-        <Process />
-      </div>
-
-      {/* 7. FAQ (Rozbijanie obiekcji: własność, koszty utrzymania) */}
-      <FAQ compact />
-
-      {/* 8. Kontakt (Hybryda: Calendly + Formularz) */}
-      <Contact />
-      
+    <>
+      <HeroSection />
+      <AgitationSection />
+      <OfferClusters />
+      <WhyN8n />
+      <AboutTrust />
+      <ProcessSteps />
+      <FaqSection />
+      <ContactDual />
       <Footer />
-    </main>
+    </>
   )
 }

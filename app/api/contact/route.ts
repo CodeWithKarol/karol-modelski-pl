@@ -1,68 +1,58 @@
-export async function POST(request: Request) {
-  const webhookUrl = process.env.CONTACT_WEBHOOK_URL;
+import { NextRequest, NextResponse } from "next/server"
+import * as z from "zod"
 
-  if (!webhookUrl) {
-    return new Response(JSON.stringify({ error: "Webhook URL not configured" }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" },
-    });
-  }
+const schema = z.object({
+  name: z.string().min(2),
+  contact: z.string().min(3),
+  message: z.string().min(10),
+})
 
+export async function POST(req: NextRequest) {
   try {
-    const body = await request.json();
-    
-    // 1. Honeypot check
-    if (body.b_name_42) {
-      // Silently ignore bot submissions
-      return new Response(JSON.stringify({ success: true, bot: true }), {
-        status: 200,
-        headers: { "Content-Type": "application/json" },
-      });
+    const body = await req.json()
+    const data = schema.parse(body)
+
+    const webhookUrl = process.env.CONTACT_WEBHOOK_URL
+    if (!webhookUrl) {
+      console.error("[contact form] CONTACT_WEBHOOK_URL is not set")
+      return NextResponse.json(
+        { success: false, error: "Błąd konfiguracji serwera." },
+        { status: 500 }
+      )
     }
 
-    // 2. Simple email domain validation (optional but effective)
-    const email = body.email || "";
-    const spamDomains = ["mailinator.com", "guerrillamail.com", "temp-mail.org"];
-    if (spamDomains.some(domain => email.endsWith(domain))) {
-      return new Response(JSON.stringify({ error: "Ten adres e-mail jest niedozwolony" }), {
-        status: 400,
-        headers: { "Content-Type": "application/json" },
-      });
-    }
-    
-    // Use environment variable for the webhook URL
-    const targetWebhook = process.env.CONTACT_WEBHOOK_URL;
-    
-    if (!targetWebhook) {
-      throw new Error("CONTACT_WEBHOOK_URL is not defined");
-    }
-    
-    const response = await fetch(targetWebhook, {
+    const webhookRes = await fetch(webhookUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        name: body.name,
-        email: body.email,
-        phone: body.phone || "Nie podano",
-        challenge: body.challenge,
-        timestamp: new Date().toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw' }),
-        source_url: request.url
+        name: data.name,
+        contact: data.contact,
+        message: data.message,
+        timestamp: new Date().toISOString(),
+        source: "karol-modelski.pl/kontakt",
       }),
-    });
+    })
 
-    if (!response.ok) {
-      throw new Error(`Webhook responded with status: ${response.status}`);
+    if (!webhookRes.ok) {
+      console.error("[contact form] webhook responded with", webhookRes.status)
+      return NextResponse.json(
+        { success: false, error: "Błąd serwera. Spróbuj ponownie." },
+        { status: 502 }
+      )
     }
 
-    return new Response(JSON.stringify({ success: true }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
-    });
+    return NextResponse.json({ success: true }, { status: 200 })
   } catch (error) {
-    console.error("Contact form error:", error);
-    return new Response(JSON.stringify({ error: "Failed to send message" }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" },
-    });
+    if (error instanceof z.ZodError) {
+      return NextResponse.json(
+        { success: false, error: "Nieprawidłowe dane formularza." },
+        { status: 400 }
+      )
+    }
+    console.error("[contact form error]", error)
+    return NextResponse.json(
+      { success: false, error: "Błąd serwera. Spróbuj ponownie." },
+      { status: 500 }
+    )
   }
 }
