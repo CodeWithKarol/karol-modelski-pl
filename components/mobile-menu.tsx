@@ -2,9 +2,11 @@
 
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import Link from "next/link"
 
 const navLinks = [
   { href: "#oferta-klastry", label: "Szybkie wdrożenia" },
+  { href: "/wspolpraca", label: "Współpraca" },
   { href: "#dlaczego-n8n", label: "Dlaczego n8n?" },
   { href: "#o-mnie", label: "O mnie" },
   { href: "#faq", label: "FAQ" },
@@ -31,13 +33,13 @@ export function MobileMenu() {
             <ul className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a
-                    href={link.href}
+                  <Link
+                    href={link.href.startsWith("#") ? `/${link.href}` : link.href}
                     onClick={() => setOpen(false)}
                     className="block rounded-md px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted hover:text-foreground"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -3,12 +3,11 @@ import { MapPin, Mail, ExternalLink } from "lucide-react"
 
 const CALENDLY_URL = "https://calendly.com/kontakt-karol-modelski/new-meeting"
 
-const navLinks: { href: string; label: string; external?: boolean }[] = [
-  { href: "#oferta-klastry", label: "Szybkie wdrożenia (Quick Wins)" },
-  { href: "#dlaczego-n8n", label: "Dlaczego platforma n8n?" },
-  { href: "#o-mnie", label: "O ekspercie" },
-  { href: "#faq", label: "Najczęściej zadawane pytania (FAQ)" },
-  { href: CALENDLY_URL, label: "Umów bezpłatną diagnozę", external: true },
+const navLinks: { href: string; label: string; external?: boolean; internal?: boolean }[] = [
+  { href: "/#oferta-klastry", label: "Oferta" },
+  { href: "/wspolpraca", label: "Współpraca" },
+  { href: "/#o-mnie", label: "O mnie" },
+  { href: "/#faq", label: "FAQ" },
 ]
 
 const processes = [
@@ -25,8 +24,8 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-background" aria-label="Stopka strony">
       {/* Main footer grid */}
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
 
           {/* Column 1: Brand & Mission */}
           <div className="flex flex-col gap-5 sm:col-span-2 lg:col-span-1">
@@ -81,6 +80,15 @@ export function Footer() {
                         />
                       </a>
                     </li>
+                  ) : link.internal ? (
+                    <li key={link.label}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
                   ) : (
                     <li key={link.label}>
                       <a
@@ -96,17 +104,15 @@ export function Footer() {
             </nav>
           </div>
 
-          {/* Column 3: Processes (SEO taxonomy — plain text, no links) */}
+          {/* Column 3: Education */}
           <div className="flex flex-col gap-5">
             <h4 className="text-sm font-semibold uppercase tracking-widest text-foreground">
-              Najczęściej wdrażane procesy
+              Baza wiedzy
             </h4>
             <ul className="flex flex-col gap-3" role="list">
-              {processes.map((label) => (
-                <li key={label} className="text-sm text-muted-foreground">
-                  {label}
-                </li>
-              ))}
+              <li><Link href="/baza-wiedzy/co-to-jest-n8n" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Co to jest n8n?</Link></li>
+              <li><Link href="/baza-wiedzy/co-to-jest-webhook" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Co to jest Webhook?</Link></li>
+              <li><Link href="/baza-wiedzy/api-w-biznesie" className="text-sm text-muted-foreground hover:text-foreground transition-colors">API w biznesie</Link></li>
             </ul>
           </div>
 
@@ -166,11 +172,13 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-border">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 sm:flex-row lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 sm:flex-row sm:px-6 lg:px-8">
           <p className="text-xs text-muted-foreground">
             Copyright &copy; {currentYear} Karol Modelski. Wszelkie prawa zastrzeżone.
           </p>
-
+          <Link href="/mapa-strony" className="text-xs text-muted-foreground hover:text-foreground">
+            Mapa strony
+          </Link>
         </div>
       </div>
     </footer>

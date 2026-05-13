@@ -9,7 +9,7 @@ export function ContactDual() {
     <section
       id="kontakt"
       aria-labelledby="contact-heading"
-      className="relative overflow-hidden bg-muted/50 py-24 sm:py-32"
+      className="relative overflow-hidden bg-muted/50 py-12 sm:py-24 lg:py-32"
     >
       {/* Background decoration */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
@@ -17,7 +17,7 @@ export function ContactDual() {
         <div className="absolute -right-48 bottom-0 h-[400px] w-[400px] rounded-full bg-violet-400/5 blur-3xl" />
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
           <div className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-400/40 bg-amber-50 px-3 py-1 dark:bg-amber-950/40">
@@ -55,7 +55,7 @@ export function ContactDual() {
               {/* Top accent bar */}
               <div className="h-1 w-full bg-gradient-to-r from-amber-400 to-amber-500" />
 
-              <CardContent className="flex flex-col gap-6 p-8">
+              <CardContent className="flex flex-col gap-4 p-4 sm:gap-6 sm:p-8">
                 {/* Label */}
                 <div className="flex items-center gap-3">
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-amber-100 dark:bg-amber-950/40">
@@ -106,7 +106,7 @@ export function ContactDual() {
               {/* Top accent bar */}
               <div className="h-1 w-full bg-gradient-to-r from-border/40 to-border/20" />
 
-              <CardContent className="flex flex-col gap-6 p-8">
+              <CardContent className="flex flex-col gap-4 p-4 sm:gap-6 sm:p-8">
                 {/* Label */}
                 <div className="flex items-center gap-3">
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-muted dark:bg-muted/60">

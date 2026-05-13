@@ -121,7 +121,7 @@ export function WorkflowDiagram() {
       </div>
 
       {/* Savings bubble */}
-      <div className="absolute -right-4 -top-4 z-20 rotate-2">
+      <div className="absolute right-0 -top-3 z-20 rotate-2 sm:-right-4 sm:-top-4">
         <div className="rounded-xl border border-amber-400/30 bg-amber-50 px-4 py-3 shadow-lg dark:bg-amber-950/50">
           <p className="font-mono text-xs font-semibold text-amber-700 dark:text-amber-300">
             ⏱ Zaoszczędzone
@@ -136,7 +136,7 @@ export function WorkflowDiagram() {
       </div>
 
       {/* Execution count badge */}
-      <div className="absolute -bottom-3 -left-3 z-20 -rotate-1">
+      <div className="absolute -bottom-3 left-0 z-20 -rotate-1 sm:-left-3">
         <div className="rounded-lg border border-emerald-400/30 bg-emerald-50 px-3 py-2 shadow-md dark:bg-emerald-950/50">
           <p className="font-mono text-xs font-bold text-emerald-700 dark:text-emerald-400">
             ✓ 312 uruchomień

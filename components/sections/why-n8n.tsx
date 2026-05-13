@@ -30,7 +30,7 @@ export function WhyN8n() {
     <section
       id="dlaczego-n8n"
       aria-labelledby="why-n8n-heading"
-      className="relative overflow-hidden bg-muted/50 py-24 sm:py-32"
+      className="relative overflow-hidden bg-muted/50 py-12 sm:py-24 lg:py-32"
     >
       {/* Background decoration */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
@@ -38,7 +38,7 @@ export function WhyN8n() {
         <div className="absolute -left-32 bottom-0 h-[400px] w-[400px] rounded-full bg-emerald-400/5 blur-3xl" />
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
           <div className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-400/40 bg-amber-50 px-3 py-1 dark:bg-amber-950/40">
@@ -53,7 +53,7 @@ export function WhyN8n() {
             className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance"
           >
             Wybierz n8n –{" "}
-            <span className="relative whitespace-nowrap">
+            <span className="relative">
               <span className="relative z-10">elastyczność i pełna kontrola</span>
               <span
                 aria-hidden="true"

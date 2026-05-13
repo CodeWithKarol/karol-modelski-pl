@@ -50,7 +50,7 @@ export function ProcessSteps() {
     <section
       id="proces"
       aria-labelledby="process-heading"
-      className="relative overflow-hidden bg-muted/50 py-24 sm:py-32"
+      className="relative overflow-hidden bg-muted/50 py-12 sm:py-24 lg:py-32"
     >
       {/* Background decoration */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
@@ -58,7 +58,7 @@ export function ProcessSteps() {
         <div className="absolute -left-48 bottom-1/4 h-[400px] w-[400px] rounded-full bg-emerald-400/5 blur-3xl" />
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
           <div className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-400/40 bg-amber-50 px-3 py-1 dark:bg-amber-950/40">
@@ -118,7 +118,7 @@ export function ProcessSteps() {
                     />
                   </div>
 
-                  <div className="flex flex-col gap-3 pl-16 lg:pl-0">
+                  <div className="flex flex-col gap-3 pl-14 sm:pl-16 lg:pl-0">
                     {/* Number + duration pill */}
                     <div className="flex items-center gap-3 lg:justify-center">
                       <span
