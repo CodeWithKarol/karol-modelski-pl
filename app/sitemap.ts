@@ -13,10 +13,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/automatyzacja-administracji-i-finansow`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/automatyzacja-procesow-z-ai`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     
-    // Obszary Biznesowe - Priorytet 0.7
-    { url: `${baseUrl}/obszary/automatyzacja-sprzedazy`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/obszary/automatyzacja-zarzadzania-projektami`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/obszary/automatyzacja-administracji-i-finansow`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    // Obszary Biznesowe (Płaska struktura)
+    { url: `${baseUrl}/automatyzacja-sprzedazy`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/automatyzacja-zarzadzania-projektami`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/automatyzacja-administracji-i-finansow`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     
     // Narzędzia - Priorytet 0.6
     { url: `${baseUrl}/integracja-pipedrive`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
