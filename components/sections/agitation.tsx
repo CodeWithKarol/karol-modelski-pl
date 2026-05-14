@@ -27,7 +27,7 @@ export function AgitationSection() {
     <section
       id="agitacja"
       aria-labelledby="agitation-heading"
-      className="relative overflow-hidden bg-muted/50 py-24 sm:py-32"
+      className="relative overflow-hidden bg-muted/50 py-12 sm:py-24 lg:py-32"
     >
       {/* Subtle background decoration */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
@@ -35,7 +35,7 @@ export function AgitationSection() {
         <div className="absolute -bottom-24 -left-48 h-[400px] w-[400px] rounded-full bg-red-400/5 blur-3xl" />
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
           {/* Eyebrow */}

@@ -43,7 +43,7 @@ export function HeroSection() {
           <div className="flex flex-col gap-8">
             {/* Eyebrow badge */}
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-400/40 bg-amber-50 px-3 py-1 dark:bg-amber-950/40">
-              <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
               <span className="font-mono text-xs font-semibold tracking-wide text-amber-700 dark:text-amber-300">
                 Wdrożenie w 48 godzin · Wolne terminy w tym tygodniu
               </span>
@@ -52,7 +52,7 @@ export function HeroSection() {
             {/* H1 */}
             <h1
               id="hero-heading"
-              className="text-4xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl"
+              className="text-3xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl"
             >
               Automatyzacja procesów biznesowych z{" "}
               <span className="relative whitespace-nowrap">
@@ -149,7 +149,7 @@ export function HeroSection() {
           </div>
 
           {/* Right: workflow diagram */}
-          <div className="relative lg:pl-4">
+          <div className="relative overflow-hidden lg:overflow-visible lg:pl-4">
             <WorkflowDiagram />
           </div>
         </div>

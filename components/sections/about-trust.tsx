@@ -27,7 +27,7 @@ export function AboutTrust() {
     <section
       id="o-mnie"
       aria-labelledby="about-trust-heading"
-      className="relative overflow-hidden bg-background py-24 sm:py-32"
+      className="relative overflow-hidden bg-background py-12 sm:py-24 lg:py-32"
     >
       {/* Background decoration */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
@@ -44,7 +44,7 @@ export function AboutTrust() {
         </svg>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
           {/* Left: copy */}
@@ -119,7 +119,7 @@ export function AboutTrust() {
                 </span>
               </div>
 
-              <CardContent className="flex flex-col gap-8 p-8">
+              <CardContent className="flex flex-col gap-6 p-4 sm:gap-8 sm:p-8">
                 {/* Avatar + identity */}
                 <div className="flex items-center gap-5">
                   {/* Avatar placeholder */}
@@ -148,7 +148,7 @@ export function AboutTrust() {
                 {/* Metrics */}
                 <div className="grid grid-cols-3 divide-x divide-border/60 rounded-xl border border-border/60 bg-muted/30">
                   {metrics.map((m) => (
-                    <div key={m.label} className="flex flex-col items-center gap-1 px-4 py-5">
+                    <div key={m.label} className="flex flex-col items-center gap-1 px-2 py-4 sm:px-4 sm:py-5">
                       <span className="font-mono text-2xl font-bold text-foreground">
                         {m.value}
                       </span>

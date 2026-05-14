@@ -1,4 +1,6 @@
 import { HeroSection } from "@/components/sections/hero"
+import { Obszary } from "@/components/sections/Obszary"
+import { NarzedziaGrid } from "@/components/sections/NarzedziaGrid"
 import { AgitationSection } from "@/components/sections/agitation"
 import { OfferClusters } from "@/components/sections/offer-clusters"
 import { WhyN8n } from "@/components/sections/why-n8n"
@@ -50,7 +52,9 @@ export default function Page() {
       <OfferClusters />
       <WhyN8n />
       <AboutTrust />
+      <Obszary />
       <ProcessSteps />
+      <NarzedziaGrid />
       <FaqSection />
       <ContactDual />
       <Footer />

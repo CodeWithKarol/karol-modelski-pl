@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Users, Receipt, BrainCircuit, CheckCircle2 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 
@@ -19,6 +20,7 @@ const clusters = [
       "Automatyczne przechwytywanie kontaktów z formularza WWW lub kalendarza i błyskawiczne przesyłanie ich do HubSpot / Pipedrive.",
     effect:
       "Natychmiastowy alert na Slacku/Teams o nowym kliencie. Odpowiadasz zanim wyprzedzi Cię konkurencja.",
+    href: "/automatyzacja-sprzedazy",
   },
   {
     icon: Receipt,
@@ -37,6 +39,7 @@ const clusters = [
       "Automatyzacja wprowadzania faktur. Każdy załącznik z fakturą trafiający na Twój Gmail jest automatycznie katalogowany na Google Drive, a najważniejsze dane lądują w dedykowanym Arkuszu Google Sheets.",
     effect:
       "Koniec z chaosem na koniec miesiąca i ręcznym przeszukiwaniem poczty dla księgowości.",
+    href: "/automatyzacja-administracji-i-finansow",
   },
   {
     icon: BrainCircuit,
@@ -55,15 +58,36 @@ const clusters = [
       "Wdrożenie zaawansowanych modeli językowych Google Gemini bezpośrednio w Twoje workflow. Algorytm automatycznie analizuje treść maili, klasyfikuje intencje klientów i przygotowuje wersje robocze odpowiedzi.",
     effect:
       "Twoja skrzynka zaczyna wstępnie obsługiwać się sama, zachowując najwyższą jakość komunikacji.",
+    href: "/automatyzacja-procesow-z-ai",
+  },
+  {
+    icon: Users,
+    accent: {
+      iconBg: "bg-emerald-100 dark:bg-emerald-950/40",
+      iconColor: "text-emerald-600 dark:text-emerald-400",
+      label: "Współpraca",
+      labelBg: "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800/40",
+      effectBg: "bg-emerald-50 border-emerald-100 dark:bg-emerald-950/30 dark:border-emerald-800/30",
+      effectText: "text-emerald-700 dark:text-emerald-300",
+      effectIcon: "text-emerald-500 dark:text-emerald-400",
+    },
+    cluster: "Współpraca",
+    title: "Jak możemy współpracować?",
+    solution:
+      "Sprawdź dostępne modele współpracy, od jednorazowych konsultacji n8n, przez audyty, po stałe wsparcie w automatyzacji Twoich procesów.",
+    effect:
+      "Znajdź model dopasowany do Twoich potrzeb i skali Twojego biznesu.",
+    href: "/wspolpraca",
   },
 ]
+
 
 export function OfferClusters() {
   return (
     <section
       id="oferta-klastry"
       aria-labelledby="offer-clusters-heading"
-      className="relative overflow-hidden bg-background py-24 sm:py-32"
+      className="relative overflow-hidden bg-background py-12 sm:py-24 lg:py-32"
     >
       {/* Background decoration */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
@@ -80,7 +104,7 @@ export function OfferClusters() {
         </svg>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
           <div className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-400/40 bg-amber-50 px-3 py-1 dark:bg-amber-950/40">
@@ -114,12 +138,19 @@ export function OfferClusters() {
         {/* Cluster cards */}
         <div className="mx-auto mt-16 max-w-6xl sm:mt-20 lg:mt-24">
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-            {clusters.map((item) => (
-              <Card
-                key={item.title}
-                className="group relative flex flex-col border-border/60 bg-background transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-black/20"
-              >
-                <CardContent className="flex flex-col gap-5 p-6">
+            {clusters.map((item) => {
+              const CardContentWrapper = ({ children }: { children: React.ReactNode }) => (
+                <Card
+                  className="group relative flex flex-col border-border/60 bg-background transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-black/20 h-full"
+                >
+                  <CardContent className="flex flex-col gap-5 p-6 h-full">
+                    {children}
+                  </CardContent>
+                </Card>
+              )
+
+              const content = (
+                <>
                   {/* Top: icon + cluster label */}
                   <div className="flex items-center gap-3">
                     <div
@@ -161,9 +192,19 @@ export function OfferClusters() {
                       {item.effect}
                     </p>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
+                </>
+              )
+
+              return item.href ? (
+                <Link href={item.href} key={item.title} className="block">
+                  <CardContentWrapper>{content}</CardContentWrapper>
+                </Link>
+              ) : (
+                <div key={item.title}>
+                  <CardContentWrapper>{content}</CardContentWrapper>
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>

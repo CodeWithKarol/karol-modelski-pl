@@ -23,7 +23,7 @@ export function FaqSection() {
     <section
       id="faq"
       aria-labelledby="faq-heading"
-      className="relative overflow-hidden bg-background py-24 sm:py-32"
+      className="relative overflow-hidden bg-background py-12 sm:py-24 lg:py-32"
     >
       {/* Background decoration */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
@@ -39,7 +39,7 @@ export function FaqSection() {
         </svg>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           {/* Header */}
           <div className="mb-16 lg:mb-20">
@@ -95,7 +95,7 @@ export function FaqSection() {
                         </svg>
                       </span>
                     </summary>
-                    <p className="pb-7 pr-12 text-base font-normal leading-relaxed text-muted-foreground">
+                    <p className="pb-7 pr-6 text-base font-normal leading-relaxed text-muted-foreground sm:pr-12">
                       {faq.answer}
                     </p>
                   </details>

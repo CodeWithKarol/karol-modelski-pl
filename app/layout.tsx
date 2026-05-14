@@ -65,6 +65,7 @@ export default function RootLayout({
     <html
       lang="pl"
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
       className={cn("antialiased", fontMono.variable, inter.variable)}
     >
       <body>

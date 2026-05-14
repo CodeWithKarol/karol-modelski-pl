@@ -2,11 +2,10 @@ import Link from "next/link"
 import { MobileMenu } from "./mobile-menu"
 
 const navLinks = [
-  { href: "#oferta-klastry", label: "Szybkie wdrożenia" },
-  { href: "#dlaczego-n8n", label: "Dlaczego n8n?" },
-  { href: "#o-mnie", label: "O mnie" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#kontakt", label: "Kontakt" },
+  { href: "/#oferta-klastry", label: "Oferta" },
+  { href: "/wspolpraca", label: "Współpraca" },
+  { href: "/#o-mnie", label: "O mnie" },
+  { href: "/#faq", label: "FAQ" },
 ]
 
 export function Navigation() {
@@ -23,16 +22,16 @@ export function Navigation() {
         </Link>
 
         {/* Nawigacja desktop */}
-        <nav aria-label="Nawigacja główna" className="hidden lg:block">
+        <nav aria-label="Nawigacja główna" className="hidden md:block">
           <ul className="flex items-center gap-1">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a
+                <Link
                   href={link.href}
-                  className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                  className="rounded-md px-2 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -44,11 +43,13 @@ export function Navigation() {
             href="https://calendly.com/kontakt-karol-modelski/new-meeting"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 lg:flex"
+            className="hidden items-center rounded-md bg-primary px-3 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 md:flex"
           >
             Bezpłatna Diagnoza
           </a>
-          <MobileMenu />
+          <div className="md:hidden">
+            <MobileMenu />
+          </div>
         </div>
       </div>
     </header>
