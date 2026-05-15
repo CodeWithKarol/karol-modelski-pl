@@ -31,6 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/automatyzacja-marketingu`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/automatyzacja-administracji-i-finansow`,
       lastModified: new Date(),
       changeFrequency: "weekly",
@@ -38,6 +44,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/automatyzacja-procesow-z-ai`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/automatyzacja-obslugi-klienta`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
@@ -62,6 +74,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    {
+      url: `${baseUrl}/integracja-hubspot`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/integracja-slack`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/automatyzacja-finansow`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
 
     // Baza wiedzy - Priorytet 0.5
     {
@@ -78,6 +108,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/baza-wiedzy/api-w-biznesie`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/baza-wiedzy/automatyzacja-marketingu-n8n-vs-saas`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.5,

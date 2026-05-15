@@ -37,7 +37,10 @@ export default function ZarzadzanieProjektamiPage() {
       links: [
         { label: "ClickUp", href: "/integracja-clickup" },
         { label: "Google Sheets", href: "/automatyzacja-google-sheets" },
-        { label: "Pipedrive", href: "/integracja-pipedrive" }
+        { label: "Pipedrive", href: "/integracja-pipedrive" },
+        { label: "Slack", href: "/integracja-slack" },
+        { label: "HubSpot", href: "/integracja-hubspot" },
+        { label: "Stripe", href: "/automatyzacja-finansow" }
       ]
     },
     faq: {

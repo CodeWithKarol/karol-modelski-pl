@@ -1,5 +1,5 @@
 import { KnowledgePageTemplate } from "@/components/templates/knowledge/knowledge-page-template"
-import { Card, CardContent } from "@/components/ui/card"
+import { KnowledgeSection, KnowledgeBenefitsList, KnowledgeManagerSummary } from "@/components/sections/knowledge/blocks"
 import { Zap, ShieldCheck, Target } from "lucide-react"
 
 export default function WebhookPage() {
@@ -10,8 +10,7 @@ export default function WebhookPage() {
       breadcrumbLabel="Co to jest Webhook?"
       href="/baza-wiedzy/co-to-jest-webhook"
     >
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-4">Istota działania: Zasada „Nie dzwoń do nas, to my zadzwonimy do Ciebie”</h2>
+      <KnowledgeSection title="Istota działania: Zasada „Nie dzwoń do nas, to my zadzwonimy do Ciebie”">
         <p className="mb-4">
           Aby zrozumieć Webhook, wyobraź sobie dwie metody sprawdzania, czy masz nowy list w skrzynce pocztowej:
         </p>
@@ -20,47 +19,21 @@ export default function WebhookPage() {
             <li><strong>Webhook:</strong> Siedzisz wygodnie w domu, a listonosz dzwoni do drzwi tylko wtedy, gdy faktycznie ma dla Ciebie list.</li>
         </ul>
         <p>Technicznie rzecz biorąc, Webhook to mechanizm, w którym jedna aplikacja (np. Pipedrive) automatycznie wysyła pakiet danych pod wskazany adres URL systemu n8n <strong>dokładnie w momencie, gdy wydarzy się określone zdarzenie</strong> (np. handlowiec przesunie transakcję na etap „Wygrana”).</p>
-      </section>
+      </KnowledgeSection>
 
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-8">Dlaczego Webhooki są kluczowe w biznesie?</h2>
-        <div className="grid gap-6">
-            <Card className="border-border/60 bg-muted/20">
-                <CardContent className="p-6 flex gap-4">
-                    <Zap className="h-8 w-8 text-amber-600 shrink-0" />
-                    <div>
-                        <h3 className="font-bold text-lg">Natychmiastowa reakcja (Real-Time)</h3>
-                        <p className="text-muted-foreground mt-1">Dane o nowym leadzie trafiają do zespołu w ułamku sekundy. Czas reakcji spada do absolutnego minimum.</p>
-                    </div>
-                </CardContent>
-            </Card>
-            <Card className="border-border/60 bg-muted/20">
-                <CardContent className="p-6 flex gap-4">
-                    <ShieldCheck className="h-8 w-8 text-amber-600 shrink-0" />
-                    <div>
-                        <h3 className="font-bold text-lg">Oszczędność i stabilność</h3>
-                        <p className="text-muted-foreground mt-1">System nie musi bez przerwy „pytać” drugiej aplikacji o nowe dane, co nie obciąża serwerów i gwarantuje ciągłość działania biznesu.</p>
-                    </div>
-                </CardContent>
-            </Card>
-            <Card className="border-border/60 bg-muted/20">
-                <CardContent className="p-6 flex gap-4">
-                    <Target className="h-8 w-8 text-amber-600 shrink-0" />
-                    <div>
-                        <h3 className="font-bold text-lg">Precyzja danych</h3>
-                        <p className="text-muted-foreground mt-1">Webhook przesyła precyzyjnie ustrukturyzowany obiekt JSON z kompletem informacji o konkretnym zdarzeniu.</p>
-                    </div>
-                </CardContent>
-            </Card>
-        </div>
-      </section>
+      <KnowledgeSection title="Dlaczego Webhooki są kluczowe w biznesie?">
+        <KnowledgeBenefitsList items={[
+            { icon: Zap, title: "Natychmiastowa reakcja (Real-Time)", description: "Dane o nowym leadzie trafiają do zespołu w ułamku sekundy. Czas reakcji spada do absolutnego minimum." },
+            { icon: ShieldCheck, title: "Oszczędność i stabilność", description: "System nie musi bez przerwy „pytać” drugiej aplikacji o nowe dane, co nie obciąża serwerów i gwarantuje ciągłość działania biznesu." },
+            { icon: Target, title: "Precyzja danych", description: "Webhook przesyła precyzyjnie ustrukturyzowany obiekt JSON z kompletem informacji o konkretnym zdarzeniu." }
+        ]} />
+      </KnowledgeSection>
 
-      <section>
-        <h2 className="text-2xl font-bold mb-4">Przykład zastosowania</h2>
+      <KnowledgeManagerSummary title="Przykład zastosowania">
         <p>
           Gdy klient rezerwuje termin w Twoim kalendarzu online, system rezerwacji wysyła Webhook do n8n. W ułamku sekundy n8n odbiera te dane, sprawdza bazę, zakłada klienta w CRM i wysyła alert na Slacku. Wszystko dzieje się automatycznie, zanim użytkownik zamknie kartę w przeglądarce.
         </p>
-      </section>
+      </KnowledgeManagerSummary>
     </KnowledgePageTemplate>
   )
 }

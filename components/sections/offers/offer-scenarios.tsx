@@ -1,7 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle2 } from "lucide-react"
 
-export function OfferScenarios({ title, scenarios }: { title: string; scenarios: { title: string; description: string }[] }) {
+interface Scenario {
+  title: string
+  description: string
+}
+
+export function OfferScenarios({ title, scenarios }: { title: string; scenarios: Scenario[] }) {
   return (
     <section className="py-12 sm:py-24 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

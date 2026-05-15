@@ -37,7 +37,10 @@ export default function AdministracjaFinansePage() {
       links: [
         { label: "Google Sheets", href: "/automatyzacja-google-sheets" },
         { label: "Pipedrive", href: "/integracja-pipedrive" },
-        { label: "ClickUp", href: "/integracja-clickup" }
+        { label: "ClickUp", href: "/integracja-clickup" },
+        { label: "HubSpot", href: "/integracja-hubspot" },
+        { label: "Stripe", href: "/automatyzacja-finansow" },
+        { label: "Slack", href: "/integracja-slack" }
       ]
     },
     faq: {
