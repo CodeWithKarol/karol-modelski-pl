@@ -1,5 +1,4 @@
 import { Breadcrumbs } from "@/components/breadcrumbs"
-import { Footer } from "@/components/sections/footer"
 import { ContactDual } from "@/components/sections/contact-dual"
 
 interface KnowledgePageProps {
@@ -43,7 +42,6 @@ export function KnowledgePageTemplate({ title, subtitle, breadcrumbLabel, href, 
       </main>
 
       <ContactDual />
-      <Footer />
     </>
   )
 }

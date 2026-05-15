@@ -4,6 +4,7 @@ import { Geist_Mono, Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/sections/footer"
 import { cn } from "@/lib/utils"
 
 const inter = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-sans" })
@@ -83,6 +84,7 @@ export default function RootLayout({
           </a>
           <Navigation />
           <main id="main-content">{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

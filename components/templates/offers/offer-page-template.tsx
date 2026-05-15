@@ -1,16 +1,14 @@
 import { OfferHero } from "@/components/sections/offers/offer-hero"
 import { ToolAgitation } from "@/components/sections/tools/tool-agitation"
 import { OfferScenarios } from "@/components/sections/offers/offer-scenarios"
-import { AreaToolLinks } from "@/components/sections/areas/area-tool-links"
+import { OfferToolLinks } from "@/components/sections/offers/offer-tool-links"
 import { OfferFaqSection } from "@/components/sections/offers/offer-faq"
 import { TechnicalDetails } from "@/components/templates/technical-details"
 import { ContactDual } from "@/components/sections/contact-dual"
-import { Footer } from "@/components/sections/footer"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { OfferAgitation } from "@/components/sections/offers/offer-agitation"
-import { OfferToolLinks } from "@/components/sections/offers/offer-tool-links"
 
 interface OfferPageProps {
   hero: any
@@ -52,7 +50,6 @@ export function OfferPageTemplate({ hero, agitation, scenarios, technical, toolL
       </section>
 
       <ContactDual />
-      <Footer />
     </>
   )
 }
