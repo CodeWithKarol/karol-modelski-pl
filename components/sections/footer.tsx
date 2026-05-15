@@ -1,21 +1,11 @@
 import Link from "next/link"
 import { MapPin, Mail, ExternalLink } from "lucide-react"
 
-const CALENDLY_URL = "https://calendly.com/kontakt-karol-modelski/new-meeting"
-
 const navLinks: { href: string; label: string; external?: boolean; internal?: boolean }[] = [
   { href: "/#oferta-klastry", label: "Oferta" },
   { href: "/wspolpraca", label: "Współpraca" },
   { href: "/#o-mnie", label: "O mnie" },
   { href: "/#faq", label: "FAQ" },
-]
-
-const processes = [
-  "Automatyzacja Google Sheets & CRM",
-  "Integracja Gmail i powiadomień Slack",
-  "Automatyzacja faktur i dokumentów",
-  "Wdrożenia Google Gemini w biznesie",
-  "Integracje systemów Pipedrive / HubSpot",
 ]
 
 export function Footer() {

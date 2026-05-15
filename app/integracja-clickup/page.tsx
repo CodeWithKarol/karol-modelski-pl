@@ -1,6 +1,5 @@
 import { ToolPageTemplate } from "@/components/templates/tool-page-template"
 import { Clock, Users, FileText, Webhook, GitBranch, Database } from "lucide-react"
-import { Breadcrumbs } from "@/components/breadcrumbs"
 
 export default function ClickUpPage() {
   const data = {

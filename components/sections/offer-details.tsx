@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle2, AlertTriangle, Code2 } from "lucide-react"
 
 export function EngineeringStandards() {

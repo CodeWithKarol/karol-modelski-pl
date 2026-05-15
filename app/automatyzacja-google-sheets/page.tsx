@@ -1,6 +1,5 @@
 import { ToolPageTemplate } from "@/components/templates/tool-page-template"
 import { ShieldCheck, Zap, Bot, FileSpreadsheet, AlertTriangle, Database } from "lucide-react"
-import { Breadcrumbs } from "@/components/breadcrumbs"
 
 export default function GoogleSheetsPage() {
   const data = {

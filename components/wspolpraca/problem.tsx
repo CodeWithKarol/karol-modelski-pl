@@ -52,7 +52,7 @@ export function WspolpracaProblem() {
 
         {/* Problem list */}
         <div className="divide-y divide-border/60">
-          {problems.map((problem, i) => (
+          {problems.map((problem) => (
             <div key={problem.title} className="flex flex-col gap-4 py-8 first:pt-0 last:pb-0 sm:flex-row sm:gap-6">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-red-100 dark:bg-red-950/40">
                 <problem.icon className="h-6 w-6 text-red-600 dark:text-red-400" aria-hidden="true" />

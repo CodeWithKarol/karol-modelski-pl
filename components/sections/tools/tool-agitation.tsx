@@ -1,4 +1,4 @@
-import { FileSpreadsheet, AlertTriangle, Database, LucideIcon } from "lucide-react"
+import { LucideIcon } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 
 interface PainPoint {

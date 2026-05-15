@@ -83,7 +83,7 @@ export function WspolpracaOffer() {
           </h2>
 
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-            Zamiast ogólnej "automatyzacji" — konkretna, opisana usługa z gwarantowanym zakresem.
+            Zamiast ogólnej &quot;automatyzacji&quot; — konkretna, opisana usługa z gwarantowanym zakresem.
           </p>
         </div>
 
