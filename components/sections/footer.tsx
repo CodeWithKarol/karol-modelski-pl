@@ -103,6 +103,7 @@ export function Footer() {
               <li><Link href="/baza-wiedzy/co-to-jest-n8n" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Co to jest n8n?</Link></li>
               <li><Link href="/baza-wiedzy/co-to-jest-webhook" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Co to jest Webhook?</Link></li>
               <li><Link href="/baza-wiedzy/api-w-biznesie" className="text-sm text-muted-foreground hover:text-foreground transition-colors">API w biznesie</Link></li>
+              <li><Link href="/baza-wiedzy/automatyzacja-marketingu-n8n-vs-saas" className="text-sm text-muted-foreground hover:text-foreground transition-colors">n8n vs SaaS (Marketing)</Link></li>
             </ul>
           </div>
 

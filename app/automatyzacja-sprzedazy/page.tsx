@@ -36,7 +36,10 @@ export default function SprzedazPage() {
       links: [
         { label: "Pipedrive", href: "/integracja-pipedrive" },
         { label: "ClickUp", href: "/integracja-clickup" },
-        { label: "Google Sheets", href: "/automatyzacja-google-sheets" }
+        { label: "Google Sheets", href: "/automatyzacja-google-sheets" },
+        { label: "HubSpot", href: "/integracja-hubspot" },
+        { label: "Slack", href: "/integracja-slack" },
+        { label: "Stripe", href: "/automatyzacja-finansow" }
       ]
     },
     faq: {

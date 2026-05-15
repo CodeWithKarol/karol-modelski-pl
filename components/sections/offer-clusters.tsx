@@ -61,6 +61,25 @@ const clusters = [
     href: "/automatyzacja-procesow-z-ai",
   },
   {
+    icon: BrainCircuit,
+    accent: {
+      iconBg: "bg-rose-100 dark:bg-rose-950/40",
+      iconColor: "text-rose-600 dark:text-rose-400",
+      label: "Automatyzacja Marketingu",
+      labelBg: "bg-rose-50 text-rose-700 border-rose-200 dark:bg-rose-950/40 dark:text-rose-300 dark:border-rose-800/40",
+      effectBg: "bg-rose-50 border-rose-100 dark:bg-rose-950/30 dark:border-rose-800/30",
+      effectText: "text-rose-700 dark:text-rose-300",
+      effectIcon: "text-rose-500 dark:text-rose-400",
+    },
+    cluster: "Marketing Automation",
+    title: "Automatyzacja Marketingu",
+    solution:
+      "Zaawansowane ścieżki Lead Nurturing, inteligentna klasyfikacja leadów i automatyczna dystrybucja treści, połączone z Twoim CRM bez wysokich opłat.",
+    effect:
+      "Zwiększ konwersję dzięki personalizacji w czasie rzeczywistym, nie płacąc za każdy przesłany lead.",
+    href: "/automatyzacja-marketingu",
+  },
+  {
     icon: Users,
     accent: {
       iconBg: "bg-emerald-100 dark:bg-emerald-950/40",
