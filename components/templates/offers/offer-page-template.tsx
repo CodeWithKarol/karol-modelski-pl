@@ -1,5 +1,4 @@
 import { OfferHero } from "@/components/sections/offers/offer-hero"
-import { ToolAgitation } from "@/components/sections/tools/tool-agitation"
 import { OfferScenarios } from "@/components/sections/offers/offer-scenarios"
 import { OfferToolLinks } from "@/components/sections/offers/offer-tool-links"
 import { OfferFaqSection } from "@/components/sections/offers/offer-faq"
@@ -10,13 +9,58 @@ import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { OfferAgitation } from "@/components/sections/offers/offer-agitation"
 
+import { LucideIcon } from "lucide-react"
+
+interface PainPoint {
+  icon: LucideIcon
+  title: string
+  description: string
+}
+
+interface OfferHeroProps {
+  title: string
+  subtitle: string
+  description: string
+}
+
+interface OfferAgitationProps {
+  title: string
+  painPoints: PainPoint[]
+}
+
+interface OfferScenariosProps {
+  title: string
+  scenarios: { title: string; description: string }[]
+}
+
+interface TechnicalFeature {
+  icon: LucideIcon
+  title: string
+  description: string
+  link?: { label: string; href: string }
+}
+
+interface TechnicalDetailsProps {
+  features: TechnicalFeature[]
+}
+
+interface OfferToolLinksProps {
+  title: string
+  description: string
+  links: { label: string; href: string }[]
+}
+
+interface OfferFaqProps {
+  faqs: { question: string; answer: string }[]
+}
+
 interface OfferPageProps {
-  hero: any
-  agitation: any
-  scenarios: any
-  technical: any
-  toolLinks: any
-  faq: any
+  hero: OfferHeroProps
+  agitation: OfferAgitationProps
+  scenarios: OfferScenariosProps
+  technical: TechnicalDetailsProps
+  toolLinks: OfferToolLinksProps
+  faq: OfferFaqProps
 }
 
 export function OfferPageTemplate({ hero, agitation, scenarios, technical, toolLinks, faq }: OfferPageProps) {

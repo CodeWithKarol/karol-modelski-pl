@@ -1,8 +1,8 @@
-import { ShieldCheck, Zap, Bot } from "lucide-react"
+import { type LucideIcon } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
 
-export function TechnicalDetails({ features }: { features: { icon: any; title: string; description: string; link?: { label: string; href: string } }[] }) {
+export function TechnicalDetails({ features }: { features: { icon: LucideIcon; title: string; description: string; link?: { label: string; href: string } }[] }) {
   return (
     <section className="py-12 sm:py-24 bg-muted/30 border-t border-border/50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

@@ -1,6 +1,5 @@
 import { OfferPageTemplate } from "@/components/templates/offers/offer-page-template"
-import { Bot, Zap, BrainCircuit, ShieldAlert, FileText, Banknote } from "lucide-react"
-import { Breadcrumbs } from "@/components/breadcrumbs"
+import { Bot, Zap, BrainCircuit, ShieldAlert, FileText } from "lucide-react"
 
 export default function AutomatyzacjaAiPage() {
   const data = {
