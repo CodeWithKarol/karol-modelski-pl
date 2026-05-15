@@ -1,15 +1,10 @@
 import { KnowledgePageTemplate } from "@/components/templates/knowledge/knowledge-page-template"
-import { KnowledgeSection, KnowledgeManagerSummary } from "@/components/sections/knowledge/blocks"
-import Link from "next/link"
+import { KnowledgeSection } from "@/components/sections/knowledge/blocks"
+import { KNOWLEDGE_PAGES } from "@/lib/knowledge"
 
 export default function N8nVsSaasPage() {
   return (
-    <KnowledgePageTemplate 
-      title="n8n vs SaaS (Zapier/Make): Wybór narzędzia do automatyzacji marketingu"
-      subtitle="Czy budżetowe rozwiązanie typu SaaS zawsze się opłaca? Analizujemy koszty i wolumeny automatyzacji w kontekście skalowalności biznesu."
-      breadcrumbLabel="n8n vs SaaS"
-      href="/baza-wiedzy/automatyzacja-marketingu-n8n-vs-saas"
-    >
+    <KnowledgePageTemplate data={KNOWLEDGE_PAGES["/baza-wiedzy/automatyzacja-marketingu-n8n-vs-saas"]}>
       <KnowledgeSection title="Modele rozliczeniowe">
         <p className="mb-4">
           Wybór między rozwiązaniami SaaS (np. Zapier, Make) a narzędziem self-hosted jak <strong>n8n</strong> to jedna z kluczowych decyzji, przed którymi stają firmy rozwijające swoje automatyzacje. Decyzja ta zależy głównie od przewidywanego wolumenu zadań oraz wymagań dotyczących bezpieczeństwa danych.
@@ -38,14 +33,6 @@ export default function N8nVsSaasPage() {
         </ul>
       </KnowledgeSection>
 
-      <KnowledgeManagerSummary title="Podsumowanie">
-        <p className="mb-4">
-          Nie ma jednego &quot;najlepszego&quot; rozwiązania. SaaS oferuje szybkość, natomiast n8n oferuje skalowalność i oszczędności przy dużych skalach. Jeśli Twoja firma intensywnie korzysta z automatyzacji, przejście na n8n jest naturalnym krokiem w optymalizacji kosztów.
-        </p>
-        <p>
-          Więcej informacji o tym, jak optymalizować procesy marketingu i sprzedaży, znajdziesz w sekcji <Link href="/automatyzacja-marketingu" className="text-amber-600 hover:underline">automatyzacja marketingu</Link>.
-        </p>
-      </KnowledgeManagerSummary>
     </KnowledgePageTemplate>
   )
 }

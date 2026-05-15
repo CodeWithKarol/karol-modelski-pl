@@ -1,8 +1,18 @@
 import Link from "next/link"
 import { MobileMenu } from "./mobile-menu"
 
+import { TOOLS } from "@/lib/tools"
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu"
+
 const navLinks = [
-  { href: "/#oferta-klastry", label: "Oferta" },
   { href: "/wspolpraca", label: "Współpraca" },
   { href: "/#o-mnie", label: "O mnie" },
   { href: "/#faq", label: "FAQ" },
@@ -23,18 +33,32 @@ export function Navigation() {
 
         {/* Nawigacja desktop */}
         <nav aria-label="Nawigacja główna" className="hidden md:block">
-          <ul className="flex items-center gap-1">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="rounded-md px-2 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <NavigationMenu>
+            <NavigationMenuList>
+              {navLinks.map((link) => (
+                <NavigationMenuItem key={link.href}>
+                  <Link href={link.href} className={navigationMenuTriggerStyle()}>
+                    {link.label}
+                  </Link>
+                </NavigationMenuItem>
+              ))}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Automatyzacje</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4">
+                    {TOOLS.map((tool) => (
+                      <li key={tool.metadata.href}>
+                        <Link href={tool.metadata.href} className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                          <div className="text-sm font-medium leading-none">{tool.metadata.name}</div>
+                          <p className="line-clamp-1 text-sm leading-snug text-muted-foreground">{tool.metadata.description}</p>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
         </nav>
 
         {/* CTA + hamburger */}
