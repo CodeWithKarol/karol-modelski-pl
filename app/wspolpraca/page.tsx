@@ -4,7 +4,6 @@ import { WspolpracaProblem } from "@/components/wspolpraca/problem"
 import { WspolpracaOffer } from "@/components/wspolpraca/offer"
 import { WspolpracaWhyN8n } from "@/components/wspolpraca/why-n8n-short"
 import { WspolpracaCta } from "@/components/wspolpraca/cta"
-import { Footer } from "@/components/sections/footer"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 
 export const metadata: Metadata = {
@@ -55,7 +54,6 @@ export default function WspolpracaPage() {
       <WspolpracaOffer />
       <WspolpracaWhyN8n />
       <WspolpracaCta />
-      <Footer />
     </>
   )
 }

@@ -3,7 +3,6 @@ import { ToolAgitation } from "@/components/sections/tools/tool-agitation"
 import { TechnicalDetails } from "@/components/templates/technical-details"
 import { ToolFaqSection } from "@/components/sections/tools/tool-faq"
 import { ContactDual } from "@/components/sections/contact-dual"
-import { Footer } from "@/components/sections/footer"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 
 export interface ToolPageProps {
@@ -22,7 +21,6 @@ export function ToolPageTemplate({ hero, agitation, technical, faq }: ToolPagePr
       <TechnicalDetails {...technical} />
       <ToolFaqSection {...faq} />
       <ContactDual />
-      <Footer />
     </>
   )
 }

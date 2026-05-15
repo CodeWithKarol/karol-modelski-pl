@@ -8,7 +8,6 @@ import { AboutTrust } from "@/components/sections/about-trust"
 import { ProcessSteps } from "@/components/sections/process-steps"
 import { FaqSection } from "@/components/sections/faq-section"
 import { ContactDual } from "@/components/sections/contact-dual"
-import { Footer } from "@/components/sections/footer"
 
 import type { Metadata } from "next"
 
@@ -57,7 +56,6 @@ export default function Page() {
       <NarzedziaGrid />
       <FaqSection />
       <ContactDual />
-      <Footer />
     </>
   )
 }
