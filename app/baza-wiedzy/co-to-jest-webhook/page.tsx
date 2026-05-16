@@ -1,15 +1,11 @@
 import { KnowledgePageTemplate } from "@/components/templates/knowledge/knowledge-page-template"
-import { KnowledgeSection, KnowledgeBenefitsList, KnowledgeManagerSummary } from "@/components/sections/knowledge/blocks"
+import { KnowledgeSection, KnowledgeBenefitsList } from "@/components/sections/knowledge/blocks"
 import { Zap, ShieldCheck, Target } from "lucide-react"
+import { KNOWLEDGE_PAGES } from "@/lib/knowledge"
 
 export default function WebhookPage() {
   return (
-    <KnowledgePageTemplate 
-      title="Co to jest Webhook? Klucz do automatyzacji w czasie rzeczywistym"
-      subtitle="Zrozum mechanizm, który pozwala Twoim aplikacjom komunikować się natychmiast, bez zbędnych opóźnień i marnowania zasobów."
-      breadcrumbLabel="Co to jest Webhook?"
-      href="/baza-wiedzy/co-to-jest-webhook"
-    >
+    <KnowledgePageTemplate data={KNOWLEDGE_PAGES["/baza-wiedzy/co-to-jest-webhook"]}>
       <KnowledgeSection title="Istota działania: Zasada „Nie dzwoń do nas, to my zadzwonimy do Ciebie”">
         <p className="mb-4">
           Aby zrozumieć Webhook, wyobraź sobie dwie metody sprawdzania, czy masz nowy list w skrzynce pocztowej:
@@ -29,11 +25,6 @@ export default function WebhookPage() {
         ]} />
       </KnowledgeSection>
 
-      <KnowledgeManagerSummary title="Przykład zastosowania">
-        <p>
-          Gdy klient rezerwuje termin w Twoim kalendarzu online, system rezerwacji wysyła Webhook do n8n. W ułamku sekundy n8n odbiera te dane, sprawdza bazę, zakłada klienta w CRM i wysyła alert na Slacku. Wszystko dzieje się automatycznie, zanim użytkownik zamknie kartę w przeglądarce.
-        </p>
-      </KnowledgeManagerSummary>
     </KnowledgePageTemplate>
   )
 }

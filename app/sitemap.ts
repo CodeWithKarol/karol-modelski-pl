@@ -1,4 +1,7 @@
 import { MetadataRoute } from "next"
+import { TOOLS } from "@/lib/tools"
+import { OFFERS } from "@/lib/offers"
+import { KNOWLEDGE_PAGES } from "@/lib/knowledge"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://karol-modelski.pl"
@@ -24,99 +27,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
 
     // Produkty (Oferta) - Priorytet 0.8
-    {
-      url: `${baseUrl}/automatyzacja-sprzedazy`,
+    ...Object.keys(OFFERS).map((path) => ({
+      url: `${baseUrl}${path}`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "weekly" as const,
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/automatyzacja-marketingu`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/automatyzacja-administracji-i-finansow`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/automatyzacja-procesow-z-ai`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/automatyzacja-obslugi-klienta`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
+    })),
 
     // Narzędzia - Priorytet 0.6
-    {
-      url: `${baseUrl}/integracja-pipedrive`,
+    ...TOOLS.map((tool) => ({
+      url: `${baseUrl}${tool.metadata.href}`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "monthly" as const,
       priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/integracja-clickup`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/automatyzacja-google-sheets`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/integracja-hubspot`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/integracja-slack`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/automatyzacja-finansow`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
+    })),
 
     // Baza wiedzy - Priorytet 0.5
-    {
-      url: `${baseUrl}/baza-wiedzy/co-to-jest-n8n`,
+    ...Object.keys(KNOWLEDGE_PAGES).map((path) => ({
+      url: `${baseUrl}${path}`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "monthly" as const,
       priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/baza-wiedzy/co-to-jest-webhook`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/baza-wiedzy/api-w-biznesie`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/baza-wiedzy/automatyzacja-marketingu-n8n-vs-saas`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
+    })),
   ]
 }

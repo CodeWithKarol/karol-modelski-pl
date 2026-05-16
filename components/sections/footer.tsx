@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { MapPin, Mail, ExternalLink } from "lucide-react"
+import { KNOWLEDGE_PAGES } from "@/lib/knowledge"
 
 const navLinks: { href: string; label: string; external?: boolean; internal?: boolean }[] = [
   { href: "/#oferta-klastry", label: "Oferta" },
@@ -100,10 +101,13 @@ export function Footer() {
               Baza wiedzy
             </h4>
             <ul className="flex flex-col gap-3" role="list">
-              <li><Link href="/baza-wiedzy/co-to-jest-n8n" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Co to jest n8n?</Link></li>
-              <li><Link href="/baza-wiedzy/co-to-jest-webhook" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Co to jest Webhook?</Link></li>
-              <li><Link href="/baza-wiedzy/api-w-biznesie" className="text-sm text-muted-foreground hover:text-foreground transition-colors">API w biznesie</Link></li>
-              <li><Link href="/baza-wiedzy/automatyzacja-marketingu-n8n-vs-saas" className="text-sm text-muted-foreground hover:text-foreground transition-colors">n8n vs SaaS (Marketing)</Link></li>
+              {Object.entries(KNOWLEDGE_PAGES).map(([href, page]) => (
+                <li key={href}>
+                  <Link href={href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    {page.breadcrumbLabel}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

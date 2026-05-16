@@ -4,10 +4,11 @@ import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
 
+import { TOOLS } from "@/lib/tools"
+
 const navLinks = [
-  { href: "#oferta-klastry", label: "Szybkie wdrożenia" },
   { href: "/wspolpraca", label: "Współpraca" },
-  { href: "#dlaczego-n8n", label: "Dlaczego n8n?" },
+  { href: "/narzedzia", label: "Narzędzia" },
   { href: "#o-mnie", label: "O mnie" },
   { href: "#faq", label: "FAQ" },
   { href: "#kontakt", label: "Kontakt" },
@@ -34,7 +35,7 @@ export function MobileMenu() {
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
-                    href={link.href.startsWith("#") ? `/${link.href}` : link.href}
+                    href={link.href}
                     onClick={() => setOpen(false)}
                     className="block rounded-md px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted hover:text-foreground"
                   >
@@ -42,6 +43,22 @@ export function MobileMenu() {
                   </Link>
                 </li>
               ))}
+              <li className="mt-2 border-t border-border pt-2">
+                <span className="px-3 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">Automatyzacje</span>
+                <ul className="flex flex-col gap-1 mt-1">
+                  {TOOLS.map((tool) => (
+                    <li key={tool.metadata.href}>
+                      <Link
+                        href={tool.metadata.href}
+                        onClick={() => setOpen(false)}
+                        className="block rounded-md px-6 py-2 text-sm text-foreground/80 hover:bg-muted hover:text-foreground"
+                      >
+                        {tool.metadata.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
             </ul>
             <div className="mt-4 border-t border-border pt-4">
               <a

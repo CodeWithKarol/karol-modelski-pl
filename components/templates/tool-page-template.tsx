@@ -1,59 +1,23 @@
 import { ToolsHero } from "@/components/sections/tools/tools-hero"
 import { ToolAgitation } from "@/components/sections/tools/tool-agitation"
 import { TechnicalDetails } from "@/components/templates/technical-details"
+import { WorkflowDetailSection } from "@/components/sections/tools/workflow-detail"
 import { ToolFaqSection } from "@/components/sections/tools/tool-faq"
+import { OfferToolLinks } from "@/components/sections/offers/offer-tool-links"
 import { ContactDual } from "@/components/sections/contact-dual"
 import { Breadcrumbs } from "@/components/breadcrumbs"
+import { ToolPageData } from "@/lib/types"
 
-import { LucideIcon } from "lucide-react"
-
-interface ToolsHeroProps {
-  title: string
-  subtitle: string
-  description: string
-}
-
-interface PainPoint {
-  icon: LucideIcon
-  title: string
-  description: string
-}
-
-interface ToolAgitationProps {
-  title: string
-  painPoints: PainPoint[]
-}
-
-interface ToolFaqProps {
-  faqs: { question: string; answer: string }[]
-}
-
-interface TechnicalFeature {
-  icon: LucideIcon
-  title: string
-  description: string
-  link?: { label: string; href: string }
-}
-
-interface TechnicalDetailsProps {
-  features: TechnicalFeature[]
-}
-
-export interface ToolPageProps {
-  hero: ToolsHeroProps
-  agitation: ToolAgitationProps
-  technical: TechnicalDetailsProps
-  faq: ToolFaqProps
-}
-
-export function ToolPageTemplate({ hero, agitation, technical, faq }: ToolPageProps) {
+export function ToolPageTemplate({ data }: { data: ToolPageData }) {
   return (
     <>
-      <Breadcrumbs items={[{ label: hero.title, href: "#" }]} />
-      <ToolsHero {...hero} />
-      <ToolAgitation {...agitation} />
-      <TechnicalDetails {...technical} />
-      <ToolFaqSection {...faq} />
+      <Breadcrumbs items={[{ label: data.hero.title, href: "#" }]} />
+      <ToolsHero {...data.hero} />
+      <ToolAgitation {...data.agitation} />
+      <TechnicalDetails {...data.technical} />
+      <WorkflowDetailSection {...data.workflowDetail} />
+      <OfferToolLinks />
+      <ToolFaqSection {...data.faq} />
       <ContactDual />
     </>
   )

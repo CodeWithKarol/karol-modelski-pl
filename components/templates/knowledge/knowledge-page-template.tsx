@@ -1,18 +1,11 @@
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { ContactDual } from "@/components/sections/contact-dual"
+import { KnowledgePageData } from "@/lib/types"
 
-interface KnowledgePageProps {
-  title: string
-  subtitle: string
-  breadcrumbLabel: string
-  href: string
-  children: React.ReactNode
-}
-
-export function KnowledgePageTemplate({ title, subtitle, breadcrumbLabel, href, children }: KnowledgePageProps) {
+export function KnowledgePageTemplate({ data, children }: { data: KnowledgePageData, children: React.ReactNode }) {
   return (
     <>
-      <Breadcrumbs items={[{ label: breadcrumbLabel, href }]} />
+      <Breadcrumbs items={[{ label: data.breadcrumbLabel, href: data.href }]} />
       
       <main className="py-16 sm:py-24 lg:py-32 bg-background relative overflow-hidden">
         {/* Background decoration matching other sections */}
@@ -29,15 +22,24 @@ export function KnowledgePageTemplate({ title, subtitle, breadcrumbLabel, href, 
                     Baza wiedzy
                   </span>
                 </div>
-                <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">{title}</h1>
+                <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">{data.title}</h1>
                 <p className="mt-6 text-lg text-muted-foreground text-balance">
-                    {subtitle}
+                    {data.subtitle}
                 </p>
             </header>
 
             <article className="prose prose-amber dark:prose-invert prose-lg max-w-none prose-headings:font-bold prose-headings:tracking-tight">
                 {children}
             </article>
+
+            {data.managerSummary && (
+                <section className="mt-16 rounded-2xl border border-amber-400/20 bg-amber-50/50 p-8 dark:bg-amber-950/20">
+                    <h2 className="text-xl font-bold mb-4">{data.managerSummary.title || "Podsumowanie dla menedżera"}</h2>
+                    <div className="text-foreground leading-relaxed">
+                        {data.managerSummary.content}
+                    </div>
+                </section>
+            )}
         </div>
       </main>
 
@@ -45,3 +47,4 @@ export function KnowledgePageTemplate({ title, subtitle, breadcrumbLabel, href, 
     </>
   )
 }
+

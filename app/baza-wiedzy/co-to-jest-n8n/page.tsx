@@ -1,15 +1,11 @@
 import { KnowledgePageTemplate } from "@/components/templates/knowledge/knowledge-page-template"
-import { KnowledgeSection, KnowledgeBenefitsList, KnowledgeManagerSummary } from "@/components/sections/knowledge/blocks"
+import { KnowledgeSection, KnowledgeBenefitsList } from "@/components/sections/knowledge/blocks"
 import { TrendingDown, Lock, Plug } from "lucide-react"
+import { KNOWLEDGE_PAGES } from "@/lib/knowledge"
 
 export default function CoToJestN8nPage() {
   return (
-    <KnowledgePageTemplate 
-      title="Co to jest n8n?" 
-      subtitle="Poznaj potężne narzędzie typu workflow automation, które rewolucjonizuje sposób, w jaki firmy łączą swoje aplikacje."
-      breadcrumbLabel="Co to jest n8n?"
-      href="/baza-wiedzy/co-to-jest-n8n"
-    >
+    <KnowledgePageTemplate data={KNOWLEDGE_PAGES["/baza-wiedzy/co-to-jest-n8n"]}>
       <KnowledgeSection title="Czym jest n8n?">
         <p className="mb-4">
           n8n to zaawansowane narzędzie klasy <strong>workflow automation</strong>, które pozwala na bezszwowe łączenie różnych systemów, aplikacji i baz danych za pomocą wizualnych schematów.
@@ -27,11 +23,6 @@ export default function CoToJestN8nPage() {
         ]} />
       </KnowledgeSection>
 
-      <KnowledgeManagerSummary>
-        <p>
-          n8n to rozwiązanie idealne dla firm, które chcą automatyzować procesy w sposób profesjonalny, stabilny i przewidywalny finansowo. Wybierając n8n, inwestujesz w kod i architekturę, które stają się trwałym, niezależnym aktywem Twojego przedsiębiorstwa.
-        </p>
-      </KnowledgeManagerSummary>
     </KnowledgePageTemplate>
   )
 }
