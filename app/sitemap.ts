@@ -27,8 +27,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
 
     // Produkty (Oferta) - Priorytet 0.8
-    ...Object.keys(OFFERS).map((path) => ({
-      url: `${baseUrl}${path}`,
+    ...Object.values(OFFERS).map((offer) => ({
+      url: `${baseUrl}${offer.metadata.href}`,
       lastModified: new Date(),
       changeFrequency: "weekly" as const,
       priority: 0.8,
