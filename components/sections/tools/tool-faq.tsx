@@ -1,11 +1,7 @@
 import { HelpCircle } from "lucide-react"
+import { FAQ } from "@/components/ui/faq"
 
-interface FaqItem {
-  question: string
-  answer: string
-}
-
-export function ToolFaqSection({ faqs }: { faqs: FaqItem[] }) {
+export function ToolFaqSection({ faqs }: { faqs: { question: string; answer: string }[] }) {
   return (
     <section className="relative overflow-hidden bg-background py-12 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -22,27 +18,7 @@ export function ToolFaqSection({ faqs }: { faqs: FaqItem[] }) {
             </h2>
           </div>
 
-          <div className="divide-y divide-border/60">
-            {faqs.map((faq, index) => (
-              <div key={index}>
-                <h3 className="text-base font-semibold leading-relaxed text-foreground sm:text-lg">
-                  <details>
-                    <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-7 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background">
-                      <span>{faq.question}</span>
-                      <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-border/60 bg-muted/60 transition-colors duration-200">
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="transition-transform duration-200 [[open]_&]:rotate-180">
-                          <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      </span>
-                    </summary>
-                    <p className="pb-7 pr-6 text-base font-normal leading-relaxed text-muted-foreground sm:pr-12">
-                      {faq.answer}
-                    </p>
-                  </details>
-                </h3>
-              </div>
-            ))}
-          </div>
+          <FAQ items={faqs} />
         </div>
       </div>
     </section>

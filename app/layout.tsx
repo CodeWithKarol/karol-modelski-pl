@@ -27,36 +27,6 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLdProfessionalService = {
-  "@context": "https://schema.org",
-  "@type": ["ProfessionalService", "LocalBusiness"],
-  name: "Karol Modelski – Automatyzacja procesów biznesowych",
-  description:
-    "Wdrożenia automatyzacji procesów biznesowych z n8n i Google Gemini dla małych i średnich firm. Eliminuję rutynowe zadania, oszczędzam czas i redukuję koszty operacyjne.",
-  url: "https://karol-modelski.pl",
-  email: "kontakt@karol-modelski.pl",
-  telephone: null,
-  founder: {
-    "@type": "Person",
-    name: "Karol Modelski",
-    jobTitle: "Systems Architect & Automation Engineer",
-    url: "https://karol-modelski.pl",
-    sameAs: ["https://www.linkedin.com/in/karol-modelski"],
-  },
-  areaServed: [
-    { "@type": "City", name: "Warszawa" },
-    { "@type": "Country", name: "Polska" },
-  ],
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Warszawa",
-    addressRegion: "Mazowieckie",
-    addressCountry: "PL",
-  },
-  sameAs: ["https://www.linkedin.com/in/karol-modelski"],
-  knowsAbout: ["n8n", "automatyzacja procesów biznesowych", "Google Gemini", "integracje API", "CRM automation"],
-}
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -70,10 +40,6 @@ export default function RootLayout({
       className={cn("antialiased", fontMono.variable, inter.variable)}
     >
       <body>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdProfessionalService) }}
-        />
         <ThemeProvider>
           {/* Skip to content — accessibility + SEO */}
           <a
