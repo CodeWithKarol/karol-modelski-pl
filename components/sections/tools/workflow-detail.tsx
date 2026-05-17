@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
-import { WorkflowDetailData } from "@/lib/types";
+import { WorkflowStep } from "@/lib/types";
 
-export function WorkflowDetailSection({ title, subtitle, steps }: WorkflowDetailData) {
+export function WorkflowDetailSection({ title, subtitle, steps }: { title: string; subtitle: string; steps: WorkflowStep[] }) {
   return (
     <section className="py-12 sm:py-24 bg-muted/30">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -13,7 +13,8 @@ export function WorkflowDetailSection({ title, subtitle, steps }: WorkflowDetail
           {steps.map((item, index) => (
             <Card key={index} className="p-6 border-border/60 bg-background transition-all hover:border-amber-400/40">
               <div className="text-amber-500 font-mono font-bold mb-4">{item.step}</div>
-              <p className="text-muted-foreground text-sm leading-relaxed">{item.text}</p>
+              <h4 className="font-bold mb-2">{item.title}</h4>
+              <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
             </Card>
           ))}
         </div>

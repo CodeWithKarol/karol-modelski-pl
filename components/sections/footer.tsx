@@ -104,7 +104,7 @@ export function Footer() {
               {Object.entries(KNOWLEDGE_PAGES).map(([href, page]) => (
                 <li key={href}>
                   <Link href={href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                    {page.breadcrumbLabel}
+                    {page.metadata.breadcrumbLabel}
                   </Link>
                 </li>
               ))}

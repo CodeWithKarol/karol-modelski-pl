@@ -26,9 +26,9 @@ export const OFFERS: Record<string, OfferPageData> = {
     },
     technical: {
       features: [
-        { icon: Webhook, title: "Synchronizacja przez Webhooki v2", description: "Zamiast obciążać API ciągłym odpytywaniem, stosuję natychmiastowe Webhooki dla każdej zmiany w transakcji.", link: { label: "(Webhooki)", href: "/baza-wiedzy/co-to-jest-webhook" } },
+        { icon: Webhook, title: "Synchronizacja przez Webhooki v2", description: "Zamiast obciążać API ciągłym odpytywaniem, stosuję natychmiastowe Webhooki dla każdej zmiany w transakcji." },
         { icon: Database, title: "Inteligentna deduplikacja", description: "n8n weryfikuje unikalne identyfikatory, nie tworząc duplikatów i zachowując pełną historię kontaktu." },
-        { icon: GitBranch, title: "Obsługa pól niestandardowych", description: "W pełni mapuję customowe klucze API Twojego CRM, gwarantując płynny przepływ danych strukturyzowanych.", link: { label: "(API)", href: "/baza-wiedzy/api-w-biznesie" } },
+        { icon: GitBranch, title: "Obsługa pól niestandardowych", description: "W pełni mapuję customowe klucze API Twojego CRM, gwarantując płynny przepływ danych strukturyzowanych." },
       ]
     },
     toolLinks: {
@@ -67,7 +67,7 @@ export const OFFERS: Record<string, OfferPageData> = {
     },
     technical: {
       features: [
-        { icon: Bot, title: "Personalizacja oparta na AI", description: "Wykorzystuję AI do analizy zachowań użytkowników i automatycznego personalizowania treści e-maili.", link: { label: "(Procesy z AI)", href: "/automatyzacja-procesow-z-ai" } },
+        { icon: Bot, title: "Personalizacja oparta na AI", description: "Wykorzystuję AI do analizy zachowań użytkowników i automatycznego personalizowania treści e-maili." },
         { icon: Zap, title: "Synchronizacja w czasie rzeczywistym", description: "Natychmiastowe przenoszenie danych między platformami marketingowymi a CRM przy pomocy Webhooków." },
         { icon: Filter, title: "Zaawansowana segmentacja", description: "Dynamiczne tworzenie list odbiorców na podstawie zachowań wewnątrz n8n, bez konieczności ręcznego tagowania." },
       ]
@@ -150,7 +150,7 @@ export const OFFERS: Record<string, OfferPageData> = {
     },
     technical: {
       features: [
-        { icon: Webhook, title: "Bezpieczna autoryzacja", description: "Integrację n8n z Twoimi arkuszami i systemami konfiguruję przy użyciu protokołu OAuth2 lub dedykowanych kont usługowych.", link: { label: "(API)", href: "/baza-wiedzy/api-w-biznesie" } },
+        { icon: Webhook, title: "Bezpieczna autoryzacja", description: "Integrację n8n z Twoimi arkuszami i systemami konfiguruję przy użyciu protokołu OAuth2 lub dedykowanych kont usługowych." },
         { icon: Database, title: "Przetwarzanie wsadowe (Batching)", description: "W przypadku dużych zbiorów danych stosuję procesy wsadowe, które zapobiegają przeciążeniu pamięci i omijają limity API." },
         { icon: GitBranch, title: "Struktura odporna na zmiany", description: "W wdrożeniach n8n odwołuję się do nazw nagłówków kolumn lub kluczy obiektów, a nie do losowych indeksów arkusza." },
       ]
@@ -196,7 +196,7 @@ export const OFFERS: Record<string, OfferPageData> = {
       ]
     },
     toolLinks: {
-      title: "Narzędzia, które integrujemy w tym obszarze",
+      title: "Narzędzia, które integrujemy",
       description: "W pracy z AI najczęściej wykorzystujemy synergię narzędzi:",
       links: TOOLS.map(t => ({ label: t.metadata.name, href: t.metadata.href }))
     },
@@ -248,5 +248,5 @@ export const OFFERS: Record<string, OfferPageData> = {
         { question: "Jak szybko wdrożymy taki system?", answer: "Wdrożenie podstawowego routingu zgłoszeń to kwestia 1-2 tygodni pracy z n8n." },
       ]
     }
-  },
+  }
 };
