@@ -1,34 +1,41 @@
 import { Bot, Zap, BrainCircuit, ShieldAlert, FileText, Clock, Users, Database, GitBranch, Webhook, Mail, Target, BarChart, Banknote, Filter } from "lucide-react";
-import { OfferPageData } from "./types";
+import { OfferPageData } from "@/lib/types";
 import { TOOLS } from "./tools";
 
 export const OFFERS: Record<string, OfferPageData> = {
   "/automatyzacja-sprzedazy": {
+    metadata: {
+      title: "Automatyzacja procesów sprzedaży i obsługi leadów",
+      subtitle: "Automatyzacja Pipedrive & HubSpot CRM – zintegruj sprzedaż z resztą firmy przez n8n",
+      metaDescription: "Zautomatyzuj proces sprzedaży w firmie. Połącz system CRM z formularzami WWW, kalendarzami i alertami na Slacku za pomocą stabilnych przepływów n8n.",
+      breadcrumbLabel: "Automatyzacja Sprzedaży",
+      href: "/oferta/automatyzacja-sprzedazy"
+    },
     hero: { 
       title: "Automatyzacja Sprzedaży", 
-      subtitle: "Automatyzacja Pipedrive CRM – zintegruj sprzedaż z resztą firmy przez n8n",
+      subtitle: "Automatyzacja Pipedrive & HubSpot CRM – zintegruj procesy przez n8n",
       description: "Przestań marnować czas handlowców na mechaniczną pracę administracyjną. Za pomocą n8n połączę Twój system CRM z formularzami www, kalendarzami i komunikatorami. Zamień ręczne przepisywanie danych na natychmiastową obsługę leadów w czasie rzeczywistym."
     },
     agitation: {
       title: "Czy to wyzwania Twojego działu sprzedaży?",
       painPoints: [
-        { icon: Clock, title: "Zbyt wolny czas reakcji", description: "Potencjalni klienci wysyłają formularz lub rezerwują termin, ale zanim handlowiec ręcznie założy szansę sprzedaży, mijają godziny." },
-        { icon: Users, title: "Chaos i „zimne” szanse", description: "Handlowcy zapominają o logowaniu działań, wysyłaniu follow-upów lub gubią notatki, przez co cenne zapytania przepadają w lejku." },
-        { icon: FileText, title: "Ręczna papierkologia", description: "Gdy transakcja osiąga etap „Wygrana”, Twój zespół musi ręcznie przepisywać dane do fakturowania lub systemów projektowych." },
+        { icon: Clock, title: "Zbyt wolny czas reakcji (Lead Response Time)", description: "Potencjalni klienci wysyłają zapytanie przez formularz, ale zanim handlowiec zauważy powiadomienie e-mail i ręcznie założy szansę sprzedaży w CRM, mijają kluczowe godziny. W tym czasie klient szuka dalej, a konkurencja przejmuje inicjatywę." },
+        { icon: Users, title: "Chaos operacyjny i utrata kontaktu w lejku", description: "Handlowcy w natłoku codziennych obowiązków zapominają o logowaniu działań, wysyłaniu rutynowych follow-upów lub gubią notatki, przez co wartościowe zapytania bezpowrotnie przepadają na dnie lejka." },
+        { icon: FileText, title: "Ręczna papierkologia po wygranej", description: "Gdy transakcja osiąga etap „Wygrana”, Twój zespół traci czas na przepisywanie danych klienta z CRM do systemów fakturowych, generowanie umów w PDF czy ręczne delegowanie zadań." },
       ]
     },
     scenarios: {
       title: "Produkcyjne Scenariusze Wdrożeń",
       scenarios: [
-        { title: "Formularz WWW ➔ n8n ➔ CRM + Alert Slack", description: "Gdy klient wysyła zapytanie, n8n automatycznie tworzy Szansę Sprzedaży, mapuje dane i wysyła alert na Slacku z bezpośrednim linkiem do CRM." },
-        { title: "Etap „Wygrana” ➔ n8n ➔ Automatyczna umowa", description: "W momencie przeniesienia transakcji na etap „Wygrana”, n8n generuje umowę PDF, wysyła ją klientowi i zakłada listę zadań w ClickUp." },
+        { title: "Formularz WWW ➔ n8n ➔ CRM + Alert Slack", description: "W ułamku sekundy po wysłaniu formularza, n8n automatycznie tworzy nową Osobę, Firmę oraz Szansę Sprzedaży na pierwszym etapie lejka. System natychmiast wysyła sformatowany obiekt na Slacka/Teams z bezpośrednim linkiem, przydzielając handlowcowi zadanie typu 'Zadzwoń'." },
+        { title: "Etap „Wygrana” ➔ n8n ➔ Automatyczna umowa i projekt", description: "Przeniesienie transakcji na etap końcowy automatycznie uruchamia proces operacyjny. n8n pobiera dane rejestrowe, generuje spersonalizowaną umowę PDF z szablonu, wysyła ją e-mailem do klienta, a w systemie ClickUp zakłada kompletną strukturę zadań wdrożeniowych." },
       ]
     },
     technical: {
       features: [
-        { icon: Webhook, title: "Synchronizacja przez Webhooki v2", description: "Zamiast obciążać API ciągłym odpytywaniem, stosuję natychmiastowe Webhooki dla każdej zmiany w transakcji." },
-        { icon: Database, title: "Inteligentna deduplikacja", description: "n8n weryfikuje unikalne identyfikatory, nie tworząc duplikatów i zachowując pełną historię kontaktu." },
-        { icon: GitBranch, title: "Obsługa pól niestandardowych", description: "W pełni mapuję customowe klucze API Twojego CRM, gwarantując płynny przepływ danych strukturyzowanych." },
+        { icon: Webhook, title: "Błyskawiczna synchronizacja (Webhooki v2)", description: "Zamiast obciążać system ciągłym odpytywaniem API (Polling), integracje opieram na natychmiastowych powiadomieniach Webhook. Każda zmiana statusu leada wyzwala akcję w ułamku sekundy." },
+        { icon: Database, title: "Inteligentne zapobieganie duplikatom", description: "Przed utworzeniem jakiegokolwiek rekordu n8n przeszukuje bazę po unikalnych identyfikatorach (e-mail, telefon). Jeśli klient istnieje, dopisuje nową szansę do istniejącego profilu." },
+        { icon: GitBranch, title: "Pełne mapowanie pól niestandardowych", description: "W pełni obsługuję customowe klucze API Twojego CRM, gwarantując płynny przepływ danych strukturyzowanych." },
       ]
     },
     toolLinks: {
@@ -36,26 +43,41 @@ export const OFFERS: Record<string, OfferPageData> = {
       description: "W obszarze sprzedaży najczęściej wykorzystujemy synergię narzędzi:",
       links: TOOLS.map(t => ({ label: t.metadata.name, href: t.metadata.href }))
     },
+    workflowTitle: "Jak wygląda gotowa automatyzacja Pipedrive w n8n?",
+    workflowSubtitle: "Anatomia produkcyjnego, bezbłędnego przepływu danych krok po kroku",
+    steps: [
+      { step: "01", title: "Wyzwalacz (Webhook)", description: "Klient wypełnia formularz wyceny lub rezerwuje termin w kalendarzu. n8n w ułamku sekundy odbiera bezpieczny pakiet danych (Payload) i uruchamia proces." },
+      { step: "02", title: "Walidacja i oczyszczanie", description: "Dedykowany kod JavaScript w n8n sprawdza poprawność e-maila, formatuje numer telefonu do standardu międzynarodowego i sprawdza bazę pod kątem duplikatów." },
+      { step: "03", title: "Wzbogacanie danych (Data Enrichment)", description: "Na podstawie podanego numeru NIP, n8n automatycznie odpytuje rejestry publiczne (np. GUS), pobiera pełne dane firmy i uzupełnia profil klienta w CRM." },
+      { step: "04", title: "Tworzenie Deal i alert zespołu", description: "System zakłada 'Deal' na pierwszym etapie lejka, przypisuje handlowca zgodnie z logiką rotacyjną (Round Robin) i wysyła sformatowany alert z linkiem na Slacka." }
+    ],
     faq: {
       faqs: [
-        { question: "Czy automatyzacja przez n8n obsługuje wiele lejków (Pipelines)?", answer: "Tak. W architekturze n8n możemy dowolnie kierować ruchem w zależności od warunków logicznych, zasilając różne lejki w oparciu o źródło leadów." },
+        { question: "Czy automatyzacja obsługuje wiele różnych lejków (Pipelines)?", answer: "Tak. W architekturze n8n możemy zaimplementować dowolną logikę warunkową. Na przykład leady z kampanii reklamowych mogą automatycznie trafiać do lejka 'Cold Outreach', podczas gdy zapytania ofertowe B2B z formularza zasilą lejek główny na dedykowanym etapie kwalifikacji." },
         { question: "Co jeśli API CRM będzie chwilowo niedostępne?", answer: "Stosuję mechanizmy Error Trigger oraz Retry On Fail. Jeśli system nie przyjmie danych, n8n wstrzyma proces, przechowa dane i ponowi próbę później." },
-        { question: "Dlaczego n8n, a nie Zapier/Make?", answer: "Kluczowe są koszty i suwerenność danych. n8n w modelu Self-Hosted nie pobiera opłat za każdą operację, co przy dużej skali sprzedaży oszczędza setki dolarów miesięcznie." },
+        { question: "Dlaczego n8n, a nie Zapier/Make?", answer: "Kluczowe są koszty oraz suwerenność danych. Zapier i Make pobierają opłaty za każdą pojedynczą operację, co przy dużej skali sprzedaży generuje setki dolarów kosztów miesięcznie. n8n w modelu Self-Hosted przetwarza nieograniczoną liczbę transakcji w stałej cenie serwera, gwarantując, że dane nie opuszczają Twojej infrastruktury." }
       ]
     }
   },
   "/automatyzacja-marketingu": {
+    metadata: {
+      title: "Automatyzacja marketingu i zaawansowana segmentacja danych",
+      subtitle: "Zautomatyzuj lead nurturing i e-mail marketing za pomocą przepływów n8n",
+      metaDescription: "Przestań zarządzać kampaniami ręcznie. Dzięki n8n połączę Twoje narzędzia marketingowe, CRM i systemy analityczne w jeden bezbłędny, spójny ekosystem.",
+      breadcrumbLabel: "Automatyzacja Marketingu",
+      href: "/oferta/automatyzacja-marketingu"
+    },
     hero: { 
       title: "Automatyzacja Marketingu", 
       subtitle: "Zautomatyzuj lead nurturing i e-mail marketing za pomocą n8n",
-      description: "Przestań zarządzać kampaniami ręcznie. Dzięki n8n połączę Twoje narzędzia marketingowe, CRM i systemy analityczne w jeden spójny ekosystem. Zbuduj zaawansowane ścieżki automatyzacji, które pielęgnują Twoje leady w czasie rzeczywistym."
+      description: "Przestań zarządzać kampaniami ręcznie i przepłacać za drogie pakiety narzędzi SaaS. Dzięki n8n połączę Twoje narzędzia marketingowe, CRM i systemy analityczne w jeden spójny ekosystem. Zbuduj zaawansowane ścieżki automatyzacji, które pielęgnują Twoje leady w czasie rzeczywistym."
     },
     agitation: {
-      title: "Czy to wyzwania Twojego marketingu?",
+      title: "Czy to wyzwania Twojego działu marketingu?",
       painPoints: [
-        { icon: Mail, title: "Nieskuteczny lead nurturing", description: "Twoje leady nie otrzymują spersonalizowanych treści w odpowiednim momencie, przez co traci szanse na sprzedaż." },
-        { icon: Target, title: "Silosy danych", description: "Dane klientów są rozproszone pomiędzy różnymi narzędziami (CRM, Newsletter, WWW), co uniemożliwia pełny obraz klienta." },
-        { icon: BarChart, title: "Ręczna obsługa kampanii", description: "Przygotowanie i wysyłka kampanii zajmuje zespołowi zbyt wiele czasu, zamiast skupiać się na strategii i kreatywności." },
+        { icon: Mail, title: "Nieskuteczny lub opóźniony lead nurturing", description: "Twoje leady nie otrzymują spersonalizowanych treści edukacyjnych w odpowiednim momencie. Brak automatycznych wysyłek sprawia, że potencjalni klienci tracą zainteresowanie ofertą przed kontaktem z handlowcem." },
+        { icon: Target, title: "Silosy danych i rozproszenie", description: "Dane klientów są rozproszone pomiędzy różnymi narzędziami (CRM, Newsletter, WWW), co uniemożliwia pełny obraz klienta i precyzyjną segmentację." },
+        { icon: BarChart, title: "Ręczna obsługa kampanii", description: "Przygotowanie list, eksportowanie plików CSV i ręczne przerzucanie kontaktów zajmuje zespołowi zbyt wiele czasu, zamiast skupiać się na strategii i kreatywności." },
       ]
     },
     scenarios: {
@@ -86,10 +108,17 @@ export const OFFERS: Record<string, OfferPageData> = {
     }
   },
   "/automatyzacja-zarzadzania-projektami": {
+    metadata: {
+      title: "Automatyzacja zarządzania projektami i procesów operacyjnych",
+      subtitle: "Uwolnij swój zespół od mechanicznego zakładania zadań, przeklejania briefów i ręcznego pilnowania terminów.",
+      metaDescription: "Uwolnij swój zespół od mechanicznego zakładania zadań, przeklejania briefów i ręcznego pilnowania terminów. Zintegruj CRM z systemem operacyjnym w n8n.",
+      breadcrumbLabel: "Zarządzanie Projektami",
+      href: "/oferta/automatyzacja-zarzadzania-projektami"
+    },
     hero: { 
       title: "Zarządzanie Projektami", 
       subtitle: "Automatyzacja zarządzania projektami – poukładaj operacje w firmie przez n8n",
-      description: "Uwolnij swoich Project Managerów i zespół od mechanicznego zakładania zadań, przeklejania briefów i ręcznego pilnowania terminów. Połączę Twoje systemy operacyjne z działem sprzedaży."
+      description: "Uwolnij swoich Project Managerów i zespół od mechanicznego zakładania zadań, przeklejania briefów i ręcznego pilnowania terminów. Za pomocą n8n połączę Twoje systemy operacyjne z działem sprzedaży."
     },
     agitation: {
       title: "Wyzwania w zarządzaniu projektami",
@@ -116,7 +145,7 @@ export const OFFERS: Record<string, OfferPageData> = {
     },
     toolLinks: {
       title: "Narzędzia, które integrujemy w tym obszarze",
-      description: "Najczęściej wykorzystujemy synergię narzędzi:",
+      description: "W obszarze zarządzania zadaniami najczęściej wykorzystujemy synergię narzędzi:",
       links: TOOLS.map(t => ({ label: t.metadata.name, href: t.metadata.href }))
     },
     faq: {
@@ -127,10 +156,17 @@ export const OFFERS: Record<string, OfferPageData> = {
     }
   },
   "/automatyzacja-administracji-i-finansow": {
+    metadata: {
+      title: "Automatyzacja administracji, finansów i obiegu faktur",
+      subtitle: "Wyeliminuj rutynę biurową i błędy w rozliczeniach dzięki n8n",
+      metaDescription: "Zautomatyzuj obieg dokumentów finansowych. Połącz płatności Stripe z systemami fakturowania Infakt, wFirma lub Google Sheets przez n8n.",
+      breadcrumbLabel: "Administracja i Finanse",
+      href: "/oferta/automatyzacja-administracji-i-finansow"
+    },
     hero: { 
       title: "Administracja i Finanse", 
       subtitle: "Automatyzacja administracji i finansów – eliminacja rutyny i bezbłędne rozliczenia",
-      description: "Przestań marnować godziny na ręczne wystawianie faktur, generowanie umów i sprawdzanie płatności. Połączę Twoje bramki płatnicze i systemy księgowe w jeden bezbłędny obieg dokumentów."
+      description: "Przestań marnować godziny na ręczne wystawianie faktur, generowanie umów w PDF i żmudne sprawdzanie płatności. Za pomocą n8n połączę Twoje bramki płatnicze, systemy księgowe i arkusze w jeden bezbłędny obieg dokumentów."
     },
     agitation: {
       title: "Wyzwania w administracji i finansach",
@@ -157,8 +193,12 @@ export const OFFERS: Record<string, OfferPageData> = {
     },
     toolLinks: {
       title: "Narzędzia, które integrujemy w tym obszarze",
-      description: "Najczęściej wykorzystujemy synergię narzędzi:",
-      links: TOOLS.map(t => ({ label: t.metadata.name, href: t.metadata.href }))
+      description: "W obszarze administracji najczęściej wykorzystujemy synergię narzędzi:",
+      links: [
+        { label: "Stripe", href: "/narzedzia/automatyzacja-stripe" },
+        { label: "Google Sheets", href: "/narzedzia/automatyzacja-google-sheets" },
+        { label: "Slack", href: "/narzedzia/automatyzacja-slack" }
+      ]
     },
     faq: {
       faqs: [
@@ -168,6 +208,13 @@ export const OFFERS: Record<string, OfferPageData> = {
     }
   },
   "/automatyzacja-procesow-z-ai": {
+    metadata: {
+      title: "Integracja Google Gemini AI i automatyzacja procesów",
+      subtitle: "Wdróż zaawansowane modele Google Gemini do codziennych zadań w n8n",
+      metaDescription: "Projektujemy produkcyjne przepływy pracy w n8n, które trwale integrują zaawansowane modele językowe Google Gemini z Twoimi firmowymi systemami.",
+      breadcrumbLabel: "Procesy z AI",
+      href: "/oferta/automatyzacja-procesow-z-ai"
+    },
     hero: { 
       title: "Procesy z AI", 
       subtitle: "Automatyzacja procesów z wykorzystaniem AI. Wdróż Google Gemini do codziennych zadań w n8n",
@@ -184,7 +231,7 @@ export const OFFERS: Record<string, OfferPageData> = {
     scenarios: {
       title: "Co realnie wdrażamy?",
       scenarios: [
-        { title: "Inteligentna klasyfikacja maili", description: "n8n przesyła treść maila do Gemini, które analizuje intencję klienta i przygotowuje wersję roboczą odpowiedzi w Twoim Gmailu." },
+        { title: "Inteligentna klasyfikacja maili", description: "n8n przesyła treść maila do Gemini, które analizuje intencję klienta i przygotowuje wersje robocze odpowiedzi w Twoim Gmailu." },
         { title: "Ekstrakcja danych ze skanów do JSON", description: "n8n przechwytuje pliki PDF lub skany umów, a Gemini przetwarza ich treść i mapuje dane bezpośrednio do Twojego CRM lub Google Sheets." },
       ]
     },
@@ -209,6 +256,13 @@ export const OFFERS: Record<string, OfferPageData> = {
     }
   },
   "/automatyzacja-obslugi-klienta": {
+    metadata: {
+      title: "Obsługa Klienta",
+      subtitle: "Automatyzacja obsługi klienta – skróć czas reakcji do minimum",
+      metaDescription: "Zautomatyzuj obieg zgłoszeń (ticketów). Zapewnij priorytetyzację i natychmiastowe alerty dla zespołu.",
+      breadcrumbLabel: "Obsługa Klienta",
+      href: "/oferta/automatyzacja-obslugi-klienta"
+    },
     hero: { 
       title: "Obsługa Klienta", 
       subtitle: "Automatyzacja obsługi klienta – skróć czas reakcji do minimum",
@@ -240,7 +294,11 @@ export const OFFERS: Record<string, OfferPageData> = {
     toolLinks: {
       title: "Narzędzia, które integrujemy",
       description: "Synergia systemów wsparcia:",
-      links: TOOLS.map(t => ({ label: t.metadata.name, href: t.metadata.href }))
+      links: [
+        { label: "ClickUp", href: "/narzedzia/automatyzacja-clickup" },
+        { label: "Slack", href: "/narzedzia/automatyzacja-slack" },
+        { label: "Google Sheets", href: "/narzedzia/automatyzacja-google-sheets" }
+      ]
     },
     faq: {
       faqs: [

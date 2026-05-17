@@ -2,31 +2,32 @@
 import Link from "next/link"
 import { Card } from "@/components/ui/card"
 import { LayoutDashboard, Target, PiggyBank, MessageSquareText } from "lucide-react"
+import { OFFERS } from "@/lib/offers"
 
 const obszary = [
   { 
     title: "Sprzedaż", 
     description: "Automatyzacja procesów sprzedażowych, lead management i integracja z CRM dla szybszej obsługi klientów.",
     icon: Target, 
-    href: "/automatyzacja-sprzedazy" 
+    href: OFFERS["/automatyzacja-sprzedazy"].metadata.href 
   },
   { 
     title: "Zarządzanie", 
     description: "Uporządkuj zadania i projekty. Automatyczne tworzenie struktur, przypisywanie zadań i śledzenie statusów w jednym miejscu.",
     icon: LayoutDashboard, 
-    href: "/automatyzacja-zarzadzania-projektami" 
+    href: OFFERS["/automatyzacja-zarzadzania-projektami"].metadata.href 
   },
   { 
     title: "Finanse", 
     description: "Zautomatyzuj obieg dokumentów i faktur. Dane trafiają tam, gdzie powinny, bez ręcznego przepisywania i błędów.",
     icon: PiggyBank, 
-    href: "/automatyzacja-administracji-i-finansow" 
+    href: OFFERS["/automatyzacja-administracji-i-finansow"].metadata.href 
   },
   { 
     title: "Obsługa Klienta", 
     description: "Skróć czas reakcji dzięki inteligentnemu kolejkowaniu zgłoszeń i automatycznym alertom o priorytetowych ticketach.",
     icon: MessageSquareText, 
-    href: "/automatyzacja-obslugi-klienta" 
+    href: OFFERS["/automatyzacja-obslugi-klienta"].metadata.href 
   },
 ]
 
