@@ -53,10 +53,21 @@ export interface Tool {
 export type CommercialPageContent = ToolPageData;
 
 export interface OfferPageData {
+  metadata: PageMetadata;
   hero: { title: string; subtitle: string; description: string };
   agitation: { title: string; painPoints: PainPoint[] };
   scenarios: { title: string; scenarios: { title: string; description: string }[] };
-  technical: { features: { icon: LucideIcon; title: string; description: string }[] };
+  technical: { 
+    features: { 
+      icon: LucideIcon; 
+      title: string; 
+      description: string; 
+      link?: { label: string; href: string } 
+    }[] 
+  };
+  workflowTitle?: string;
+  workflowSubtitle?: string;
+  steps?: WorkflowStep[];
   toolLinks: { title: string; description: string; links: { label: string; href: string }[] };
   faq: { faqs: ToolFAQ[] };
 }

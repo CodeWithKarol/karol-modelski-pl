@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Users, Receipt, BrainCircuit, CheckCircle2 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
+import { OFFERS } from "@/lib/offers"
 
 const clusters = [
   {
@@ -20,7 +21,7 @@ const clusters = [
       "Automatyczne przechwytywanie kontaktów z formularza WWW lub kalendarza i błyskawiczne przesyłanie ich do HubSpot / Pipedrive.",
     effect:
       "Natychmiastowy alert na Slacku/Teams o nowym kliencie. Odpowiadasz zanim wyprzedzi Cię konkurencja.",
-    href: "/automatyzacja-sprzedazy",
+    href: OFFERS["/automatyzacja-sprzedazy"].metadata.href,
   },
   {
     icon: Receipt,
@@ -39,7 +40,7 @@ const clusters = [
       "Automatyzacja wprowadzania faktur. Każdy załącznik z fakturą trafiający na Twój Gmail jest automatycznie katalogowany na Google Drive, a najważniejsze dane lądują w dedykowanym Arkuszu Google Sheets.",
     effect:
       "Koniec z chaosem na koniec miesiąca i ręcznym przeszukiwaniem poczty dla księgowości.",
-    href: "/automatyzacja-administracji-i-finansow",
+    href: OFFERS["/automatyzacja-administracji-i-finansow"].metadata.href,
   },
   {
     icon: BrainCircuit,
@@ -58,7 +59,7 @@ const clusters = [
       "Wdrożenie zaawansowanych modeli językowych Google Gemini bezpośrednio w Twoje workflow. Algorytm automatycznie analizuje treść maili, klasyfikuje intencje klientów i przygotowuje wersje robocze odpowiedzi.",
     effect:
       "Twoja skrzynka zaczyna wstępnie obsługiwać się sama, zachowując najwyższą jakość komunikacji.",
-    href: "/automatyzacja-procesow-z-ai",
+    href: OFFERS["/automatyzacja-procesow-z-ai"].metadata.href,
   },
   {
     icon: BrainCircuit,
@@ -77,7 +78,7 @@ const clusters = [
       "Zaawansowane ścieżki Lead Nurturing, inteligentna klasyfikacja leadów i automatyczna dystrybucja treści, połączone z Twoim CRM bez wysokich opłat.",
     effect:
       "Zwiększ konwersję dzięki personalizacji w czasie rzeczywistym, nie płacąc za każdy przesłany lead.",
-    href: "/automatyzacja-marketingu",
+    href: OFFERS["/automatyzacja-marketingu"].metadata.href,
   },
   {
     icon: Users,
@@ -100,7 +101,6 @@ const clusters = [
   },
 ]
 
-
 export function OfferClusters() {
   return (
     <section
@@ -108,11 +108,9 @@ export function OfferClusters() {
       aria-labelledby="offer-clusters-heading"
       className="relative overflow-hidden bg-background py-12 sm:py-24 lg:py-32"
     >
-      {/* Background decoration */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -left-48 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-indigo-400/5 blur-3xl" />
         <div className="absolute -right-48 top-1/3 h-[400px] w-[400px] rounded-full bg-amber-400/5 blur-3xl" />
-        {/* Hairline grid — matching hero */}
         <svg className="absolute inset-0 h-full w-full opacity-[0.02]" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="offer-grid" width="40" height="40" patternUnits="userSpaceOnUse">
@@ -124,7 +122,6 @@ export function OfferClusters() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
           <div className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-400/40 bg-amber-50 px-3 py-1 dark:bg-amber-950/40">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-amber-500" />
@@ -154,7 +151,6 @@ export function OfferClusters() {
           </p>
         </div>
 
-        {/* Cluster cards */}
         <div className="mx-auto mt-16 max-w-6xl sm:mt-20 lg:mt-24">
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
             {clusters.map((item) => {
@@ -170,7 +166,6 @@ export function OfferClusters() {
 
               const content = (
                 <>
-                  {/* Top: icon + cluster label */}
                   <div className="flex items-center gap-3">
                     <div
                       className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl transition-colors duration-300 ${item.accent.iconBg}`}
@@ -184,12 +179,10 @@ export function OfferClusters() {
                     </span>
                   </div>
 
-                  {/* H3 */}
                   <h3 className="text-lg font-bold leading-snug text-foreground">
                     {item.title}
                   </h3>
 
-                  {/* Solution */}
                   <div>
                     <p className="mb-1.5 font-mono text-[10px] font-semibold uppercase tracking-widest text-muted-foreground/60">
                       Rozwiązanie
@@ -199,7 +192,6 @@ export function OfferClusters() {
                     </p>
                   </div>
 
-                  {/* Effect callout */}
                   <div
                     className={`mt-auto flex items-start gap-3 rounded-xl border p-4 ${item.accent.effectBg}`}
                   >
