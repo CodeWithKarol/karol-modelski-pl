@@ -13,11 +13,11 @@ export function ToolPageTemplate({ data }: { data: ToolPageData }) {
     <>
       <Breadcrumbs items={[{ label: data.hero.title, href: "#" }]} />
       <ToolsHero {...data.hero} />
-      <ToolAgitation {...data.agitation} />
-      <TechnicalDetails {...data.technical} />
-      <WorkflowDetailSection {...data.workflowDetail} />
+      <ToolAgitation title={data.agitationTitle} painPoints={data.painPoints} />
+      <TechnicalDetails features={data.technical.features} />
+      <WorkflowDetailSection title={data.workflowTitle} subtitle={data.workflowSubtitle} steps={data.steps.map(s => ({ step: s.step, title: s.title, description: s.description }))} />
       <OfferToolLinks />
-      <ToolFaqSection {...data.faq} />
+      <ToolFaqSection faqs={data.faqs} />
       <ContactDual />
     </>
   )
