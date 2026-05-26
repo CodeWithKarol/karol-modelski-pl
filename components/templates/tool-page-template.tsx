@@ -5,8 +5,6 @@ import { ToolPageData } from "@/lib/types"
 import { getToolProfessionalSchema } from "@/lib/schema"
 
 export function ToolPageTemplate({ data }: { data: ToolPageData }) {
-  const schema = getToolProfessionalSchema(data);
-
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
       <div className="mb-8 hidden sm:block">
