@@ -66,23 +66,42 @@ export interface Tool {
 }
 
 export interface OfferPageData {
-  metadata: PageMetadata;
-  hero: { title: string; subtitle: string; description: string };
-  agitation: { title: string; painPoints: { icon: LucideIcon; title: string; description: string }[] };
-  scenarios: { title: string; scenarios: { title: string; description: string }[] };
-  technical: { 
-    features: { 
-      icon: LucideIcon; 
-      title: string; 
-      description: string; 
-      link?: { label: string; href: string } 
-    }[] 
+  page_id: string;
+  offer_url: string;
+  offer_name: string;
+  hero_section: {
+    h1: string;
+    subtitle: string;
+    cta_label: string;
+    cta_url: string;
+    cta_microcopy: string;
   };
-  workflowTitle?: string;
-  workflowSubtitle?: string;
-  steps?: { step: string; title: string; description: string }[];
-  toolLinks: { title: string; description: string; links: { label: string; href: string }[] };
-  faq: { faqs: ToolFAQ[] };
+  business_pains: {
+    section_title: string;
+    section_description: string;
+    pains_list: string[];
+  };
+  modules_section: {
+    section_title: string;
+    section_description: string;
+    modules: {
+      module_title: string;
+      problem: string;
+      solution: string;
+      outcome: string;
+    }[];
+  };
+  tech_ecosystem: {
+    section_title: string;
+    section_description: string;
+    supported_tools: string[];
+  };
+  faq_section: ToolFAQ[];
+  seo_metadata: {
+    focus_keyword: string;
+    meta_title: string;
+    meta_description: string;
+  };
 }
 
 export interface ArticleContentBlock {

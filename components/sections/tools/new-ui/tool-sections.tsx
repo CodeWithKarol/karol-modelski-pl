@@ -12,12 +12,12 @@ export function SectionHeader({ title }: { title: string }) {
 
 export function ToolHeroSection({ h1, cta_label, cta_url }: { h1: string; cta_label: string; cta_url: string }) {
   return (
-    <section className="py-12 sm:py-24 border-b border-border/50">
-      <div className="mx-auto max-w-3xl">
+    <section className="py-12 sm:py-24 border-b border-border/50 text-center">
+      <div className="mx-auto max-w-3xl flex flex-col items-center">
         <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl mb-8 leading-[1.2]">
           {h1}
         </h1>
-        <div className="flex justify-start">
+        <div className="flex justify-center">
           <a
             href={cta_url === "/kontakt" ? "#kontakt" : cta_url}
             className="group flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-4 text-lg font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 hover:shadow-primary/30"

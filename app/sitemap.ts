@@ -28,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Produkty (Oferta) - Priorytet 0.8
     ...Object.values(OFFERS).map((offer) => ({
-      url: `${baseUrl}${offer.metadata.href}`,
+      url: `${baseUrl}${offer.offer_url}`,
       lastModified: new Date(),
       changeFrequency: "weekly" as const,
       priority: 0.8,
