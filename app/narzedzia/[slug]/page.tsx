@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { ToolPageTemplate } from "@/components/templates/tool-page-template";
 import { TOOLS } from "@/lib/tools";
 import { Metadata } from "next";
+import { getToolProfessionalSchema } from "@/lib/schema";
 
 export async function generateStaticParams() {
   return TOOLS.map((tool) => ({
@@ -29,5 +30,15 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
     notFound();
   }
 
-  return <ToolPageTemplate data={toolEntry.content} />;
+  const jsonLd = getToolProfessionalSchema(toolEntry.content);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <ToolPageTemplate data={toolEntry.content} />
+    </>
+  );
 }
