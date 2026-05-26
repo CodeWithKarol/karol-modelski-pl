@@ -31,10 +31,12 @@ export function ToolAgitation({ title = "Dlaczego potrzebujesz automatyzacji?", 
             >
               <CardContent className="flex flex-col gap-4 p-6">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-50 transition-colors duration-300 group-hover:bg-red-100 dark:bg-red-950/40 dark:group-hover:bg-red-950/60">
-                  <point.icon
-                    className="h-6 w-6 text-red-600 dark:text-red-400"
-                    aria-hidden="true"
-                  />
+                  {point.icon && (
+                    <point.icon
+                      className="h-6 w-6 text-red-600 dark:text-red-400"
+                      aria-hidden="true"
+                    />
+                  )}
                 </div>
                 <div>
                   <h3 className="text-base font-bold text-foreground">{point.title}</h3>

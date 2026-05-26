@@ -25,29 +25,9 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLdService = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "Automatyczne przesyłanie leadów do Pipedrive CRM z n8n",
-  description:
-    "Konfiguracja workflow n8n integrującego formularze WWW z Pipedrive CRM i systemem powiadomień Slack/e-mail.",
-  provider: {
-    "@type": "Person",
-    name: "Karol Modelski",
-    url: "https://karol-modelski.pl",
-  },
-  areaServed: { "@type": "Country", name: "Polska" },
-  serviceType: "Automatyzacja procesów biznesowych",
-  url: "https://karol-modelski.pl/wspolpraca",
-}
-
 export default function WspolpracaPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }}
-      />
       <Breadcrumbs items={[{ label: "Współpraca", href: "/wspolpraca" }]} />
       <WspolpracaHero />
       <WspolpracaProblem />
