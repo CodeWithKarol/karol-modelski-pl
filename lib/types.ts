@@ -104,17 +104,42 @@ export interface OfferPageData {
   };
 }
 
-export interface ArticleContentBlock {
-  type: "paragraph" | "code" | "quote";
-  title?: string;
-  body: string;
-  language?: string;
-}
-
-export interface KnowledgePageContent {
-  metadata: PageMetadata;
-  readingTime: string;
-  managerSummary: string;
-  contentBlocks: ArticleContentBlock[];
-  relatedTools?: { label: string; href: string }[];
+export interface ArticlePageData {
+  article_id: string;
+  article_url: string; // Dodane pole
+  article_type: string;
+  taxonomy: {
+    category: string;
+    tags: string[];
+  };
+  metadata: {
+    author_name: string;
+    author_role: string;
+    publication_date: string;
+    last_modified_date: string;
+  };
+  hero_section: {
+    h1: string;
+    lead_paragraph: string;
+    reading_time_minutes: number;
+  };
+  table_of_contents: string[];
+  content_blocks: {
+    content_block_id: string;
+    type: "text_with_image" | "text" | "code";
+    h2: string;
+    content: string;
+    image_url?: string;
+    image_alt?: string;
+  }[];
+  internal_linking: {
+    related_tools: { name: string; url: string }[];
+    related_offers: { name: string; url: string; cta_text: string }[];
+  };
+  faq_section: ToolFAQ[];
+  seo_metadata: {
+    focus_keyword: string;
+    meta_title: string;
+    meta_description: string;
+  };
 }

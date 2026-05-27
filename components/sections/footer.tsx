@@ -103,8 +103,8 @@ export function Footer() {
             <ul className="flex flex-col gap-3" role="list">
               {Object.entries(KNOWLEDGE_PAGES).map(([href, page]) => (
                 <li key={href}>
-                  <Link href={href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                    {page.metadata.breadcrumbLabel}
+                  <Link href={page.article_url} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    {page.hero_section.h1}
                   </Link>
                 </li>
               ))}

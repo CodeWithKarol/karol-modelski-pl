@@ -14,11 +14,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const toolEntry = TOOLS.find((t) => t.metadata.href === `/narzedzia/${slug}`);
   
-  if (!toolEntry) return { title: "Narzędzie nie znalezione" };
+  if (!toolEntry) return {};
 
   return {
     title: toolEntry.content.seo.title,
     description: toolEntry.content.seo.description,
+    alternates: {
+      canonical: `https://karol-modelski.pl${toolEntry.metadata.href}`,
+    },
+    openGraph: {
+      title: toolEntry.content.seo.title,
+      description: toolEntry.content.seo.description,
+      url: `https://karol-modelski.pl${toolEntry.metadata.href}`,
+      type: "website",
+    },
   };
 }
 
