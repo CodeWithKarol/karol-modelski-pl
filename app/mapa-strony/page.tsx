@@ -46,7 +46,7 @@ export default function SitemapPage() {
           <ul className="mt-4 space-y-2 text-muted-foreground">
             {Object.entries(KNOWLEDGE_PAGES).map(([href, data]) => (
               <li key={href}>
-                <Link href={href} className="hover:text-amber-600 transition-colors">{data.metadata.breadcrumbLabel}</Link>
+                <Link href={data.article_url} className="hover:text-amber-600 transition-colors">{data.hero_section.h1}</Link>
               </li>
             ))}
           </ul>
