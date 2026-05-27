@@ -13,8 +13,7 @@ import {
 
 const navLinks = [
   { href: "/wspolpraca", label: "Współpraca" },
-  { href: "/#o-mnie", label: "O mnie" },
-  { href: "/#faq", label: "FAQ" },
+  { href: "/baza-wiedzy", label: "Baza wiedzy" },
 ]
 
 export function Navigation() {

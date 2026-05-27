@@ -50,13 +50,18 @@ export function ArticleTOCSection({ items, content_blocks }: { items: string[], 
 export function ArticleLinksSection({ internal_linking }: { internal_linking: ArticlePageData["internal_linking"] }) {
   return (
     <section className="mt-16 grid gap-8 md:grid-cols-2">
-      {internal_linking.related_tools.length > 0 && (
+      {(internal_linking.related_tools || internal_linking.related_articles) && (
         <div className="p-6 rounded-xl border bg-card">
-          <h4 className="font-bold mb-4">Powiązane narzędzia</h4>
+          <h4 className="font-bold mb-4">Powiązane treści</h4>
           <div className="flex flex-wrap gap-2">
-            {internal_linking.related_tools.map((tool) => (
+            {internal_linking.related_tools?.map((tool) => (
               <a key={tool.url} href={tool.url} className="px-3 py-1 text-sm bg-secondary rounded-full hover:bg-primary/10 transition-colors">
                 {tool.name}
+              </a>
+            ))}
+            {internal_linking.related_articles?.map((article) => (
+              <a key={article.url} href={article.url} className="px-3 py-1 text-sm bg-secondary rounded-full hover:bg-primary/10 transition-colors">
+                {article.name}
               </a>
             ))}
           </div>

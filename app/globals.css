@@ -118,7 +118,7 @@
 
 @layer base {
   html {
-    @apply font-sans scroll-smooth;
+    @apply font-sans scroll-smooth text-base leading-relaxed;
     }
   * {
     @apply border-border outline-ring/50;

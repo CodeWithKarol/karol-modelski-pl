@@ -56,11 +56,9 @@ export const KNOWLEDGE_CONTENT: Record<string, ArticlePageData> = {
       }
     ],
     internal_linking: {
-      related_tools: [
-        {
-          name: "Automatyzacja Google Sheets",
-          url: "/narzedzia/automatyzacja-google-sheets"
-        }
+      related_articles: [
+        { name: "Jak zautomatyzować faktury?", url: "/baza-wiedzy/jak-zautomatyzowac-faktury" },
+        { name: "Czym jest n8n?", url: "/baza-wiedzy/co-to-jest-n8n" }
       ],
       related_offers: [
         {
@@ -141,15 +139,9 @@ export const KNOWLEDGE_CONTENT: Record<string, ArticlePageData> = {
       }
     ],
     internal_linking: {
-      related_tools: [
-        {
-          name: "Automatyzacja Slack",
-          url: "/narzedzia/automatyzacja-slack"
-        },
-        {
-          name: "Automatyzacja Google Sheets",
-          url: "/narzedzia/automatyzacja-google-sheets"
-        }
+      related_articles: [
+        { name: "Czym jest n8n?", url: "/baza-wiedzy/co-to-jest-n8n" },
+        { name: "API w biznesie", url: "/baza-wiedzy/api-w-biznesie" }
       ],
       related_offers: [
         {
@@ -230,15 +222,9 @@ export const KNOWLEDGE_CONTENT: Record<string, ArticlePageData> = {
       }
     ],
     internal_linking: {
-      related_tools: [
-        {
-          name: "Automatyzacja Google Sheets",
-          url: "/narzedzia/automatyzacja-google-sheets"
-        },
-        {
-          name: "Automatyzacja Slack",
-          url: "/narzedzia/automatyzacja-slack"
-        }
+      related_articles: [
+        { name: "Co to jest Webhook?", url: "/baza-wiedzy/co-to-jest-webhook" },
+        { name: "Automatyzacja marketingu: n8n vs SaaS", url: "/baza-wiedzy/automatyzacja-marketingu-n8n-vs-saas" }
       ],
       related_offers: [
         {
@@ -319,9 +305,9 @@ export const KNOWLEDGE_CONTENT: Record<string, ArticlePageData> = {
       }
     ],
     internal_linking: {
-      related_tools: [
-        { name: "Automatyzacja HubSpot", url: "/narzedzia/automatyzacja-hubspot" },
-        { name: "Automatyzacja Slack", url: "/narzedzia/automatyzacja-slack" }
+      related_articles: [
+        { name: "Czym jest n8n?", url: "/baza-wiedzy/co-to-jest-n8n" },
+        { name: "Co to jest Webhook?", url: "/baza-wiedzy/co-to-jest-webhook" }
       ],
       related_offers: [
         {
@@ -402,8 +388,8 @@ export const KNOWLEDGE_CONTENT: Record<string, ArticlePageData> = {
       }
     ],
     internal_linking: {
-      related_tools: [
-        { name: "Automatyzacja Slack", url: "/narzedzia/automatyzacja-slack" }
+      related_articles: [
+        { name: "Czym jest n8n?", url: "/baza-wiedzy/co-to-jest-n8n" }
       ],
       related_offers: [
         {
@@ -484,15 +470,8 @@ export const KNOWLEDGE_CONTENT: Record<string, ArticlePageData> = {
       }
     ],
     internal_linking: {
-      related_tools: [
-        {
-          name: "Automatyzacja Google Sheets",
-          url: "/narzedzia/automatyzacja-google-sheets"
-        },
-        {
-          name: "Automatyzacja Slack",
-          url: "/narzedzia/automatyzacja-slack"
-        }
+      related_articles: [
+        { name: "Czym jest n8n?", url: "/baza-wiedzy/co-to-jest-n8n" }
       ],
       related_offers: [
         {
@@ -518,7 +497,87 @@ export const KNOWLEDGE_CONTENT: Record<string, ArticlePageData> = {
       meta_description: "Dowiedz się, czym jest automatyzacja procesów biznesowych (BPA). Poznaj kluczowe korzyści, zobacz realne przykłady wdrożeń z n8n i usprawnij swoją firmę."
     }
   },
+  "/baza-wiedzy/automatyzacja-w-firmie-od-czego-zaczac": {
+    article_id: "automatyzacja-w-firmie-od-czego-zaczac",
+    article_url: "/baza-wiedzy/automatyzacja-w-firmie-od-czego-zaczac",
+    article_type: "Poradnik",
+    taxonomy: {
+      category: "Strategia",
+      tags: ["Automatyzacja w firmie", "Optymalizacja", "n8n"]
+    },
+    metadata: {
+      author_name: "Karol Modelski",
+      author_role: "Ekspert ds. Automatyzacji Procesów",
+      publication_date: "2026-05-27",
+      last_modified_date: "2026-05-27"
+    },
+    hero_section: {
+      h1: "Automatyzacja procesów w firmie – od czego zacząć optymalizację?",
+      lead_paragraph: "Nie musisz od razu automatyzować całej firmy. Zobacz, jak zidentyfikować najbardziej czasochłonne, rutynowe zadania w Twoim zespole i krok po kroku zastąpić je inteligentnymi scenariuszami n8n.",
+      reading_time_minutes: 5
+    },
+    table_of_contents: [
+      "Zasada 80/20 w automatyzacji biznesu",
+      "Jak audytować zadania i znaleźć wąskie gardła?",
+      "Pierwsze wdrożenie low-code (Quick Wins)",
+      "Skalowanie automatyzacji zadań z AI"
+    ],
+    content_blocks: [
+      {
+        content_block_id: "zasada-80-20-automatyzacja-biznesu",
+        type: "text",
+        h2: "Zasada 80/20 w automatyzacji biznesu",
+        content: "Większość przedsiębiorców uważa, że automatyzacja dla firm wymaga rewolucji technologicznej i wymiany całego oprogramowania. To błąd. Skuteczna automatyzacja procesów w firmie opiera się na zasadzie Pareto – 80% marnowanego czasu Twojego zespołu wynika z zaledwie 20% powtarzalnych czynności. Zamiast budować skomplikowane, drogie systemy, należy skupić się na eliminacji 'wypełniaczy czasu', takich jak ręczne pobieranie załączników z maili, aktualizowanie statusów w arkuszach czy powiadomienia o nowych leadach."
+      },
+      {
+        content_block_id: "identyfikacja-nudnych-zadan",
+        type: "text_with_image",
+        h2: "Jak audytować zadania i znaleźć wąskie gardła?",
+        content: "Aby znaleźć procesy idealne pod n8n, poproś swój zespół o spisanie czynności, które wykonują codziennie i które określają jako 'nudne' lub mechaniczne. Jeśli pracownik musi skopiować dane z punktu A do punktu B (np. z formularza kontaktowego do pliku Excel), jest to natychmiastowy kandydat do optymalizacji. Automatyzacja nudnych zadań pozwala nie tylko zaoszczędzić realne godziny robocze, ale drastycznie zmniejsza poziom frustracji w zespole, uwalniając potencjał pracowników do zadań kreatywnych i bezpośredniej obsługi klienta.",
+        image_url: "/assets/blog/identyfikacja-procesow-biznesowych.webp",
+        image_alt: "Matryca oceny procesów pod kątem łatwości i opłacalności wdrożenia automatyzacji w firmie"
+      },
+      {
+        content_block_id: "pierwsze-wdrozenie-quick-wins",
+        type: "text",
+        h2: "Pierwsze wdrożenie low-code (Quick Wins)",
+        content: "Rozpoczynając przygodę z n8n, warto celować w tzw. 'Quick Wins' – małe, łatwe do wdrożenia automatyzacje, które dają natychmiastowy, mierzalny efekt. Doskonałym przykładem jest automatyzacja powiadomień o nowych leadach. Zamiast logować się do systemów reklamowych lub sprawdzać skrzynkę, n8n w ułamku sekundy po wypełnieniu formularza przez klienta wysyła sformatowany raport na dedykowany kanał Slack lub Teams. Handlowiec klika jeden przycisk i od razu dzwoni do klienta. Wdrożenie takiego schematu zajmuje chwilę, a diametralnie zmienia dynamikę pracy w firmie."
+      },
+      {
+        content_block_id: "skalowanie-automatyzacji-zadan-ai",
+        type: "text",
+        h2: "Skalowanie automatyzacji zadań z AI",
+        content: "Gdy podstawowe integracje (typu aplikacja-to-aplikacja) działają stabilnie, czas na kolejny krok: wdrożenie sztucznej inteligencji w architekturę procesów. Zaawansowana automatyzacja zadań ai z wykorzystaniem n8n pozwala na analizowanie kontekstu przesyłanych danych. n8n może przekazać treść przychodzącego zapytania mailowego do modelu LLM (np. Gemini lub GPT-4), który automatycznie rozpozna intencję klienta, przydzieli odpowiedni tag w CRM, a nawet przygotuje gotowy szkic odpowiedzi (draft) dla pracownika biura obsługi. W ten sposób łączymy sztywną logikę integracji z elastycznością AI."
+      }
+    ],
+    internal_linking: {
+      related_articles: [
+        { name: "Czym jest n8n?", url: "/baza-wiedzy/co-to-jest-n8n" }
+      ],
+      related_offers: [
+        {
+          name: "Analiza i Audyt Procesów Biznesowych",
+          url: "/oferta/automatyzacja-sprzedazy",
+          cta_text: "Nie wiesz, które procesy w Twojej firmie generują największe straty czasu? Przeprowadzimy dla Ciebie profesjonalny audyt i wdrożymy n8n."
+        }
+      ]
+    },
+    faq_section: [
+      {
+        question: "Ile kosztuje rozpoczęcie automatyzacji w małej firmie?",
+        answer: "Dzięki wykorzystaniu n8n self-hosted, koszt technologiczny to jedynie utrzymanie serwera VPS. Główną inwestycją jest czas potrzebny na zmapowanie procesu lub koszt pracy architekta automatyzacji, który zaprojektuje przepływy."
+      },
+      {
+        question: "Czy mój zespół poradzi sobie z obsługą wdrożonych automatyzacji?",
+        answer: "Tak. Dobrze zaprojektowane procesy w n8n działają całkowicie bezobsługowo w tle. Zespół operuje na swoich dotychczasowych narzędziach (CRM, Slack, Gmail), a automatyzacja po prostu wykonuje za nich pracę techniczną, nie wymagając od nich nauki nowego oprogramowania."
+      }
+    ],
+    seo_metadata: {
+      focus_keyword: "automatyzacja procesów w firmie",
+      meta_title: "Automatyzacja procesów w firmie: Od czego zacząć? | n8n",
+      meta_description: "Dowiedz się, jak skutecznie podejść do automatyzacji procesów w firmie. Znajdź nudne zadania, wyeliminuj rutynę z n8n i oszczędzaj czas zespołu."
+    }
+  }
 };
 
 export const KNOWLEDGE_PAGES = KNOWLEDGE_CONTENT;
-

@@ -1,10 +1,10 @@
 import Link from "next/link"
 import { MapPin, Mail, ExternalLink } from "lucide-react"
-import { KNOWLEDGE_PAGES } from "@/lib/knowledge"
 
 const navLinks: { href: string; label: string; external?: boolean; internal?: boolean }[] = [
   { href: "/#oferta-klastry", label: "Oferta" },
   { href: "/wspolpraca", label: "Współpraca" },
+  { href: "/baza-wiedzy", label: "Baza wiedzy" },
   { href: "/#o-mnie", label: "O mnie" },
   { href: "/#faq", label: "FAQ" },
 ]
@@ -95,21 +95,19 @@ export function Footer() {
             </nav>
           </div>
 
-          {/* Column 3: Education */}
-          <div className="flex flex-col gap-5">
-            <h4 className="text-sm font-semibold uppercase tracking-widest text-foreground">
-              Baza wiedzy
-            </h4>
-            <ul className="flex flex-col gap-3" role="list">
-              {Object.entries(KNOWLEDGE_PAGES).map(([href, page]) => (
-                <li key={href}>
-                  <Link href={page.article_url} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                    {page.hero_section.h1}
+            {/* Column 3: Education */}
+            <div className="flex flex-col gap-5">
+              <h4 className="text-sm font-semibold uppercase tracking-widest text-foreground">
+                Zasoby
+              </h4>
+              <ul className="flex flex-col gap-3" role="list">
+                <li>
+                  <Link href="/baza-wiedzy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    Baza wiedzy
                   </Link>
                 </li>
-              ))}
-            </ul>
-          </div>
+              </ul>
+            </div>
 
           {/* Column 4: Company Data (E-E-A-T) */}
           <div className="flex flex-col gap-5">

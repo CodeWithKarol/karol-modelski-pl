@@ -15,9 +15,7 @@ import { useState } from "react"
 
 const navLinks = [
   { href: "/wspolpraca", label: "Współpraca" },
-  { href: "/#o-mnie", label: "O mnie" },
-  { href: "/#faq", label: "FAQ" },
-  { href: "/#kontakt", label: "Kontakt" },
+  { href: "/baza-wiedzy", label: "Baza wiedzy" },
 ]
 
 export function MobileMenu() {
