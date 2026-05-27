@@ -24,7 +24,7 @@ export default function SitemapPage() {
           <ul className="mt-4 space-y-2 text-muted-foreground">
             {Object.entries(OFFERS).map(([href, data]) => (
               <li key={href}>
-                <Link href={data.metadata.href} className="hover:text-amber-600 transition-colors">{data.hero.title}</Link>
+                <Link href={data.offer_url} className="hover:text-amber-600 transition-colors">{data.offer_name}</Link>
               </li>
             ))}
           </ul>

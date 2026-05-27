@@ -21,7 +21,7 @@ const clusters = [
       "Automatyczne przechwytywanie kontaktów z formularza WWW lub kalendarza i błyskawiczne przesyłanie ich do HubSpot / Pipedrive.",
     effect:
       "Natychmiastowy alert na Slacku/Teams o nowym kliencie. Odpowiadasz zanim wyprzedzi Cię konkurencja.",
-    href: OFFERS["/automatyzacja-sprzedazy"].metadata.href,
+    href: OFFERS["/automatyzacja-sprzedazy"].offer_url,
   },
   {
     icon: Receipt,
@@ -40,7 +40,7 @@ const clusters = [
       "Automatyzacja wprowadzania faktur. Każdy załącznik z fakturą trafiający na Twój Gmail jest automatycznie katalogowany na Google Drive, a najważniejsze dane lądują w dedykowanym Arkuszu Google Sheets.",
     effect:
       "Koniec z chaosem na koniec miesiąca i ręcznym przeszukiwaniem poczty dla księgowości.",
-    href: OFFERS["/automatyzacja-administracji-i-finansow"].metadata.href,
+    href: OFFERS["/automatyzacja-administracji-i-finansow"].offer_url,
   },
   {
     icon: BrainCircuit,
@@ -59,7 +59,7 @@ const clusters = [
       "Wdrożenie zaawansowanych modeli językowych Google Gemini bezpośrednio w Twoje workflow. Algorytm automatycznie analizuje treść maili, klasyfikuje intencje klientów i przygotowuje wersje robocze odpowiedzi.",
     effect:
       "Twoja skrzynka zaczyna wstępnie obsługiwać się sama, zachowując najwyższą jakość komunikacji.",
-    href: OFFERS["/automatyzacja-procesow-z-ai"].metadata.href,
+    href: OFFERS["/automatyzacja-procesow-z-ai"].offer_url,
   },
   {
     icon: BrainCircuit,
@@ -78,7 +78,7 @@ const clusters = [
       "Zaawansowane ścieżki Lead Nurturing, inteligentna klasyfikacja leadów i automatyczna dystrybucja treści, połączone z Twoim CRM bez wysokich opłat.",
     effect:
       "Zwiększ konwersję dzięki personalizacji w czasie rzeczywistym, nie płacąc za każdy przesłany lead.",
-    href: OFFERS["/automatyzacja-marketingu"].metadata.href,
+    href: OFFERS["/automatyzacja-marketingu"].offer_url,
   },
   {
     icon: Users,

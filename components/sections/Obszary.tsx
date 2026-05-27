@@ -9,25 +9,25 @@ const obszary = [
     title: "Sprzedaż", 
     description: "Automatyzacja procesów sprzedażowych, lead management i integracja z CRM dla szybszej obsługi klientów.",
     icon: Target, 
-    href: OFFERS["/automatyzacja-sprzedazy"].metadata.href 
+    href: OFFERS["/automatyzacja-sprzedazy"].offer_url
   },
   { 
     title: "Zarządzanie", 
     description: "Uporządkuj zadania i projekty. Automatyczne tworzenie struktur, przypisywanie zadań i śledzenie statusów w jednym miejscu.",
     icon: LayoutDashboard, 
-    href: OFFERS["/automatyzacja-zarzadzania-projektami"].metadata.href 
+    href: OFFERS["/automatyzacja-zarzadzania-projektami"].offer_url
   },
   { 
     title: "Finanse", 
     description: "Zautomatyzuj obieg dokumentów i faktur. Dane trafiają tam, gdzie powinny, bez ręcznego przepisywania i błędów.",
     icon: PiggyBank, 
-    href: OFFERS["/automatyzacja-administracji-i-finansow"].metadata.href 
+    href: OFFERS["/automatyzacja-administracji-i-finansow"].offer_url
   },
   { 
     title: "Obsługa Klienta", 
     description: "Skróć czas reakcji dzięki inteligentnemu kolejkowaniu zgłoszeń i automatycznym alertom o priorytetowych ticketach.",
     icon: MessageSquareText, 
-    href: OFFERS["/automatyzacja-obslugi-klienta"].metadata.href 
+    href: OFFERS["/automatyzacja-obslugi-klienta"].offer_url
   },
 ]
 
