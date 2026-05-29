@@ -39,7 +39,7 @@ export const KNOWLEDGE_HUB_DATA: KnowledgeHubData = {
     h1: "Baza Wiedzy: Automatyzacja Procesów Biznesowych od A do Z",
     lead_paragraph: "Zrozumienie technologii to pierwszy krok do optymalizacji biznesu. Przygotowaliśmy dla Ciebie kompletne, eksperckie poradniki, definicje oraz instrukcje krok po kroku, które pomogą Ci wyeliminować rutynę, wdrożyć n8n i skutecznie wyskalować operacje w Twojej firmie.",
     cta_label: "Umów bezpłatną konsultację",
-    cta_url: "/kontakt"
+    cta_url: "https://calendly.com/kontakt-karol-modelski/new-meeting"
   },
 
   intro_section: {
