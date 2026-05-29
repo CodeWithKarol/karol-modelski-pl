@@ -1,5 +1,5 @@
-import { ToolPageData, OfferPageData, ArticlePageData } from "@/lib/types";
-import { Service, ProfessionalService, WithContext, Organization, Article, Person } from "schema-dts";
+import { ToolPageData, OfferPageData, ArticlePageData, KnowledgeHubData } from "@/lib/types";
+import { Service, ProfessionalService, WithContext, Organization, Article, Person, WebPage, ItemList, FAQPage, Graph } from "schema-dts";
 
 export function getToolProfessionalSchema(data: ToolPageData): [WithContext<Service>, WithContext<ProfessionalService>] {
   const provider: Organization = {
@@ -88,3 +88,21 @@ export function getArticleSchema(data: ArticlePageData): WithContext<Article> {
   };
 }
 
+export function getKnowledgeHubSchema(data: KnowledgeHubData): WithContext<WebPage> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": data.seo_metadata.meta_title,
+    "description": data.seo_metadata.meta_description,
+    "url": `https://karol-modelski.pl${data.url}`,
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": data.categories_display.map((cat, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "name": cat.name,
+        "description": cat.description
+      }))
+    }
+  };
+}

@@ -16,7 +16,36 @@ export interface PageMetadata {
   href: string;
 }
 
-// --- Nowa struktura narzędziowa ---
+export interface KnowledgeCategory {
+  slug: string;
+  name: string;
+  content_block_id: string;
+  description: string;
+  icon: string;
+}
+
+export interface KnowledgeHubData {
+  page_id: string;
+  url: string;
+  hero_section: {
+    h1: string;
+    lead_paragraph: string;
+    cta_label: string;
+    cta_url: string;
+  };
+  intro_section: {
+    content_block_id: string;
+    h2: string;
+    content: string;
+  };
+  categories_display: KnowledgeCategory[];
+  faq_section: ToolFAQ[];
+  seo_metadata: {
+    focus_keyword: string;
+    meta_title: string;
+    meta_description: string;
+  };
+}
 
 export interface ToolSection {
   title: string;
@@ -133,7 +162,8 @@ export interface ArticlePageData {
     image_alt?: string;
   }[];
   internal_linking: {
-    related_tools: { name: string; url: string }[];
+    related_articles?: { name: string; url: string }[];
+    related_tools?: { name: string; url: string }[];
     related_offers: { name: string; url: string; cta_text: string }[];
   };
   faq_section: ToolFAQ[];
