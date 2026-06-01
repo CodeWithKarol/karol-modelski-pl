@@ -10,12 +10,8 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import { NAV_LINKS, CTA_CONFIG } from "@/lib/nav-config"
 import { TOOLS } from "@/lib/tools"
-
-const navLinks = [
-  { href: "/oferta", label: "Oferta" },
-  { href: "/baza-wiedzy", label: "Baza wiedzy" },
-]
 
 export function Navigation() {
   return (
@@ -39,7 +35,7 @@ export function Navigation() {
         <nav aria-label="Nawigacja główna" className="hidden md:block">
           <NavigationMenu>
             <NavigationMenuList>
-              {navLinks.map((link) => (
+              {NAV_LINKS.map((link) => (
                 <NavigationMenuItem key={link.href}>
                   <Link href={link.href} className={navigationMenuTriggerStyle()}>
                     {link.label}
@@ -68,13 +64,13 @@ export function Navigation() {
         {/* CTA + hamburger */}
         <div className="flex items-center gap-2">
           <a
-            href="https://calendly.com/kontakt-karol-modelski/new-meeting"
+            href={CTA_CONFIG.href}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden flex-col items-center rounded-md bg-foreground px-4 py-1.5 text-sm font-semibold text-background transition-colors hover:bg-foreground/90 md:flex leading-tight"
           >
-            <span>Bezpłatna diagnoza</span>
-            <span className="text-[10px] opacity-80 font-normal">15 min · Online</span>
+            <span>{CTA_CONFIG.label}</span>
+            <span className="text-[10px] opacity-80 font-normal">{CTA_CONFIG.sublabel}</span>
           </a>
           <div className="md:hidden">
             <MobileMenu />

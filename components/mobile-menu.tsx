@@ -10,13 +10,9 @@ import {
   SheetDescription,
   SheetHeader,
 } from "@/components/ui/sheet"
+import { NAV_LINKS, CTA_CONFIG } from "@/lib/nav-config"
 import { TOOLS } from "@/lib/tools"
 import { useState } from "react"
-
-const navLinks = [
-  { href: "/wspolpraca", label: "Współpraca" },
-  { href: "/baza-wiedzy", label: "Baza wiedzy" },
-]
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false)
@@ -39,7 +35,7 @@ export function MobileMenu() {
         
         <nav aria-label="Nawigacja mobilna" className="flex-1 overflow-y-auto py-4">
           <ul className="flex flex-col gap-2">
-            {navLinks.map((link) => (
+            {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
@@ -73,14 +69,14 @@ export function MobileMenu() {
 
         <div className="border-t border-border pt-6">
           <a
-            href="https://calendly.com/kontakt-karol-modelski/new-meeting"
+            href={CTA_CONFIG.href}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
             className="flex w-full flex-col items-center justify-center rounded-xl bg-foreground px-4 py-4 text-base font-semibold text-background transition-colors hover:bg-foreground/90"
           >
-            <span>Bezpłatna diagnoza</span>
-            <span className="text-[10px] opacity-80 font-normal">15 min · Online · Bez zobowiązań</span>
+            <span>{CTA_CONFIG.label}</span>
+            <span className="text-[10px] opacity-80 font-normal">{CTA_CONFIG.sublabel}</span>
           </a>
         </div>
       </SheetContent>
