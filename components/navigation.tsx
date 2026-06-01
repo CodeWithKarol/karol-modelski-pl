@@ -1,7 +1,7 @@
+'use client'
+
 import Link from "next/link"
 import { MobileMenu } from "./mobile-menu"
-
-import { TOOLS } from "@/lib/tools"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -10,9 +10,10 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import { TOOLS } from "@/lib/tools"
 
 const navLinks = [
-  { href: "/wspolpraca", label: "Współpraca" },
+  { href: "/oferta", label: "Oferta" },
   { href: "/baza-wiedzy", label: "Baza wiedzy" },
 ]
 
@@ -23,6 +24,11 @@ export function Navigation() {
         {/* Logotyp */}
         <Link
           href="/"
+          onClick={() => {
+            if (typeof window !== 'undefined' && window.location.pathname === '/') {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          }}
           className="text-base font-semibold tracking-tight text-foreground transition-opacity hover:opacity-80"
           aria-label="Strona główna – Karol Modelski"
         >
@@ -65,9 +71,10 @@ export function Navigation() {
             href="https://calendly.com/kontakt-karol-modelski/new-meeting"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center rounded-md bg-primary px-3 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 md:flex"
+            className="hidden flex-col items-center rounded-md bg-foreground px-4 py-1.5 text-sm font-semibold text-background transition-colors hover:bg-foreground/90 md:flex leading-tight"
           >
-            Bezpłatna Diagnoza
+            <span>Bezpłatna diagnoza</span>
+            <span className="text-[10px] opacity-80 font-normal">15 min · Online</span>
           </a>
           <div className="md:hidden">
             <MobileMenu />
