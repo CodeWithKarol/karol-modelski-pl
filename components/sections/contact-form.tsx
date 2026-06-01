@@ -69,11 +69,15 @@ export function ContactForm() {
           autoComplete="name"
           placeholder="Jan Kowalski"
           {...register("name")}
-          className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-colors focus:border-amber-400/60 focus:outline-none focus:ring-2 focus:ring-amber-400/20 dark:focus:border-amber-500/60 dark:focus:ring-amber-500/20"
+          className={`rounded-xl border px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-colors focus:outline-none focus:ring-2 ${
+            errors.name 
+              ? "border-destructive focus:border-destructive focus:ring-destructive/20" 
+              : "border-border bg-background focus:border-amber-400/60 focus:ring-amber-400/20 dark:focus:border-amber-500/60 dark:focus:ring-amber-500/20"
+          }`}
         />
-        {errors.name && (
-          <p className="text-xs font-medium text-destructive">{errors.name.message}</p>
-        )}
+        <p className={`text-xs font-medium text-destructive transition-opacity ${errors.name ? 'opacity-100' : 'opacity-0'}`}>
+          {errors.name?.message || "\u00A0"}
+        </p>
       </div>
 
       {/* Contact */}
@@ -87,11 +91,15 @@ export function ContactForm() {
           autoComplete="email"
           placeholder="jan@firma.pl lub +48 500 000 000"
           {...register("contact")}
-          className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-colors focus:border-amber-400/60 focus:outline-none focus:ring-2 focus:ring-amber-400/20 dark:focus:border-amber-500/60 dark:focus:ring-amber-500/20"
+          className={`rounded-xl border px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-colors focus:outline-none focus:ring-2 ${
+            errors.contact 
+              ? "border-destructive focus:border-destructive focus:ring-destructive/20" 
+              : "border-border bg-background focus:border-amber-400/60 focus:ring-amber-400/20 dark:focus:border-amber-500/60 dark:focus:ring-amber-500/20"
+          }`}
         />
-        {errors.contact && (
-          <p className="text-xs font-medium text-destructive">{errors.contact.message}</p>
-        )}
+        <p className={`text-xs font-medium text-destructive transition-opacity ${errors.contact ? 'opacity-100' : 'opacity-0'}`}>
+          {errors.contact?.message || "\u00A0"}
+        </p>
       </div>
 
       {/* Message */}
@@ -104,11 +112,15 @@ export function ContactForm() {
           rows={4}
           placeholder="Opisz krótko proces lub narzędzia, które najbardziej spowalniają Twoją firmę..."
           {...register("message")}
-          className="resize-none rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-colors focus:border-amber-400/60 focus:outline-none focus:ring-2 focus:ring-amber-400/20 dark:focus:border-amber-500/60 dark:focus:ring-amber-500/20"
+          className={`resize-none rounded-xl border px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-colors focus:outline-none focus:ring-2 ${
+            errors.message 
+              ? "border-destructive focus:border-destructive focus:ring-destructive/20" 
+              : "border-border bg-background focus:border-amber-400/60 focus:ring-amber-400/20 dark:focus:border-amber-500/60 dark:focus:ring-amber-500/20"
+          }`}
         />
-        {errors.message && (
-          <p className="text-xs font-medium text-destructive">{errors.message.message}</p>
-        )}
+        <p className={`text-xs font-medium text-destructive transition-opacity ${errors.message ? 'opacity-100' : 'opacity-0'}`}>
+          {errors.message?.message || "\u00A0"}
+        </p>
       </div>
 
       {isError && (

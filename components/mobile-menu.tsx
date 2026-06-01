@@ -77,9 +77,10 @@ export function MobileMenu() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="flex w-full items-center justify-center rounded-xl bg-primary px-4 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+            className="flex w-full flex-col items-center justify-center rounded-xl bg-foreground px-4 py-4 text-base font-semibold text-background transition-colors hover:bg-foreground/90"
           >
-            Bezpłatna Diagnoza
+            <span>Bezpłatna diagnoza</span>
+            <span className="text-[10px] opacity-80 font-normal">15 min · Online · Bez zobowiązań</span>
           </a>
         </div>
       </SheetContent>
