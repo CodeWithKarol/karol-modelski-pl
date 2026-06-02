@@ -26,13 +26,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/baza-wiedzy`,
+      url: `${baseUrl}/narzedzia`,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.7,
+      priority: 0.9,
     },
     {
-      url: `${baseUrl}/narzedzia`,
+      url: `${baseUrl}/baza-wiedzy`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.7,
@@ -52,19 +52,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     })),
 
-    // Narzędzia - Priorytet 0.6
+    // Narzędzia - Priorytet 0.7
     ...TOOLS.map((tool) => ({
       url: `${baseUrl}${tool.metadata.href}`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
     })),
 
     // Baza wiedzy - Priorytet 0.5
     ...Object.keys(KNOWLEDGE_PAGES).map((path) => ({
       url: `${baseUrl}${path}`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
+      changeFrequency: "weekly" as const,
       priority: 0.5,
     })),
   ]
