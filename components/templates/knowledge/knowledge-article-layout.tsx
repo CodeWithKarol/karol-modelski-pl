@@ -1,9 +1,8 @@
-import { Breadcrumbs } from "@/components/breadcrumbs"
 import { ContactDual } from "@/components/sections/contact-dual"
 import { ArticlePageData } from "@/lib/types"
 
 export function KnowledgeArticleLayout({ content }: { content: ArticlePageData }) {
-  const { hero_section, content_blocks, faq_section, internal_linking } = content;
+  const { hero_section, content_blocks, internal_linking } = content;
 
   return (
     <>
@@ -29,12 +28,11 @@ export function KnowledgeArticleLayout({ content }: { content: ArticlePageData }
                             <code>{block.content}</code>
                           </pre>
                         )}
-                        {block.type === "text_with_image" && (
-                          <div className="space-y-4">
-                             <p className="leading-relaxed text-lg text-muted-foreground">{block.content}</p>
-                             {block.image_url && <img src={block.image_url} alt={block.image_alt || ""} className="rounded-lg shadow-md" />}
-                          </div>
-                        )}
+                         {block.type === "text_with_image" && (
+                           <div className="space-y-4">
+                              <p className="leading-relaxed text-lg text-muted-foreground">{block.content}</p>
+                           </div>
+                         )}
                     </div>
                 ))}
             </article>

@@ -92,8 +92,28 @@ export const KNOWLEDGE_HUB_DATA: KnowledgeHubData = {
       answer: "Świat technologii low-code i API zmienia się dynamicznie, dlatego wszystkie nasze poradniki przechodzą regularny audyt techniczny. Aktualizujemy opisy węzłów n8n, zmiany w protokołach bezpieczeństwa oraz nowe wytyczne RODO, aby dostarczać wyłącznie sprawdzone, działające w praktyce rozwiązania."
     },
     {
-      question: "Czy kody i schematy n8n udostępniane w artykułach mogę wdrożyć samodzielnie?",
-      answer: "Tak, wszystkie przykłady, payloady JSON oraz fragmenty kodu JavaScript umieszczane w naszych przewodnikach są darmowe i przygotowane do implementacji we własnych instancjach n8n. Jeśli jednak Twój proces wymaga dedykowanej logiki lub integracji systemów legacy, rekomendujemy kontakt w celu przeprowadzenia audytu."
+      question: "Czy schematy n8n z artykułów mogę wdrożyć samodzielnie?",
+      answer: "Schematy udostępniam w formie otwartej, aby każdy mógł zrozumieć logikę działania danego procesu. Jeśli masz doświadczenie z n8n, możesz je zaimportować i dostosować. Pamiętaj jednak, że standardy produkcyjne wymagają obsługi błędów (Error Handling) oraz bezpiecznego przechowywania poświadczeń, o czym piszę w artykułach."
+    },
+    {
+      question: "Czy schematy n8n są bezpieczne w środowisku produkcyjnym?",
+      answer: "Bezpieczeństwo to fundament, wyniesiony z pracy w sektorze bankowym. Każdy schemat, który wdrażam, przechodzi testy pod kątem Data Compliance oraz stabilności działania (Retry Loops). Ucząc się na moich przykładach, wdrażasz techniki minimalizujące ryzyko przestojów."
+    },
+    {
+      question: "Czy baza wiedzy jest przeznaczona tylko dla programistów?",
+      answer: "Absolutnie nie. Moim celem jest tłumaczenie złożonych procesów na język biznesowych korzyści. Jeśli jesteś właścicielem firmy lub managerem, artykuły pokażą Ci, jak automatyzacja rozwiązuje Twoje problemy. Jeśli potrzebujesz wdrożenia, zajmę się techniczną stroną projektu."
+    },
+    {
+      question: "Czy mogę zamówić wdrożenie rozwiązania opisanego w artykule?",
+      answer: "Tak. Wiele artykułów bazuje na wdrożeniach, które realizuję. Jeśli widzisz rozwiązanie idealnie pasujące do Twojej firmy, umów bezpłatną diagnozę – dostosuję schemat tak, aby przyniósł maksymalny ROI w Twoim środowisku."
+    },
+    {
+      question: "Co jeśli wdrożę schemat i coś przestanie działać?",
+      answer: "Systemy zewnętrzne (np. Pipedrive, HubSpot) czasem zmieniają swoje API. Jeśli utkniesz przy samodzielnym wdrożeniu, zapraszam na diagnozę techniczną – pomogę zidentyfikować 'wąskie gardło' i przywrócić stabilność."
+    },
+    {
+      question: "Dlaczego dzielisz się tą wiedzą za darmo?",
+      answer: "Wierzę, że przejrzyste automatyzacje budują długofalowe relacje. Dzieląc się rozwiązaniami, pokazuję mój inżynierski standard pracy. Wolę, żebyś poznał sposób, w jaki myślę o systemach, zanim zdecydujesz o współpracy przy profesjonalnym wdrożeniu."
     }
   ],
 

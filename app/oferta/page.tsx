@@ -1,7 +1,6 @@
 import { OFFERS_HUB_CONFIG } from "@/lib/offers-hub"
 import Link from "next/link"
 import { FAQ } from "@/components/ui/faq"
-import { Breadcrumbs } from "@/components/breadcrumbs"
 import type { Metadata } from "next"
 import { GenericHero } from "@/components/sections/generic-hero"
 
@@ -24,7 +23,6 @@ export default function OffersHubPage() {
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
       <GenericHero 
-        title="Oferta"
         subtitle={OFFERS_HUB_CONFIG.hero.headline}
         description={OFFERS_HUB_CONFIG.hero.description}
         ctaText={OFFERS_HUB_CONFIG.cta.label}
@@ -58,10 +56,11 @@ export default function OffersHubPage() {
 
         {/* FAQ Section */}
         <div className="mb-24">
-          <h2 className="text-2xl font-bold text-foreground mb-8 text-center">{OFFERS_HUB_CONFIG.faq.title}</h2>
-          <div className="max-w-3xl mx-auto">
-            <FAQ items={faqs} />
-          </div>
+          <FAQ 
+            title={OFFERS_HUB_CONFIG.faq.title} 
+            items={faqs} 
+            className="max-w-3xl mx-auto"
+          />
         </div>
 
         {/* Knowledge Base */}

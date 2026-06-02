@@ -23,7 +23,7 @@ export function ToolPageTemplate({ data }: { data: ToolPageData }) {
           <ToolSolutionSection title={data.solution.title} description={data.solution.description} steps={data.solution.steps} />
           <ToolBenefitsSection title={data.benefits.title} description={data.benefits.description} items={data.benefits.items} />
           
-          <ToolFaqSection title={data.faq.title} description={data.faq.description} faqs={data.faq.faqs} />
+          <ToolFaqSection title={data.faq.title} faqs={data.faq.faqs} />
           <ContactDual />
         </div>
       </div>

@@ -7,12 +7,6 @@ import { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { Clock } from "lucide-react";
 import { FAQ } from "@/components/ui/faq";
-import { 
-  Accordion, 
-  AccordionContent, 
-  AccordionItem, 
-  AccordionTrigger 
-} from "@/components/ui/accordion";
 import { GenericHero } from "@/components/sections/generic-hero"
 
 export const metadata: Metadata = {
@@ -37,7 +31,6 @@ export default function BazaWiedzyIndexPage() {
       
       {/* Hero Section */}
       <GenericHero 
-        title="Baza wiedzy"
         subtitle={KNOWLEDGE_HUB_DATA.hero_section.h1}
         description={KNOWLEDGE_HUB_DATA.hero_section.lead_paragraph}
         ctaText={KNOWLEDGE_HUB_DATA.hero_section.cta_label}
@@ -106,43 +99,11 @@ export default function BazaWiedzyIndexPage() {
 
         {/* FAQ Section */}
         <section className="max-w-3xl mx-auto py-12">
-          <h2 className="text-3xl font-bold text-center mb-10">Często zadawane pytania</h2>
-          
-          <h3 className="text-xl font-semibold mb-4 text-primary">Standardy techniczne</h3>
-          <Accordion type="single" collapsible className="w-full mb-8">
-            <AccordionItem value="tech-1">
-              <AccordionTrigger>Czy schematy n8n z artykułów mogę wdrożyć samodzielnie?</AccordionTrigger>
-              <AccordionContent>Schematy udostępniam w formie otwartej, aby każdy mógł zrozumieć logikę działania danego procesu. Jeśli masz doświadczenie z n8n, możesz je zaimportować i dostosować. Pamiętaj jednak, że standardy produkcyjne wymagają obsługi błędów (Error Handling) oraz bezpiecznego przechowywania poświadczeń, o czym piszę w artykułach.</AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="tech-2">
-              <AccordionTrigger>Czy schematy n8n są bezpieczne w środowisku produkcyjnym?</AccordionTrigger>
-              <AccordionContent>Bezpieczeństwo to fundament, wyniesiony z pracy w sektorze bankowym. Każdy schemat, który wdrażam, przechodzi testy pod kątem Data Compliance oraz stabilności działania (Retry Loops). Ucząc się na moich przykładach, wdrażasz techniki minimalizujące ryzyko przestojów.</AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="tech-3">
-              <AccordionTrigger>Jak często aktualizowana jest baza wiedzy?</AccordionTrigger>
-              <AccordionContent>Baza wiedzy jest aktualizowana w trybie ciągłym – publikuję nowe materiały, gdy tylko pojawiają się istotne zmiany w narzędziach (np. nowe wersje API) lub gdy wypracuję nową, bardziej wydajną metodę rozwiązania problemu.</AccordionContent>
-            </AccordionItem>
-          </Accordion>
-
-          <h3 className="text-xl font-semibold mb-4 text-primary">Współpraca i wdrożenia</h3>
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="biz-1">
-              <AccordionTrigger>Czy baza wiedzy jest przeznaczona tylko dla programistów?</AccordionTrigger>
-              <AccordionContent>Absolutnie nie. Moim celem jest tłumaczenie złożonych procesów na język biznesowych korzyści. Jeśli jesteś właścicielem firmy lub managerem, artykuły pokażą Ci, jak automatyzacja rozwiązuje Twoje problemy. Jeśli potrzebujesz wdrożenia, zajmę się techniczną stroną projektu.</AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="biz-2">
-              <AccordionTrigger>Czy mogę zamówić wdrożenie rozwiązania opisanego w artykule?</AccordionTrigger>
-              <AccordionContent>Tak. Wiele artykułów bazuje na wdrożeniach, które realizuję. Jeśli widzisz rozwiązanie idealnie pasujące do Twojej firmy, umów bezpłatną diagnozę – dostosuję schemat tak, aby przyniósł maksymalny ROI w Twoim środowisku. <Link href="https://calendly.com/kontakt-karol-modelski/new-meeting" className="text-primary hover:underline font-semibold">Umów diagnozę</Link>.</AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="biz-3">
-              <AccordionTrigger>Co jeśli wdrożę schemat i coś przestanie działać?</AccordionTrigger>
-              <AccordionContent>Systemy zewnętrzne (np. Pipedrive, HubSpot) czasem zmieniają swoje API. Jeśli utkniesz przy samodzielnym wdrożeniu, zapraszam na diagnozę techniczną – pomogę zidentyfikować "wąskie gardło" i przywrócić stabilność. <Link href="https://calendly.com/kontakt-karol-modelski/new-meeting" className="text-primary hover:underline font-semibold">Umów diagnozę</Link>.</AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="biz-4">
-              <AccordionTrigger>Dlaczego dzielisz się tą wiedzą za darmo?</AccordionTrigger>
-              <AccordionContent>Wierzę, że przejrzyste automatyzacje budują długofalowe relacje. Dzieląc się rozwiązaniami, pokazuję mój inżynierski standard pracy. Wolę, żebyś poznał sposób, w jaki myślę o systemach, zanim zdecydujesz o współpracy przy profesjonalnym wdrożeniu.</AccordionContent>
-            </AccordionItem>
-          </Accordion>
+          <FAQ 
+            title="Często zadawane pytania" 
+            items={KNOWLEDGE_HUB_DATA.faq_section.map(faq => ({ question: faq.question, answer: faq.answer }))}
+            className="w-full"
+          />
         </section>
 
         {/* CTA Section */}

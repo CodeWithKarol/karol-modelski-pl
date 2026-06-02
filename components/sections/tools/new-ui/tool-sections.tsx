@@ -1,12 +1,21 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { FAQ } from "@/components/ui/faq";
+import { ToolPageData } from "@/lib/types";
 import { CheckCircle2, AlertCircle, ArrowRight } from "lucide-react";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export function SectionHeader({ title }: { title: string }) {
   return (
-    <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-8">
-      {title}
-    </h2>
+    <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">{title}</h2>
+  );
+}
+
+export function ToolFaqSection({ title, faqs }: { title: string; faqs: ToolPageData["faq"]["faqs"] }) {
+  return (
+    <section className="py-12 border-t border-border/50">
+      <FAQ 
+        title={title} 
+        items={faqs.map(faq => ({ question: faq.question, answer: faq.answer }))}
+      />
+    </section>
   );
 }
 
@@ -97,21 +106,7 @@ export function ToolBenefitsSection({ title, description, items }: { title: stri
   );
 }
 
-export function ToolFaqSection({ title, description, faqs }: { title: string; description: string; faqs: { question: string; answer: string }[] }) {
-  return (
-    <section className="py-12 border-t border-border/50">
-      <SectionHeader title={title} />
-      <p className="text-lg text-muted-foreground mb-8">{description}</p>
-      <Accordion type="single" collapsible className="w-full">
-        {faqs.map((faq, i) => (
-          <AccordionItem key={i} value={`faq-${i}`}>
-            <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
-            <AccordionContent className="text-muted-foreground">
-              {faq.answer}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-    </section>
-  );
-}
+// ... (rest of the file exports)
+
+// Removed duplicate ToolFaqSection at line 104
+

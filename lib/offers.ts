@@ -1,6 +1,4 @@
-import { Bot, Zap, BrainCircuit, ShieldAlert, FileText, Clock, Users, Database, GitBranch, Webhook, Mail, Target, BarChart, Banknote, Filter } from "lucide-react";
 import { OfferPageData } from "@/lib/types";
-import { TOOLS } from "./tools";
 
 export const OFFERS: Record<string, OfferPageData> = {
   "/automatyzacja-sprzedazy": {

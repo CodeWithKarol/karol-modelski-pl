@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, AlertCircle, ArrowRight, Zap, Target, BrainCircuit } from "lucide-react";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { AlertCircle, ArrowRight } from "lucide-react";
+import { FAQ } from "@/components/ui/faq";
 import { OfferPageData } from "@/lib/types";
 
 export function SectionHeader({ title, description }: { title: string; description: string }) {
@@ -109,17 +109,10 @@ export function OfferTechEcosystemSection({ section_title, section_description, 
 export function OfferFaqSection({ faqs }: { faqs: OfferPageData["faq_section"] }) {
   return (
     <section className="py-12 border-t border-border/50">
-      <SectionHeader title="Najczęściej zadawane pytania" description="Poznaj odpowiedzi na najczęstsze wątpliwości dotyczące wdrożeń." />
-      <Accordion type="single" collapsible className="w-full">
-        {faqs.map((faq, i) => (
-          <AccordionItem key={i} value={`faq-${i}`}>
-            <AccordionTrigger className="text-left font-semibold text-lg hover:no-underline">{faq.question}</AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base leading-relaxed">
-              {faq.answer}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+      <FAQ 
+        title="Najczęściej zadawane pytania" 
+        items={faqs.map(faq => ({ question: faq.question, answer: faq.answer }))}
+      />
     </section>
   );
 }

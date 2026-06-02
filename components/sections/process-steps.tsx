@@ -1,5 +1,4 @@
 import { PROCESS_CONFIG } from "@/lib/process"
-import { ArrowRight, Check } from "lucide-react"
 
 export function ProcessSteps() {
   return (

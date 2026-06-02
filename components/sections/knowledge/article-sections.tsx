@@ -1,6 +1,5 @@
-import { Card } from "@/components/ui/card";
+import { FAQ } from "@/components/ui/faq";
 import { Clock } from "lucide-react";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArticlePageData } from "@/lib/types";
 
 export function ArticleHeroSection({ h1, lead_paragraph, reading_time_minutes, metadata }: ArticlePageData["hero_section"] & { metadata: ArticlePageData["metadata"] }) {
@@ -32,7 +31,7 @@ export function ArticleHeroSection({ h1, lead_paragraph, reading_time_minutes, m
   );
 }
 
-export function ArticleTOCSection({ items, content_blocks }: { items: string[], content_blocks: ArticlePageData["content_blocks"] }) {
+export function ArticleTOCSection({ content_blocks }: { content_blocks: ArticlePageData["content_blocks"] }) {
   return (
     <nav className="my-12 p-6 rounded-2xl bg-secondary/30 border border-border">
       <h3 className="font-bold text-lg mb-4">Spis treści</h3>
@@ -87,17 +86,10 @@ export function ArticleLinksSection({ internal_linking }: { internal_linking: Ar
 export function ArticleFaqSection({ faqs }: { faqs: ArticlePageData["faq_section"] }) {
   return (
     <section id="najczestsze-pytania" className="py-12 border-t border-border/50">
-      <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-12">Najczęściej zadawane pytania</h2>
-      <Accordion type="single" collapsible className="w-full">
-        {faqs.map((faq, i) => (
-          <AccordionItem key={i} value={`faq-${i}`}>
-            <AccordionTrigger className="text-left font-semibold text-lg hover:no-underline">{faq.question}</AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base leading-relaxed">
-              {faq.answer}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+      <FAQ 
+        title="Najczęściej zadawane pytania" 
+        items={faqs.map(faq => ({ question: faq.question, answer: faq.answer }))}
+      />
     </section>
   );
 }

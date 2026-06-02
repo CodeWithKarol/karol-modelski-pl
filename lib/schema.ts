@@ -1,5 +1,5 @@
 import { ToolPageData, OfferPageData, ArticlePageData, KnowledgeHubData } from "@/lib/types";
-import { Service, ProfessionalService, WithContext, Organization, Article, Person, WebPage, ItemList, FAQPage, Graph } from "schema-dts";
+import { Service, ProfessionalService, WithContext, Organization, Article, Person, WebPage } from "schema-dts";
 
 export function getToolProfessionalSchema(data: ToolPageData): [WithContext<Service>, WithContext<ProfessionalService>] {
   const provider: Organization = {

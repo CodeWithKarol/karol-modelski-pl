@@ -13,19 +13,6 @@ interface FAQProps {
 }
 
 export const FAQ = ({ items, title, className = '' }: FAQProps) => {
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    'mainEntity': items.map((item) => ({
-      '@type': 'Question',
-      'name': item.question,
-      'acceptedAnswer': {
-        '@type': 'Answer',
-        'text': typeof item.answer === 'string' ? item.answer : '', // Schema requires text
-      },
-    })),
-  };
-
   return (
     <div className={`space-y-4 ${className}`}>
       {title && <h2 className="text-2xl font-bold">{title}</h2>}

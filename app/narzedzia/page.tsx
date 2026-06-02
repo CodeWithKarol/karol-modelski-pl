@@ -1,17 +1,16 @@
 'use client';
 
 import { useState } from 'react';
-import { TOOLS_HUB_CONFIG } from "@/lib/tools-hub";
 import { TOOLS } from '@/lib/tools';
+import { TOOLS_HUB_CONFIG } from "@/lib/tools-hub";
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { FAQ } from '@/components/ui/faq';
 import { Workflow, BrainCircuit, Database, MessageSquare, CreditCard } from 'lucide-react';
-import { Breadcrumbs } from "@/components/breadcrumbs";
 import { GenericHero } from "@/components/sections/generic-hero";
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, React.ElementType> = {
   'Pipedrive': Workflow,
   'ClickUp': Workflow,
   'Google Sheets': Database,
@@ -62,7 +61,6 @@ export default function NarzedziaPage() {
   return (
     <main className="min-h-screen bg-background">
       <GenericHero 
-        title={TOOLS_HUB_CONFIG.hero.title}
         subtitle={TOOLS_HUB_CONFIG.hero.subtitle}
         description={TOOLS_HUB_CONFIG.hero.description}
         ctaText={TOOLS_HUB_CONFIG.hero.cta.label}
@@ -116,17 +114,11 @@ export default function NarzedziaPage() {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-8 text-center">Często zadawane pytania</h2>
-          <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="w-full">
-              {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger>{faq.question}</AccordionTrigger>
-                  <AccordionContent>{faq.answer}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
+          <FAQ 
+            title="Często zadawane pytania" 
+            items={faqs} 
+            className="max-w-3xl mx-auto"
+          />
         </section>
 
         <section className="mb-24 text-center bg-background p-12 rounded-2xl border border-amber-400/20 shadow-xl shadow-amber-500/5">

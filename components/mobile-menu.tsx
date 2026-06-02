@@ -11,7 +11,6 @@ import {
   SheetHeader,
 } from "@/components/ui/sheet"
 import { NAV_LINKS, CTA_CONFIG } from "@/lib/nav-config"
-import { TOOLS } from "@/lib/tools"
 import { useState } from "react"
 
 export function MobileMenu() {

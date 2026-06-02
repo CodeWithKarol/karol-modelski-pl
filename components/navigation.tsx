@@ -4,14 +4,11 @@ import Link from "next/link"
 import { MobileMenu } from "./mobile-menu"
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { NAV_LINKS, CTA_CONFIG } from "@/lib/nav-config"
-import { TOOLS } from "@/lib/tools"
 
 export function Navigation() {
   return (

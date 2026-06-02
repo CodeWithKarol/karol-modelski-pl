@@ -11,7 +11,6 @@ export function ArticlePageTemplate({ data }: { data: ArticlePageData }) {
   return (
     <div className="min-h-screen bg-background">
       <GenericHero 
-        title="Baza wiedzy"
         subtitle={data.hero_section.h1}
         description={data.hero_section.lead_paragraph}
         ctaText="Umów bezpłatną konsultację"
@@ -37,7 +36,7 @@ export function ArticlePageTemplate({ data }: { data: ArticlePageData }) {
             </div>
           </div>
 
-          <ArticleTOCSection items={data.table_of_contents} content_blocks={data.content_blocks} />
+          <ArticleTOCSection content_blocks={data.content_blocks} />
 
           <article className="prose prose-lg dark:prose-invert max-w-4xl mb-16 prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-foreground prose-a:text-primary prose-a:no-underline hover:prose-a:underline">
             {data.content_blocks.map((block, idx) => (

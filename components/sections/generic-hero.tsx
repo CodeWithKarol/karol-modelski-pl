@@ -1,9 +1,9 @@
-import { WorkflowDiagram } from "@/components/workflow-diagram"
+// import { WorkflowDiagram } from "@/components/workflow-diagram"
 import Link from "next/link"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 
 interface GenericHeroProps {
-  title: string
+  title?: string
   subtitle: string
   description: string
   ctaText?: string
@@ -13,7 +13,6 @@ interface GenericHeroProps {
 }
 
 export function GenericHero({ 
-  title, 
   subtitle, 
   description, 
   ctaText = "Bezpłatna Konsultacja", 
