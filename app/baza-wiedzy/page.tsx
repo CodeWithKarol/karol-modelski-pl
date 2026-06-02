@@ -13,7 +13,7 @@ import {
   AccordionItem, 
   AccordionTrigger 
 } from "@/components/ui/accordion";
-import { Breadcrumbs } from "@/components/breadcrumbs";
+import { GenericHero } from "@/components/sections/generic-hero"
 
 export const metadata: Metadata = {
   title: KNOWLEDGE_HUB_DATA.seo_metadata.meta_title,
@@ -36,33 +36,16 @@ export default function BazaWiedzyIndexPage() {
       />
       
       {/* Hero Section */}
-      <section className="relative border-b border-border pt-6 pb-16 sm:pb-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex w-full">
-            <Breadcrumbs items={[{ label: "Baza wiedzy", href: "/baza-wiedzy" }]} />
-          </div>
-          <div className="text-center mt-8">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
-              {KNOWLEDGE_HUB_DATA.hero_section.h1}
-            </h1>
-            <p className="mt-6 text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
-              {KNOWLEDGE_HUB_DATA.hero_section.lead_paragraph}
-            </p>
-            <div className="mt-10">
-              <Link 
-                href="https://calendly.com/kontakt-karol-modelski/new-meeting" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-xl bg-foreground px-8 py-4 text-sm font-semibold text-background transition-all hover:bg-foreground/85 hover:shadow-lg"
-              >
-                Edukacja to pierwszy krok. Diagnoza to pierwszy zysk.
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <GenericHero 
+        title="Baza wiedzy"
+        subtitle={KNOWLEDGE_HUB_DATA.hero_section.h1}
+        description={KNOWLEDGE_HUB_DATA.hero_section.lead_paragraph}
+        ctaText={KNOWLEDGE_HUB_DATA.hero_section.cta_label}
+        ctaHref={KNOWLEDGE_HUB_DATA.hero_section.cta_url}
+        breadcrumbItems={[{ label: "Baza wiedzy", href: "/baza-wiedzy" }]}
+      />
 
-      <div className="container mx-auto px-4 space-y-20 py-16 sm:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-20 py-16 sm:py-24">
         {/* Intro Section */}
         <section className="bg-card p-8 rounded-2xl border border-border">
           <h2 className="text-2xl font-bold mb-4">{KNOWLEDGE_HUB_DATA.intro_section.h2}</h2>

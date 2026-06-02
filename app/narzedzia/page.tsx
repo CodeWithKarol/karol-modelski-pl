@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { TOOLS_HUB_CONFIG } from "@/lib/tools-hub";
 import { TOOLS } from '@/lib/tools';
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -8,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Workflow, BrainCircuit, Database, MessageSquare, CreditCard } from 'lucide-react';
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { GenericHero } from "@/components/sections/generic-hero";
 
 const iconMap: Record<string, any> = {
   'Pipedrive': Workflow,
@@ -59,31 +61,14 @@ export default function NarzedziaPage() {
 
   return (
     <main className="min-h-screen bg-background">
-      <section className="relative border-b border-border pt-6 pb-16 sm:pb-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex w-full">
-             <Breadcrumbs items={[{ label: "Automatyzacje", href: "/narzedzia" }]} />
-          </div>
-          <div className="text-center mt-8">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
-              Zamień powtarzalne zadania w zyski – odkryj potęgę inteligentnych integracji
-            </h1>
-            <p className="mt-6 text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
-              Zamiast tracić godziny na żmudne procesy, zintegryj swoje narzędzia w jeden, bezbłędny system. Sprawdź, jak odzyskać czas swojego zespołu.
-            </p>
-            <div className="mt-10">
-              <Link 
-                href="https://calendly.com/kontakt-karol-modelski/new-meeting" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-xl bg-foreground px-8 py-4 text-sm font-semibold text-background transition-all hover:bg-foreground/85 hover:shadow-lg"
-              >
-                Zdiagnozuj swoje procesy – odzyskaj czas zespołu
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <GenericHero 
+        title={TOOLS_HUB_CONFIG.hero.title}
+        subtitle={TOOLS_HUB_CONFIG.hero.subtitle}
+        description={TOOLS_HUB_CONFIG.hero.description}
+        ctaText={TOOLS_HUB_CONFIG.hero.cta.label}
+        ctaHref={TOOLS_HUB_CONFIG.hero.cta.href}
+        breadcrumbItems={[{ label: "Automatyzacje", href: "/narzedzia" }]}
+      />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <section className="mb-12">

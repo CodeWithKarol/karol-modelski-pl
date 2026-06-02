@@ -65,7 +65,7 @@ export const OFFERS_HUB_CONFIG = {
   cta: {
     headline: "Wciąż nie masz pewności, od czego zacząć?",
     description: "Nie każda firma potrzebuje wszystkiego od razu. Zamiast zgadywać, umów się na bezpłatną diagnozę, a ja sam wskażę obszar, który przyniesie Ci największe oszczędności w ciągu pierwszych 30 dni.",
-    label: "Umów bezpłatną diagnozę techniczną",
+    label: "Zaprojektujmy system, który pracuje za Ciebie. Bezpłatna diagnoza.",
     href: "https://calendly.com/kontakt-karol-modelski/new-meeting",
   },
   localSeo: {

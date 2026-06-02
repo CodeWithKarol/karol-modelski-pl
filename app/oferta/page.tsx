@@ -3,6 +3,7 @@ import Link from "next/link"
 import { FAQ } from "@/components/ui/faq"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import type { Metadata } from "next"
+import { GenericHero } from "@/components/sections/generic-hero"
 
 export const metadata: Metadata = {
   title: "Usługi automatyzacji procesów biznesowych",
@@ -22,36 +23,14 @@ export default function OffersHubPage() {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative border-b border-border pt-6 pb-16 sm:pb-24">
-        {/* Subtle background glow */}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute -top-32 -right-32 h-[500px] w-[500px] rounded-full bg-amber-400/5 blur-3xl" />
-        </div>
-
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex w-full">
-            <Breadcrumbs items={[{ label: "Oferta", href: "/oferta" }]} />
-          </div>
-          <div className="text-center mt-8">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
-              {OFFERS_HUB_CONFIG.hero.headline}
-            </h1>
-            <p className="mt-6 text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
-              {OFFERS_HUB_CONFIG.hero.description}
-            </p>
-            <div className="mt-10">
-              <Link 
-                href="https://calendly.com/kontakt-karol-modelski/new-meeting" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-xl bg-foreground px-8 py-4 text-sm font-semibold text-background transition-all hover:bg-foreground/85 hover:shadow-lg"
-              >
-                Zaprojektujmy system, który pracuje za Ciebie. Bezpłatna diagnoza.
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <GenericHero 
+        title="Oferta"
+        subtitle={OFFERS_HUB_CONFIG.hero.headline}
+        description={OFFERS_HUB_CONFIG.hero.description}
+        ctaText={OFFERS_HUB_CONFIG.cta.label}
+        ctaHref={OFFERS_HUB_CONFIG.cta.href}
+        breadcrumbItems={[{ label: "Oferta", href: "/oferta" }]}
+      />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         {/* Intro SEO Section */}
