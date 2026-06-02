@@ -22,14 +22,16 @@ export default function OffersHubPage() {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative border-b border-border py-16 sm:py-24">
+      <section className="relative border-b border-border pt-6 pb-16 sm:pb-24">
         {/* Subtle background glow */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
           <div className="absolute -top-32 -right-32 h-[500px] w-[500px] rounded-full bg-amber-400/5 blur-3xl" />
         </div>
 
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <Breadcrumbs items={[{ label: "Oferta", href: "/oferta" }]} />
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex w-full">
+            <Breadcrumbs items={[{ label: "Oferta", href: "/oferta" }]} />
+          </div>
           <div className="text-center mt-8">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
               {OFFERS_HUB_CONFIG.hero.headline}
@@ -37,6 +39,16 @@ export default function OffersHubPage() {
             <p className="mt-6 text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
               {OFFERS_HUB_CONFIG.hero.description}
             </p>
+            <div className="mt-10">
+              <Link 
+                href="https://calendly.com/kontakt-karol-modelski/new-meeting" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-xl bg-foreground px-8 py-4 text-sm font-semibold text-background transition-all hover:bg-foreground/85 hover:shadow-lg"
+              >
+                Zaprojektujmy system, który pracuje za Ciebie. Bezpłatna diagnoza.
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -85,8 +97,8 @@ export default function OffersHubPage() {
         <div className="mb-24 text-center bg-background p-12 rounded-2xl border border-amber-400/20 shadow-xl shadow-amber-500/5">
           <h2 className="text-2xl font-bold text-foreground mb-4">{OFFERS_HUB_CONFIG.cta.headline}</h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto">{OFFERS_HUB_CONFIG.cta.description}</p>
-          <a href={OFFERS_HUB_CONFIG.cta.href} className="inline-flex items-center justify-center rounded-xl bg-foreground px-8 py-4 text-sm font-semibold text-background transition-all hover:bg-foreground/85 hover:shadow-lg">
-            {OFFERS_HUB_CONFIG.cta.label}
+          <a href="https://calendly.com/kontakt-karol-modelski/new-meeting" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl bg-foreground px-8 py-4 text-sm font-semibold text-background transition-all hover:bg-foreground/85 hover:shadow-lg">
+            Potrzebujesz wdrożenia szytego na miarę? Umówmy się na 15 min rozmowy technicznej.
           </a>
         </div>
 

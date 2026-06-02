@@ -43,19 +43,9 @@ export function Navigation() {
                 </NavigationMenuItem>
               ))}
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Automatyzacje</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4">
-                    {TOOLS.map((tool) => (
-                      <li key={tool.metadata.href}>
-                        <Link href={tool.metadata.href} className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                          <div className="text-sm font-medium leading-none">{tool.metadata.name}</div>
-                          <p className="line-clamp-1 text-sm leading-snug text-muted-foreground">{tool.metadata.description}</p>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
+                <Link href="/narzedzia" className={navigationMenuTriggerStyle()}>
+                  Automatyzacje
+                </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>

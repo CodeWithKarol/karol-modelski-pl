@@ -46,23 +46,14 @@ export function MobileMenu() {
                 </Link>
               </li>
             ))}
-            <li className="mt-4 border-t border-border pt-4">
-              <span className="px-4 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+            <li>
+              <Link
+                href="/narzedzia"
+                onClick={() => setOpen(false)}
+                className="block rounded-lg px-4 py-3 text-lg font-medium text-foreground transition-colors hover:bg-muted"
+              >
                 Automatyzacje
-              </span>
-              <ul className="flex flex-col gap-1 mt-2">
-                {TOOLS.map((tool) => (
-                  <li key={tool.metadata.href}>
-                    <Link
-                      href={tool.metadata.href}
-                      onClick={() => setOpen(false)}
-                      className="block rounded-lg px-6 py-3 text-base text-foreground/80 hover:bg-muted hover:text-foreground"
-                    >
-                      {tool.metadata.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              </Link>
             </li>
           </ul>
         </nav>
