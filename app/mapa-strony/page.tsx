@@ -18,6 +18,7 @@ export default function SitemapPage() {
           <ul className="mt-4 space-y-2 text-muted-foreground">
             <li><Link href="/" className="hover:text-amber-600 transition-colors">Strona główna</Link></li>
             <li><Link href="/oferta" className="hover:text-amber-600 transition-colors">Oferta</Link></li>
+            <li><Link href="/narzedzia" className="hover:text-amber-600 transition-colors">Automatyzacje</Link></li>
             <li><Link href="/baza-wiedzy" className="hover:text-amber-600 transition-colors">Baza wiedzy</Link></li>
             <li><Link href="/mapa-strony" className="hover:text-amber-600 transition-colors">Mapa strony</Link></li>
           </ul>
