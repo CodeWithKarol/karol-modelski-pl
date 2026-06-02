@@ -1,9 +1,12 @@
 import Link from "next/link"
 import { TOOLS } from "@/lib/tools"
 import { OFFERS } from "@/lib/offers"
-import { KNOWLEDGE_PAGES } from "@/lib/knowledge"
+import { KNOWLEDGE_CONTENT } from "@/lib/knowledge"
 
 export default function SitemapPage() {
+  const articles = Object.values(KNOWLEDGE_CONTENT)
+  const offers = Object.values(OFFERS)
+
   return (
     <main className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
       <h1 className="text-4xl font-bold tracking-tight text-foreground">Mapa strony</h1>
@@ -14,7 +17,8 @@ export default function SitemapPage() {
           <h2 className="text-xl font-semibold text-foreground">Strony główne</h2>
           <ul className="mt-4 space-y-2 text-muted-foreground">
             <li><Link href="/" className="hover:text-amber-600 transition-colors">Strona główna</Link></li>
-            <li><Link href="/wspolpraca" className="hover:text-amber-600 transition-colors">Współpraca</Link></li>
+            <li><Link href="/oferta" className="hover:text-amber-600 transition-colors">Oferta</Link></li>
+            <li><Link href="/baza-wiedzy" className="hover:text-amber-600 transition-colors">Baza wiedzy</Link></li>
             <li><Link href="/mapa-strony" className="hover:text-amber-600 transition-colors">Mapa strony</Link></li>
           </ul>
         </section>
@@ -22,9 +26,9 @@ export default function SitemapPage() {
         <section>
           <h2 className="text-xl font-semibold text-foreground">Oferta</h2>
           <ul className="mt-4 space-y-2 text-muted-foreground">
-            {Object.entries(OFFERS).map(([href, data]) => (
-              <li key={href}>
-                <Link href={data.offer_url} className="hover:text-amber-600 transition-colors">{data.offer_name}</Link>
+            {offers.map((offer) => (
+              <li key={offer.offer_url}>
+                <Link href={offer.offer_url} className="hover:text-amber-600 transition-colors">{offer.offer_name}</Link>
               </li>
             ))}
           </ul>
@@ -45,9 +49,9 @@ export default function SitemapPage() {
           <h2 className="text-xl font-semibold text-foreground">Baza wiedzy</h2>
           <ul className="mt-4 space-y-2 text-muted-foreground">
             <li><Link href="/baza-wiedzy" className="hover:text-amber-600 transition-colors">Przegląd bazy wiedzy</Link></li>
-            {Object.values(KNOWLEDGE_PAGES).map((data) => (
-              <li key={data.article_id}>
-                <Link href={data.article_url} className="hover:text-amber-600 transition-colors">{data.hero_section.h1}</Link>
+            {articles.map((article) => (
+              <li key={article.article_url}>
+                <Link href={article.article_url} className="hover:text-amber-600 transition-colors">{article.hero_section.h1}</Link>
               </li>
             ))}
           </ul>
