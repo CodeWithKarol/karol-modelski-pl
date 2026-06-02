@@ -61,17 +61,21 @@ export default function OffersHubPage() {
         </div>
 
         {/* Service Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-          {OFFERS_HUB_CONFIG.serviceAreas.map((area) => (
-            <div key={area.title} className="flex flex-col gap-4 p-8 rounded-xl border border-border bg-background hover:border-border/80 transition-colors">
-              <h3 className="text-xl font-bold text-foreground">{area.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed flex-grow">{area.description}</p>
-              <Link href={area.href} className="inline-flex items-center text-sm font-semibold text-foreground hover:text-muted-foreground mt-2">
-                {area.cta} &rarr;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+            {OFFERS_HUB_CONFIG.serviceAreas.map((area) => (
+              <Link
+                key={area.title}
+                href={area.href}
+                className="flex flex-col gap-4 p-8 rounded-xl border border-border bg-background hover:border-primary/50 hover:bg-muted/30 hover:shadow-md hover:scale-[1.02] transition-all cursor-pointer"
+              >
+                <h3 className="text-xl font-bold text-foreground">{area.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-grow">{area.description}</p>
+                <span className="inline-flex items-center text-sm font-semibold text-foreground hover:text-muted-foreground mt-2">
+                  {area.cta} &rarr;
+                </span>
               </Link>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
         {/* FAQ Section */}
         <div className="mb-24">

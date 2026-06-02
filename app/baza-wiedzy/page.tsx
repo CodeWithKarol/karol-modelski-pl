@@ -88,7 +88,7 @@ export default function BazaWiedzyIndexPage() {
                         key={article.article_id} 
                         className={`block group ${isFeatured ? "md:col-span-2 lg:col-span-2" : ""}`}
                       >
-                        <Card className={`h-full p-2 hover:shadow-sm hover:border-border/60 transition-all duration-300 border-border/30 bg-card/50 ${isFeatured ? "flex flex-col md:flex-row gap-4" : ""}`}>
+                        <Card className={`h-full p-2 hover:border-primary/50 hover:bg-muted/30 hover:shadow-md hover:scale-[1.02] transition-all duration-300 border-border/30 bg-card/50 ${isFeatured ? "flex flex-col md:flex-row gap-4" : ""}`}>
                           <CardHeader className={`pb-4 ${isFeatured ? "md:w-1/3" : ""}`}>
                             <div className="flex flex-wrap gap-2 mb-2">
                               {article.taxonomy.tags.slice(0, 2).map(tag => (

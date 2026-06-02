@@ -110,7 +110,7 @@ export default function NarzedziaPage() {
                   aria-label={`Dowiedz się więcej o: ${tool.content.seo.title}`}
                   className="flex flex-col h-full group"
                 >
-                  <Card className="flex-grow transition-all hover:border-primary cursor-pointer flex flex-col">
+                  <Card className="flex-grow transition-all hover:border-primary/50 hover:bg-muted/30 hover:shadow-md hover:scale-[1.02] cursor-pointer flex flex-col">
                     <CardHeader className="flex-grow">
                       <div className="mb-4 text-primary transition-colors group-hover:text-primary/80">
                         <Icon size={32} />

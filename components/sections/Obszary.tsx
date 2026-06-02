@@ -21,9 +21,10 @@ export function Obszary() {
         </div>
         <div className="mx-auto mt-16 max-w-6xl grid grid-cols-1 gap-6 md:grid-cols-2">
           {AREAS_CONFIG.areas.map((area) => (
-            <div
+            <Link
               key={area.title}
-              className="group flex flex-col gap-4 rounded-xl border border-border bg-muted/20 p-8 transition-all hover:border-border/80 hover:bg-muted/30"
+              href={area.href}
+              className="group flex flex-col gap-4 rounded-xl border border-border bg-muted/20 p-8 transition-all hover:border-primary/50 hover:bg-muted/40 hover:shadow-md hover:scale-[1.02] cursor-pointer"
             >
               <h3 className="text-xl font-bold text-foreground">{area.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed flex-grow">
@@ -32,13 +33,12 @@ export function Obszary() {
               <p className="text-sm font-medium text-foreground italic">
                 {area.benefit}
               </p>
-              <Link
-                href={area.href}
+              <span
                 className="inline-flex items-center text-sm font-semibold text-foreground hover:text-muted-foreground transition-colors mt-2"
               >
                 {area.cta}
-              </Link>
-            </div>
+              </span>
+            </Link>
           ))}
         </div>
       </div>
