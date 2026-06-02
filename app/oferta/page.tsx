@@ -3,6 +3,7 @@ import Link from "next/link"
 import { FAQ } from "@/components/ui/faq"
 import type { Metadata } from "next"
 import { GenericHero } from "@/components/sections/generic-hero"
+import { GenericCta } from "@/components/sections/generic-cta"
 
 export const metadata: Metadata = {
   title: "Usługi automatyzacji procesów biznesowych",
@@ -25,8 +26,8 @@ export default function OffersHubPage() {
       <GenericHero 
         subtitle={OFFERS_HUB_CONFIG.hero.headline}
         description={OFFERS_HUB_CONFIG.hero.description}
-        ctaText={OFFERS_HUB_CONFIG.cta.label}
-        ctaHref={OFFERS_HUB_CONFIG.cta.href}
+        ctaText={OFFERS_HUB_CONFIG.hero.cta.label}
+        ctaHref={OFFERS_HUB_CONFIG.hero.cta.href}
         breadcrumbItems={[{ label: "Oferta", href: "/oferta" }]}
       />
 
@@ -76,13 +77,12 @@ export default function OffersHubPage() {
         </div>
 
         {/* Final CTA */}
-        <div className="mb-24 text-center bg-background p-12 rounded-2xl border border-amber-400/20 shadow-xl shadow-amber-500/5">
-          <h2 className="text-2xl font-bold text-foreground mb-4">{OFFERS_HUB_CONFIG.cta.headline}</h2>
-          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">{OFFERS_HUB_CONFIG.cta.description}</p>
-          <a href="https://calendly.com/kontakt-karol-modelski/new-meeting" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl bg-foreground px-8 py-4 text-sm font-semibold text-background transition-all hover:bg-foreground/85 hover:shadow-lg">
-            Potrzebujesz wdrożenia szytego na miarę? Umówmy się na 15 min rozmowy technicznej.
-          </a>
-        </div>
+        <GenericCta 
+          headline={OFFERS_HUB_CONFIG.cta.headline}
+          description={OFFERS_HUB_CONFIG.cta.description}
+          ctaText={OFFERS_HUB_CONFIG.cta.label}
+          ctaHref={OFFERS_HUB_CONFIG.cta.href}
+        />
 
         {/* Local SEO */}
         <div className="text-center border-t border-border pt-12">

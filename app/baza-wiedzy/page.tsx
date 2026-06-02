@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Clock } from "lucide-react";
 import { FAQ } from "@/components/ui/faq";
 import { GenericHero } from "@/components/sections/generic-hero"
+import { GenericCta } from "@/components/sections/generic-cta"
 
 export const metadata: Metadata = {
   title: KNOWLEDGE_HUB_DATA.seo_metadata.meta_title,
@@ -107,18 +108,12 @@ export default function BazaWiedzyIndexPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="mb-24 text-center bg-background p-12 rounded-2xl border border-amber-400/20 shadow-xl shadow-amber-500/5">
-          <h2 className="text-2xl font-bold text-foreground mb-4">Chcesz przełożyć tę wiedzę na algorytmy w swojej firmie?</h2>
-          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">Skorzystaj z darmowej konsultacji i sprawdź, jak zautomatyzować Twoje procesy.</p>
-          <Link 
-            href="https://calendly.com/kontakt-karol-modelski/new-meeting" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="inline-flex items-center justify-center rounded-xl bg-foreground px-8 py-4 text-sm font-semibold text-background transition-all hover:bg-foreground/85 hover:shadow-lg"
-          >
-            Masz pytania po lekturze? Umów 15 min bezpłatnej diagnozy
-          </Link>
-        </section>
+        <GenericCta 
+          headline={KNOWLEDGE_HUB_DATA.cta.headline}
+          description={KNOWLEDGE_HUB_DATA.cta.description}
+          ctaText={KNOWLEDGE_HUB_DATA.cta.label}
+          ctaHref={KNOWLEDGE_HUB_DATA.cta.href}
+        />
       </div>
     </main>
   );

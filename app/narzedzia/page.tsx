@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { FAQ } from '@/components/ui/faq';
 import { Workflow, BrainCircuit, Database, MessageSquare, CreditCard } from 'lucide-react';
 import { GenericHero } from "@/components/sections/generic-hero";
+import { GenericCta } from "@/components/sections/generic-cta";
 
 const iconMap: Record<string, React.ElementType> = {
   'Pipedrive': Workflow,
@@ -121,18 +122,12 @@ export default function NarzedziaPage() {
           />
         </section>
 
-        <section className="mb-24 text-center bg-background p-12 rounded-2xl border border-amber-400/20 shadow-xl shadow-amber-500/5">
-          <h2 className="text-2xl font-bold text-foreground mb-4">Nie trać czasu na ręczne procesy.</h2>
-          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">Wybierz diagnozę, która pokaże Ci drogę do skalowalnego biznesu.</p>
-          <Link 
-            href="https://calendly.com/kontakt-karol-modelski/new-meeting" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-xl bg-foreground px-8 py-4 text-sm font-semibold text-background transition-all hover:bg-foreground/85 hover:shadow-lg"
-          >
-            Nie wiesz, od czego zacząć automatyzację? Umów 15 min diagnozy technicznej.
-          </Link>
-        </section>
+        <GenericCta 
+          headline={TOOLS_HUB_CONFIG.finalCta.headline}
+          description={TOOLS_HUB_CONFIG.finalCta.description}
+          ctaText={TOOLS_HUB_CONFIG.finalCta.label}
+          ctaHref={TOOLS_HUB_CONFIG.finalCta.href}
+        />
       </div>
     </main>
   );

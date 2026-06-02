@@ -24,6 +24,7 @@ export interface KnowledgeHubData {
   };
   categories_display: KnowledgeCategory[];
   faq_section: ToolFAQ[];
+  cta: { headline: string; description: string; label: string; href: string };
   seo_metadata: {
     focus_keyword: string;
     meta_title: string;
@@ -116,6 +117,13 @@ export const KNOWLEDGE_HUB_DATA: KnowledgeHubData = {
       answer: "Wierzę, że przejrzyste automatyzacje budują długofalowe relacje. Dzieląc się rozwiązaniami, pokazuję mój inżynierski standard pracy. Wolę, żebyś poznał sposób, w jaki myślę o systemach, zanim zdecydujesz o współpracy przy profesjonalnym wdrożeniu."
     }
   ],
+
+  cta: {
+    headline: "Chcesz przełożyć tę wiedzę na algorytmy w swojej firmie?",
+    description: "Skorzystaj z darmowej konsultacji i sprawdź, jak zautomatyzować Twoje procesy.",
+    label: "Masz pytania po lekturze? Umów 15 min bezpłatnej diagnozy",
+    href: "https://calendly.com/kontakt-karol-modelski/new-meeting",
+  },
 
   seo_metadata: {
     focus_keyword: "baza wiedzy automatyzacja",

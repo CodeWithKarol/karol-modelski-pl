@@ -2,6 +2,10 @@ export const OFFERS_HUB_CONFIG = {
   hero: {
     headline: "Automatyzacja procesów biznesowych – Inżynierskie rozwiązania dla Twojej firmy",
     description: "Wybierz obszar, który wymaga usprawnienia, i odzyskaj czas swojego zespołu dzięki automatyzacji n8n oraz AI.",
+    cta: {
+      label: "Zaprojektujmy system, który pracuje za Ciebie. Bezpłatna diagnoza.",
+      href: "https://calendly.com/kontakt-karol-modelski/new-meeting"
+    }
   },
   introduction: {
     title: "Jak automatyzacja procesów biznesowych wspiera wzrost?",
@@ -65,7 +69,7 @@ export const OFFERS_HUB_CONFIG = {
   cta: {
     headline: "Wciąż nie masz pewności, od czego zacząć?",
     description: "Nie każda firma potrzebuje wszystkiego od razu. Zamiast zgadywać, umów się na bezpłatną diagnozę, a ja sam wskażę obszar, który przyniesie Ci największe oszczędności w ciągu pierwszych 30 dni.",
-    label: "Zaprojektujmy system, który pracuje za Ciebie. Bezpłatna diagnoza.",
+    label: "Potrzebujesz wdrożenia szytego na miarę? Umówmy się na 15 min rozmowy technicznej.",
     href: "https://calendly.com/kontakt-karol-modelski/new-meeting",
   },
   localSeo: {

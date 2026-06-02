@@ -7,5 +7,11 @@ export const TOOLS_HUB_CONFIG = {
       label: "Zdiagnozuj swoje procesy – odzyskaj czas zespołu",
       href: "https://calendly.com/kontakt-karol-modelski/new-meeting",
     }
+  },
+  finalCta: {
+    headline: "Nie trać czasu na ręczne procesy.",
+    description: "Wybierz diagnozę, która pokaże Ci drogę do skalowalnego biznesu.",
+    label: "Nie wiesz, od czego zacząć automatyzację? Umów 15 min diagnozy technicznej.",
+    href: "https://calendly.com/kontakt-karol-modelski/new-meeting"
   }
 }
