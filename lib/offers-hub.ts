@@ -13,28 +13,66 @@ export const OFFERS_HUB_CONFIG = {
   },
   serviceAreas: [
     {
-      title: "Automatyzacja Sprzedaży i CRM",
-      description: "Koniec z ręcznym wpisywaniem leadów. Automatyczne przekierowywanie zapytań, klasyfikacja klientów i natychmiastowe alerty dla handlowców.",
-      cta: "Sprawdź, jak zautomatyzować proces sprzedaży",
-      href: "/oferta/automatyzacja-sprzedazy",
+      groupTitle: "Strategia i Audyt",
+      items: [
+        {
+          title: "Audyt i Strategia Automatyzacji",
+          description: "Zidentyfikujemy wąskie gardła w Twojej firmie i przygotujemy precyzyjny plan wdrożenia automatyzacji, który realnie zwiększy marżę.",
+          cta: "Zamów audyt procesów",
+          href: "/oferta/audyt-i-strategia-automatyzacji",
+        },
+      ],
     },
     {
-      title: "Automatyzacja Finansów",
-      description: "Automatyzacja obiegu faktur i wyciągów. Inteligentne katalogowanie plików i przesyłanie danych do systemów księgowych bez pomyłek.",
-      cta: "Zobacz rozwiązania dla automatyzacji obiegu faktur",
-      href: "/oferta/automatyzacja-administracji-i-finansow",
+      groupTitle: "Sprzedaż i Marketing",
+      items: [
+        {
+          title: "Automatyzacja Sprzedaży i CRM",
+          description: "Koniec z ręcznym wpisywaniem leadów. Automatyczne przekierowywanie zapytań, klasyfikacja klientów i natychmiastowe alerty dla handlowców.",
+          cta: "Sprawdź, jak zautomatyzować proces sprzedaży",
+          href: "/oferta/automatyzacja-sprzedazy",
+        },
+        {
+          title: "Automatyzacja Marketingu",
+          description: "Przestań zarządzać kampaniami ręcznie. Połącz swoje narzędzia marketingowe, CRM i systemy analityczne w jeden spójny ekosystem.",
+          cta: "Poznaj automatyzację marketingu",
+          href: "/oferta/automatyzacja-marketingu",
+        },
+      ],
     },
     {
-      title: "Inteligentna Automatyzacja z AI",
-      description: "Wdrażanie modeli AI w procesy biznesowe. Analiza danych, przetwarzanie dokumentów i inteligentna komunikacja.",
-      cta: "Poznaj możliwości automatyzacji z AI",
-      href: "/oferta/automatyzacja-procesow-z-ai",
+      groupTitle: "Operacje i Zarządzanie",
+      items: [
+        {
+          title: "Zarządzanie Projektami",
+          description: "Uporządkuj zadania bez wysiłku. Automatyczne tworzenie struktur projektowych, przypisywanie zadań i śledzenie statusów.",
+          cta: "Poznaj automatyzację zarządzania projektami",
+          href: "/oferta/automatyzacja-zarzadzania-projektami",
+        },
+        {
+          title: "Automatyzacja Finansów",
+          description: "Automatyzacja obiegu faktur i wyciągów. Inteligentne katalogowanie plików i przesyłanie danych do systemów księgowych bez pomyłek.",
+          cta: "Zobacz rozwiązania dla automatyzacji obiegu faktur",
+          href: "/oferta/automatyzacja-administracji-i-finansow",
+        },
+        {
+          title: "Automatyzacja Obsługi Klienta",
+          description: "Zautomatyzuj obieg zgłoszeń i priorytetyzację. Skróć czas odpowiedzi na zapytania klientów dzięki inteligentnym integracjom.",
+          cta: "Poznaj automatyzację obsługi klienta",
+          href: "/oferta/automatyzacja-obslugi-klienta",
+        },
+      ],
     },
     {
-      title: "Zarządzanie Projektami",
-      description: "Uporządkuj zadania bez wysiłku. Automatyczne tworzenie struktur projektowych, przypisywanie zadań i śledzenie statusów.",
-      cta: "Poznaj automatyzację zarządzania projektami",
-      href: "/oferta/automatyzacja-zarzadzania-projektami",
+      groupTitle: "Innowacje AI",
+      items: [
+        {
+          title: "Inteligentna Automatyzacja z AI",
+          description: "Wdrażanie modeli AI w procesy biznesowe. Analiza danych, przetwarzanie dokumentów i inteligentna komunikacja.",
+          cta: "Poznaj możliwości automatyzacji z AI",
+          href: "/oferta/automatyzacja-procesow-z-ai",
+        },
+      ],
     },
   ],
   knowledgeBase: {

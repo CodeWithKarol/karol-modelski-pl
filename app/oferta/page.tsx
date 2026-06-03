@@ -38,22 +38,27 @@ export default function OffersHubPage() {
           <p className="text-muted-foreground leading-relaxed">{OFFERS_HUB_CONFIG.introduction.text}</p>
         </div>
 
-        {/* Service Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-            {OFFERS_HUB_CONFIG.serviceAreas.map((area) => (
-              <Link
-                key={area.title}
-                href={area.href}
-                className="flex flex-col gap-4 p-8 rounded-xl border border-border bg-background hover:border-primary/50 hover:bg-muted/30 hover:shadow-md hover:scale-[1.02] transition-all cursor-pointer"
-              >
-                <h3 className="text-xl font-bold text-foreground">{area.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed flex-grow">{area.description}</p>
-                <span className="inline-flex items-center text-sm font-semibold text-foreground hover:text-muted-foreground mt-2">
-                  {area.cta} &rarr;
-                </span>
-              </Link>
-            ))}
-          </div>
+        {/* Service Areas Grid */}
+        {OFFERS_HUB_CONFIG.serviceAreas.map((group) => (
+          <section key={group.groupTitle} className="mb-16">
+            <h2 className="text-2xl font-bold text-foreground mb-8">{group.groupTitle}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {group.items.map((area) => (
+                <Link
+                  key={area.title}
+                  href={area.href}
+                  className="flex flex-col gap-4 p-8 rounded-xl border border-border bg-background hover:border-primary/50 hover:bg-muted/30 hover:shadow-md hover:scale-[1.02] transition-all cursor-pointer"
+                >
+                  <h3 className="text-xl font-bold text-foreground">{area.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-grow">{area.description}</p>
+                  <span className="inline-flex items-center text-sm font-semibold text-foreground hover:text-muted-foreground mt-2">
+                    {area.cta} &rarr;
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        ))}
 
         {/* FAQ Section */}
         <div className="mb-24">

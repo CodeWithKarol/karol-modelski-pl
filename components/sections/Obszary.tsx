@@ -19,25 +19,22 @@ export function Obszary() {
             {AREAS_CONFIG.description}
           </p>
         </div>
-        <div className="mx-auto mt-16 max-w-6xl grid grid-cols-1 gap-6 md:grid-cols-2">
-          {AREAS_CONFIG.areas.map((area) => (
-            <Link
-              key={area.title}
-              href={area.href}
-              className="group flex flex-col gap-4 rounded-xl border border-border bg-muted/20 p-8 transition-all hover:border-primary/50 hover:bg-muted/40 hover:shadow-md hover:scale-[1.02] cursor-pointer"
+        <div className="mx-auto mt-16 max-w-6xl grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {AREAS_CONFIG.categories.map((category) => (
+              <Link
+              key={category.groupTitle}
+              href="/oferta"
+              className="group flex flex-col justify-between rounded-xl border border-border bg-muted/20 p-8 transition-all hover:border-primary/50 hover:bg-muted/40 hover:shadow-md hover:scale-[1.02] cursor-pointer"
             >
-              <h3 className="text-xl font-bold text-foreground">{area.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed flex-grow">
-                {area.description}
+              <div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">{category.groupTitle}</h3>
+                <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                  {category.description}
+                </p>
+              </div>
+              <p className="text-sm font-semibold text-primary">
+                {category.cta} &rarr;
               </p>
-              <p className="text-sm font-medium text-foreground italic">
-                {area.benefit}
-              </p>
-              <span
-                className="inline-flex items-center text-sm font-semibold text-foreground hover:text-muted-foreground transition-colors mt-2"
-              >
-                {area.cta}
-              </span>
             </Link>
           ))}
         </div>
