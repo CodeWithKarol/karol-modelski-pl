@@ -7,8 +7,8 @@ export function Obszary() {
     <section className="py-12 sm:py-24 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-muted/30 px-3 py-1">
-            <span className="font-mono text-xs font-semibold tracking-wide text-muted-foreground">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-400/20 bg-amber-400/10 px-3 py-1">
+            <span className="font-mono text-xs font-semibold tracking-wide text-amber-700 dark:text-amber-500">
               {AREAS_CONFIG.eyebrow}
             </span>
           </div>
@@ -21,10 +21,10 @@ export function Obszary() {
         </div>
         <div className="mx-auto mt-16 max-w-6xl grid grid-cols-1 sm:grid-cols-2 gap-6">
           {AREAS_CONFIG.categories.map((category) => (
-              <Link
+            <Link
               key={category.groupTitle}
-              href="/oferta"
-              className="group flex flex-col justify-between rounded-xl border border-border bg-muted/20 p-8 transition-all hover:border-primary/50 hover:bg-muted/40 hover:shadow-md hover:scale-[1.02] cursor-pointer"
+              href={category.href}
+              className="group flex flex-col justify-between rounded-xl border border-border bg-muted/20 p-8 transition-all hover:border-amber-400/50 hover:bg-muted/40 hover:shadow-md hover:scale-[1.02] cursor-pointer"
             >
               <div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">{category.groupTitle}</h3>
@@ -32,7 +32,7 @@ export function Obszary() {
                   {category.description}
                 </p>
               </div>
-              <p className="text-sm font-semibold text-primary">
+              <p className="text-sm font-semibold text-amber-700 dark:text-amber-500">
                 {category.cta} &rarr;
               </p>
             </Link>

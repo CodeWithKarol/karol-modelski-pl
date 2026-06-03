@@ -1,38 +1,40 @@
-import { FAQ_CONFIG } from "@/lib/faq"
-import { FAQ } from "@/components/ui/faq"
-import { HelpCircle } from "lucide-react"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+import { FAQ_CONFIG } from "@/lib/faq-config"
 
 export function FaqSection() {
-  const faqs = FAQ_CONFIG.faqs.map(faq => ({
-    question: faq.question,
-    answer: faq.answer
-  }))
-
   return (
-    <section
-      id="faq"
-      aria-labelledby="faq-heading"
-      className="relative bg-background py-12 sm:py-24 lg:py-32"
-    >
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-16 text-center">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-muted/30 px-3 py-1">
-            <HelpCircle className="h-3.5 w-3.5 text-muted-foreground" aria-hidden="true" />
-            <span className="font-mono text-xs font-semibold tracking-wide text-muted-foreground">
-              {FAQ_CONFIG.eyebrow}
+    <section className="py-12 sm:py-24 bg-background">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-400/20 bg-amber-400/10 px-3 py-1">
+            <span className="font-mono text-xs font-semibold tracking-wide text-amber-700 dark:text-amber-500">
+              {FAQ_CONFIG.hook}
             </span>
           </div>
-
-          <h2
-            id="faq-heading"
-            className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance"
-          >
-            {FAQ_CONFIG.headline}
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            {FAQ_CONFIG.title}
           </h2>
         </div>
 
-        <FAQ items={faqs} />
+        <div className="mt-12">
+          <Accordion type="single" collapsible className="w-full">
+            {FAQ_CONFIG.questions.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`} className="border-border">
+                <AccordionTrigger className="text-left hover:no-underline font-semibold text-lg py-6 hover:text-primary transition-colors">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed text-base pb-6">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
     </section>
   )
