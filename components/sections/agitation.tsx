@@ -1,5 +1,5 @@
 import { AGITATION_CONFIG } from "@/lib/agitation"
-import { Check } from "lucide-react"
+import { AlertTriangle } from "lucide-react"
 
 export function AgitationSection() {
   return (
@@ -11,8 +11,8 @@ export function AgitationSection() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-muted/30 px-3 py-1">
-            <span className="font-mono text-xs font-semibold tracking-wide text-muted-foreground">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-400/20 bg-amber-400/10 px-3 py-1">
+            <span className="font-mono text-xs font-semibold tracking-wide text-amber-700 dark:text-amber-500">
               {AGITATION_CONFIG.eyebrow}
             </span>
           </div>
@@ -30,38 +30,38 @@ export function AgitationSection() {
         </div>
 
         {/* Pain points */}
-        <ul className="mt-12 space-y-6">
+        <div className="mt-12 grid gap-6 px-4 sm:px-0">
           {AGITATION_CONFIG.painPoints.map((point) => (
-            <li key={point.title} className="flex gap-4">
-              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-amber-100 dark:bg-amber-950/40">
-                <Check className="h-4 w-4 text-amber-600 dark:text-amber-400" />
+            <div key={point.title} className="flex flex-col sm:flex-row gap-4 p-6 rounded-xl border border-border bg-muted/20">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-400/10">
+                <AlertTriangle className="h-5 w-5 text-amber-600" />
               </div>
               <div>
-                <h3 className="text-base font-bold text-foreground">{point.title}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                <h3 className="text-lg font-bold text-foreground leading-tight">{point.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {point.description}
                 </p>
               </div>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
 
         {/* Summary & CTA */}
-        <div className="mt-12 text-center">
-          <p className="text-lg leading-relaxed text-foreground">
+        <div className="mt-12 p-8 rounded-2xl bg-muted/30 border border-border">
+          <p className="text-md leading-relaxed text-foreground">
             {AGITATION_CONFIG.summary}
           </p>
           
-          <div className="mt-10 flex flex-col items-center gap-2">
+          <div className="mt-10 flex flex-col items-center gap-3 w-full max-w-sm mx-auto px-4 sm:px-0">
             <a
               href={AGITATION_CONFIG.cta.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-xl bg-foreground px-6 py-3.5 text-sm font-semibold text-background transition-all hover:bg-foreground/85 hover:shadow-lg"
+              className="inline-flex items-center justify-center rounded-full bg-foreground px-6 py-4 font-bold text-background transition-all hover:bg-foreground/90 w-full text-center text-sm sm:text-base"
             >
               {AGITATION_CONFIG.cta.label}
             </a>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-[12px] text-muted-foreground text-center leading-snug w-full px-2">
               {AGITATION_CONFIG.cta.subtext}
             </p>
           </div>

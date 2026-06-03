@@ -1,21 +1,21 @@
 export const FOOTER_CONFIG = {
   brand: {
-    title: "Karol Modelski – Automatyzacja procesów biznesowych",
-    description: "Projektuję i wdrażam skalowalne automatyzacje dla firm, wykorzystując n8n, AI oraz standardy systemów klasy Enterprise.",
+    title: "Karol Modelski",
+    description: "Projektuję i wdrażam bezpieczne, skalowalne ekosystemy technologiczne (n8n, API, AI), przenosząc standardy bezpieczeństwa z systemów klasy Enterprise do sektora MŚP. Koniec z operacyjnym chaosem.",
     linkedin: {
-      label: "Profil zawodowy na LinkedIn",
+      label: "LinkedIn",
       href: "https://www.linkedin.com/in/karol-modelski",
     },
   },
   contact: {
     email: "kontakt@karol-modelski.pl",
-    address: "Warszawa, Polska (współpraca hybrydowa i zdalna)",
+    address: "Warszawa, Polska (Współpraca hybrydowa i zdalna)",
   },
   services: [
-    { label: "Automatyzacja procesów biznesowych (Warszawa)", href: "/oferta/audyt-i-strategia-automatyzacji" },
     { label: "Automatyzacja procesów sprzedaży (CRM)", href: "/oferta/automatyzacja-sprzedazy" },
     { label: "Automatyzacja obiegu faktur i finansów", href: "/oferta/automatyzacja-administracji-i-finansow" },
-    { label: "Wdrożenia AI w biznesie", href: "/oferta/automatyzacja-procesow-z-ai" },
+    { label: "Automatyzacja zarządzania projektami", href: "/oferta/automatyzacja-zarzadzania-projektami" },
+    { label: "Obsługa klienta i AI Ticketing", href: "/oferta/automatyzacja-obslugi-klienta" },
   ],
   companyData: {
     name: "Karol Modelski",
@@ -23,5 +23,5 @@ export const FOOTER_CONFIG = {
     address: "Warszawa, Polska",
   },
   bottomLinks: [{ label: "Mapa strony", href: "/mapa-strony" }],
-  copyright: "Karol Modelski. Wszystkie prawa zastrzeżone.",
+  copyright: "2026 Karol Modelski. Wszystkie prawa zastrzeżone.",
 }

@@ -2,7 +2,8 @@ import { HeroSection } from "@/components/sections/hero"
 import { AgitationSection } from "@/components/sections/agitation"
 import { WhyMeSection } from "@/components/sections/why-me"
 import { Obszary } from "@/components/sections/Obszary"
-import { ProcessSteps } from "@/components/sections/process-steps"
+import { ProcessStepsSection } from "@/components/sections/process-steps"
+import { StackSection } from "@/components/sections/stack"
 import { FaqSection } from "@/components/sections/faq-section"
 import { ContactDual } from "@/components/sections/contact-dual"
 import type { Metadata } from "next"
@@ -23,7 +24,8 @@ export default function Page() {
       <AgitationSection />
       <Obszary />
       <WhyMeSection />
-      <ProcessSteps />
+      <ProcessStepsSection />
+      <StackSection />
       <FaqSection />
       <ContactDual />
     </>

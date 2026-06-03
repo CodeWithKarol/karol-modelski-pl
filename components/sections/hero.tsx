@@ -38,12 +38,13 @@ export function HeroSection() {
               id="hero-heading"
               className="text-2xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-3xl md:text-4xl lg:text-5xl"
             >
-              Automatyzacja procesów biznesowych,{" "}
-              <br className="hidden lg:block" />
+              {HERO_CONFIG.headline.prefix}
+              {" "}
               <span className="relative inline-block text-amber-600 dark:text-amber-400">
-                która odzyskuje godziny pracy
+                {HERO_CONFIG.headline.highlight}
               </span>
-              {" "}Twojego zespołu
+              {" "}
+              {HERO_CONFIG.headline.suffix}
             </h1>
 
             {/* Subheadline */}
@@ -51,45 +52,20 @@ export function HeroSection() {
               {HERO_CONFIG.subheadline}
             </p>
 
-            {/* Tool pills */}
-            <div className="flex flex-wrap gap-2">
-              {HERO_CONFIG.tools.map((label) => (
-                <span
-                  key={label}
-                  className="rounded-full bg-accent px-3 py-1 font-mono text-xs font-medium text-accent-foreground"
-                >
-                  {label}
-                </span>
-              ))}
-            </div>
-
             {/* CTA block */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2">
               <a
                 href={HERO_CONFIG.cta.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`${HERO_CONFIG.cta.label} (otwiera Calendly)`}
-                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-foreground px-5 py-3 text-sm font-semibold text-background transition-all duration-200 hover:bg-foreground/85 hover:shadow-lg hover:shadow-foreground/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:px-7 sm:py-3.5"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-foreground px-6 py-3 text-sm font-semibold text-background transition-all hover:bg-foreground/85"
               >
                 {HERO_CONFIG.cta.label}
-                <svg
-                  aria-hidden="true"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  className="transition-transform duration-200 group-hover:translate-x-1"
-                >
-                  <path
-                    d="M3 8h10M9 4l4 4-4 4"
-                    stroke="currentColor"
-                    strokeWidth="1.75"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="transition-transform group-hover:translate-x-1">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </a>
+              <span className="text-[11px] text-muted-foreground">{HERO_CONFIG.cta.subtext}</span>
             </div>
           </div>
 

@@ -4,11 +4,13 @@ import Link from "next/link"
 import { MobileMenu } from "./mobile-menu"
 import {
   NavigationMenu,
+  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuList,
+  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import { NAV_LINKS, CTA_CONFIG } from "@/lib/nav-config"
+import { NAV_LINKS, SOLUTIONS, KNOWLEDGE_AND_TOOLS, CTA_CONFIG } from "@/lib/nav-config"
 
 export function Navigation() {
   return (
@@ -17,13 +19,8 @@ export function Navigation() {
         {/* Logotyp */}
         <Link
           href="/"
-          onClick={() => {
-            if (typeof window !== 'undefined' && window.location.pathname === '/') {
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-          }}
-          className="text-base font-semibold tracking-tight text-foreground transition-opacity hover:opacity-80"
-          aria-label="Strona główna – Karol Modelski"
+          className="text-base font-bold tracking-tight text-foreground"
+          aria-label="Karol Modelski – Automatyzacja procesów biznesowych"
         >
           Karol Modelski
         </Link>
@@ -32,18 +29,51 @@ export function Navigation() {
         <nav aria-label="Nawigacja główna" className="hidden md:block">
           <NavigationMenu>
             <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Rozwiązania</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-2 p-4">
+                    {SOLUTIONS.map((solution) => (
+                      <li key={solution.href}>
+                        <Link href={solution.href} className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                          <div className="text-sm font-medium leading-none">{solution.label}</div>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Wiedza i Narzędzia</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[200px] gap-2 p-4">
+                    {KNOWLEDGE_AND_TOOLS.map((link) => (
+                      <li key={link.href}>
+                        <Link href={link.href} className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                          <div className="text-sm font-medium leading-none">{link.label}</div>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
               {NAV_LINKS.map((link) => (
                 <NavigationMenuItem key={link.href}>
-                  <Link href={link.href} className={navigationMenuTriggerStyle()}>
+                  <Link 
+                    href={link.href}
+                    onClick={(e) => {
+                      if (link.href === "/#o-mnie" && typeof window !== 'undefined' && window.location.pathname === '/') {
+                        e.preventDefault();
+                        const element = document.getElementById('o-mnie');
+                        element?.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    className={navigationMenuTriggerStyle()}
+                  >
                     {link.label}
                   </Link>
                 </NavigationMenuItem>
               ))}
-              <NavigationMenuItem>
-                <Link href="/narzedzia" className={navigationMenuTriggerStyle()}>
-                  Automatyzacje
-                </Link>
-              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
         </nav>
@@ -54,10 +84,9 @@ export function Navigation() {
             href={CTA_CONFIG.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden flex-col items-center rounded-md bg-foreground px-4 py-1.5 text-sm font-semibold text-background transition-colors hover:bg-foreground/90 md:flex leading-tight"
+            className="hidden rounded-full bg-foreground px-5 py-2 text-sm font-semibold text-background transition-all hover:bg-foreground/90 md:flex"
           >
-            <span>{CTA_CONFIG.label}</span>
-            <span className="text-[10px] opacity-80 font-normal">{CTA_CONFIG.sublabel}</span>
+            {CTA_CONFIG.label}
           </a>
           <div className="md:hidden">
             <MobileMenu />
